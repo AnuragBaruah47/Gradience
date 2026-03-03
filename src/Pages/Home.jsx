@@ -4,10 +4,16 @@ import Cards from "../Components/Cards";
 import CopySvg from "../Components/CopySvg";
 import EyeSvg from "../Components/EyeSvg";
 import MathSvg from "../Components/MathSvg";
+import { gridPatterns } from "../Patterns";
+import PatternCards from "../Components/PatternCards";
+import { useStore } from "../Store/Store";
 
 const Home = () => {
   return (
-    <div className="h-full flex flex-col gap-10 mt-2 w-full">
+    <div
+   
+      className="flex flex-col gap-10 mt-2"
+    >
       <div className="w-full flex justify-center">
         <NewsCard />
       </div>
@@ -48,7 +54,7 @@ const Home = () => {
         />
       </div>
       <div className="w-full gap-2  flex justify-center">
-        <button className="flex cursor-pointer items-center px-2 py-2 shadow-2xl border border-[#ebe9e9] rounded-xl">
+        <button className="flex cursor-pointer items-center px-2 py-2 border border-[#ebe9e9] rounded-xl hover:text-gray-500 transition-all ease-in-out duration-200">
           <div className="text-md font-semibold">Buy Me A Coffee</div>
           <div className="h-8 w-8">
             <svg
@@ -101,7 +107,7 @@ const Home = () => {
             </svg>
           </div>
         </button>
-        <button className="flex cursor-pointer items-center px-2 py-2 shadow-2xl border border-[#ebe9e9] rounded-xl">
+        <button className="flex cursor-pointer items-center px-2 py-2 hover:text-gray-500 transition-all ease-in-out duration-200 border border-[#ebe9e9] rounded-xl">
           <div className="text-md font-semibold">Browse Patterns</div>
           <div className="h-8 w-8">
             <svg
@@ -242,9 +248,63 @@ const Home = () => {
             </ul>
           </div>
         </div>
-      </div>
-      <div className="h-screen">
-
+        <div className="w-full flex justify-center">
+          <div className="flex relative justify-center items-center">
+            <div className="h-6 absolute font-bold left-0 translate-x-2 w-6">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="20"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <path
+                    d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                    stroke="#000000"
+                    stroke-width="0.672"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{" "}
+                </g>
+              </svg>
+            </div>
+            <div>
+              <input
+                placeholder="Search..."
+                style={{
+                  "box-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                }}
+                className="w-6xl rounded-md p-2 px-9 font-semibold border focus:outline-0 border-[#ebe9e9] "
+              />
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex justify-center">
+          <div className="w-6xl font-semibold text-[16px]">
+            {gridPatterns.length} patterns
+          </div>
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <div className="w-6xl grid grid-cols-4 gap-4">
+            {gridPatterns.map((e) => {
+              return (
+                <PatternCards
+                  id={e.id}
+                  key={e.id}
+                  style={e.style}
+                  name={e.name}
+                  className={"shadow-2xl"}
+                />
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

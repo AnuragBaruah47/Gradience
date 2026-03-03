@@ -1,4 +1,3 @@
-
 export const gridPatterns = [
   {
     id: "top-gradient-radial",
@@ -592,7 +591,7 @@ export const gridPatterns = [
     category: "geometric",
     style: {
       background: "#ffffff",
-      backgroundImage: `
+      backgroundImage: `  
       linear-gradient(to right, #f0f0f0 1px, transparent 1px),
       linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
       radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)

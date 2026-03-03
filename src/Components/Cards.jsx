@@ -5,8 +5,7 @@ const Cards = ({ p, h, symbol }) => {
     <div
       className="rounded-xl px-3 py-2 flex gap-1.5"
       style={{
-        "box-shadow":
-          "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px} className= h-fit flex gap-2 w-fit",
+       "box-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px"
       }}
     >
       <div className="h-8 w-8">{symbol}</div>
