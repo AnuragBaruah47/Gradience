@@ -6,21 +6,20 @@ import EyeSvg from "../Components/EyeSvg";
 import MathSvg from "../Components/MathSvg";
 import { gridPatterns } from "../Patterns";
 import PatternCards from "../Components/PatternCards";
-import { useStore } from "../Store/Store";
+
 
 const Home = () => {
+ 
+
   return (
-    <div
-   
-      className="flex flex-col gap-10 mt-2"
-    >
+    <div className="flex flex-col gap-10 mt-2">
       <div className="w-full flex justify-center">
         <NewsCard />
       </div>
       <div className="w-full flex justify-center">
         <div className="flex flex-col gap-2">
           <div className="text-6xl flex font-semibold">
-            <div> Design Mod </div>
+            <div className="dark:text-amber-50"> Design Mod </div>
             <div className="text-[#2f3c40]">ern</div>
           </div>
           <div className="text-4xl font-semibold flex justify-center text-center">
@@ -59,16 +58,16 @@ const Home = () => {
           <div className="h-8 w-8">
             <svg
               viewBox="0 0 1024 1024"
-              class="icon"
+              className="icon"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               fill="#000000"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
@@ -113,17 +112,17 @@ const Home = () => {
             <svg
               viewBox="0 0 1024 1024"
               fill="#c800ff"
-              class="icon"
+              className="icon"
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"
               stroke="#c800ff"
-              stroke-width="0.01024"
+              strokeWidth="0.01024"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
               <g
                 id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
@@ -232,7 +231,7 @@ const Home = () => {
         <div className="w-full flex justify-center">
           <div
             style={{
-              "box-shadow":
+              boxShadow:
                 "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px",
             }}
             className="w-6xl border p-4 border-[#e8e8e8] rounded-xl flex justify-center"
@@ -256,20 +255,19 @@ const Home = () => {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="20"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="20"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
-                  {" "}
                   <path
                     d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
                     stroke="#000000"
-                    stroke-width="0.672"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="0.672"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></path>{" "}
                 </g>
               </svg>
@@ -278,7 +276,7 @@ const Home = () => {
               <input
                 placeholder="Search..."
                 style={{
-                  "box-shadow": "rgba(0, 0, 0, 0.24) 0px 3px 8px",
+                  boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
                 }}
                 className="w-6xl rounded-md p-2 px-9 font-semibold border focus:outline-0 border-[#ebe9e9] "
               />
@@ -295,6 +293,7 @@ const Home = () => {
             {gridPatterns.map((e) => {
               return (
                 <PatternCards
+                wholeStyle={e}
                   id={e.id}
                   key={e.id}
                   style={e.style}

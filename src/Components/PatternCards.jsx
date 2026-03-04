@@ -1,68 +1,90 @@
 import React, { useRef } from "react";
 import { cn } from "../Utils";
 import CopySvg from "./CopySvg";
-import { useStore } from "../Store/Store";
+import { styleStore, themeStore } from "../Store/Store";
 import { gridPatterns } from "../Patterns";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-const PatternCards = ({ style, name ,id }) => {
-const clearStyle = useStore((s) => s.clearStyle);
+gsap.registerPlugin(ScrollToPlugin);
 
- const setStyle = useStore((s) => s.setStyle);
+const PatternCards = ({ style, name, id ,wholeStyle }) => {
+  const { setTheme } = themeStore();
 
-const changeBackgroundOnClick = () => {
-    clearStyle()
-  const selected = gridPatterns.find((e) => e.id === id);
+  const clearStyle = styleStore((s) => s.clearStyle);
 
-  if (selected) {
-    setStyle(selected.style);
-  }
-};
+  const setStyle = styleStore((s) => s.setStyle);
+
+  const changeBackgroundOnClick = () => {
+    clearStyle();
+    const selected = gridPatterns.find((e) => e.id === id);
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 0,
+    });
+    if (selected) {
+      setStyle(selected.style);
+      if (id.includes("dark")) {
+        document.querySelector("html").classList.add("dark");
+        setTheme("dark");
+      } else {
+        document.querySelector("html").classList.remove("dark");
+        setTheme("light");
+      }
+    }
+  };
+
+  
   return (
-    <div className="group border-[#e4e2e2] overflow-hidden relative rounded-xl h-fit w-fit border">
+    <div className="group border-[#e4e2e2] hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit border">
       <div
         style={{
           background:
             "linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)",
         }}
-        className="h-68 w-65 rounded-xl absolute z-10 
+        className="h-68 w-65 hover:scale-105 rounded-xl absolute z-10 
                transition-transform duration-500 
                translate-y-80
                cursor-pointer
-               group-hover:translate-y-0"
+               group-hover:translate-y-0
+               "
       >
-        <div className="w-full translate-y-16 gap-4 flex justify-center flex-col items-center">
-          <div className="text-md text-center font-medium text-white">
+        <div className="w-full opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1200 translate-y-16 gap-3 flex justify-center flex-col items-center">
+          <div className="text-md w-58 text-center font-medium text-white">
             {name}
           </div>
           <div>
-            <button onClick={()=>changeBackgroundOnClick()} className="flex hover:cursor-pointer px-15 py-2 bg-black rounded-xl">
+            <button
+              onClick={() => changeBackgroundOnClick()}
+              className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
+            >
               <div className="h-6 text-white w-6">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></g>
                   <g id="SVGRepo_iconCarrier">
                     {" "}
                     <path
                       d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
                       stroke="#FFFFFF"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>{" "}
                     <path
                       d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
                       stroke="#FFFFFF"
-                      stroke-width="1.056"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.056"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>{" "}
                   </g>
                 </svg>
@@ -70,13 +92,16 @@ const changeBackgroundOnClick = () => {
               <div className="text-white">Preview</div>
             </button>
           </div>
-          <div className="flex px-17 py-1.5 rounded-xl bg-white">
-            <div className="h-6 w-6">
-              <CopySvg />
-            </div>
-            <div>
-              <button>Copy</button>
-            </div>
+          <div>
+            <button
+              onClick={() => changeBackgroundOnClick()}
+              className="flex hover:cursor-pointer h-10 w-50 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 bg-white rounded-xl"
+            >
+              <div className="h-6 text-white w-6">
+                <CopySvg />
+              </div>
+              <div className="">Copy</div>
+            </button>
           </div>
         </div>
       </div>
