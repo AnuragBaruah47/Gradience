@@ -6,11 +6,11 @@ import EyeSvg from "../Components/EyeSvg";
 import MathSvg from "../Components/MathSvg";
 import { gridPatterns } from "../Patterns";
 import PatternCards from "../Components/PatternCards";
-
+import { themeStore } from "../Store/Store";
+import { Link } from "react-router-dom";
 
 const Home = () => {
- 
-
+  const darkTheme = themeStore((state) => state.darkTheme);
   return (
     <div className="flex flex-col gap-10 mt-2">
       <div className="w-full flex justify-center">
@@ -20,16 +20,16 @@ const Home = () => {
         <div className="flex flex-col gap-2">
           <div className="text-6xl flex font-semibold">
             <div className="dark:text-amber-50"> Design Mod </div>
-            <div className="text-[#2f3c40]">ern</div>
+            <div className="text-[#4a2eff]">ern</div>
           </div>
           <div className="text-4xl font-semibold flex justify-center text-center">
-            <div>Pattern Back</div>
-            <div className="text-green-800">grounds</div>
+            <div className="text-black dark:text-white">Pattern Back</div>
+            <div className="text-[#4a2eff]">grounds</div>
           </div>
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <p className="text-center tracking-tighter text-gray-500 w-xl font-medium text-[18px]">
+        <p className="text-center tracking-tighter dark:text-gray-100 text-gray-500 w-xl font-medium text-[18px]">
           Production-ready static and animated background patterns and
           gradients. Receive both div and Tailwind implementations for
           effortless integration. Modern, clean, and developer-friendly.
@@ -53,8 +53,8 @@ const Home = () => {
         />
       </div>
       <div className="w-full gap-2  flex justify-center">
-        <button className="flex cursor-pointer items-center px-2 py-2 border border-[#ebe9e9] rounded-xl hover:text-gray-500 transition-all ease-in-out duration-200">
-          <div className="text-md font-semibold">Buy Me A Coffee</div>
+        <button className="flex dark:text-white cursor-pointer items-center px-2 py-2 border border-[#ebe9e9] dark:border-[#1E2129] rounded-xl hover:text-gray-500 transition-all ease-in-out duration-200">
+          <div className="text-md  font-semibold">Buy Me A Coffee</div>
           <div className="h-8 w-8">
             <svg
               viewBox="0 0 1024 1024"
@@ -106,7 +106,7 @@ const Home = () => {
             </svg>
           </div>
         </button>
-        <button className="flex cursor-pointer items-center px-2 py-2 hover:text-gray-500 transition-all ease-in-out duration-200 border border-[#ebe9e9] rounded-xl">
+        <button className="flex dark:border-[#1E2129] dark:text-white cursor-pointer items-center px-2 py-2 hover:text-gray-500 transition-all ease-in-out duration-200 border border-[#ebe9e9] rounded-xl">
           <div className="text-md font-semibold">Browse Patterns</div>
           <div className="h-8 w-8">
             <svg
@@ -202,21 +202,52 @@ const Home = () => {
           </div>
         </button>
       </div>
+      <div className="w-full dark:text-white flex text-[18px] font-medium flex-col items-center justify-center">
+        <div className="flex gap-1 flex-col">
+          <div>
+  Inspired by the work of.
+          <Link className="pl-1.5 font-extrabold hover:underline" to={"https://github.com/megh-bari"}>
+            Megh Bari
+          </Link>
+          </div>
+          <div>
+    Huge respect to the original creator.
+          </div>
+        
+      
+        </div>
+        <div className="flex gap-2 font-extrabold">
+          <div>
+           
+            <Link className="hover:underline" to={"https://github.com/megh-bari/pattern-craft"}>
+              GitHub
+            </Link>
+          </div>
+          <div className="flex ">
+              
+          <div>
+            <Link className="hover:underline" to={"https://patterncraft.fun/"}>Website</Link>
+          </div>
+          </div>
+       
+        </div>
+      </div>
+
       <div className="w-full flex justify-center">
-        <div className="border-[0.01px] w-4xl border-[#f3f3f3]"></div>
+        <div className="border-[0.01px] w-4xl border-[#1E2129]"></div>
       </div>
       <div className="w-full gap-10 flex justify-center">
         <div className="flex items-center flex-col">
-          <h1 className="font-extrabold text-xl">300+</h1>
-          <p className="font-normal">Patterns</p>
+          <h1 className="font-extrabold dark:text-white text-xl">150+</h1>
+          <p className="font-normal dark:text-white">Patterns</p>
         </div>
         <div className="flex items-center flex-col">
-          <h1 className="font-extrabold text-xl">100%</h1>
-          <p className="font-normal">free</p>
+          <h1 className="font-extrabold dark:text-white text-xl">100%</h1>
+          <p className="font-normal dark:text-white">free</p>
         </div>
         <div className="flex items-center flex-col">
-          <h1 className="font-extrabold text-xl">CSS</h1>
-          <p className="font-normal">& Tailwind</p>
+          <h1 className="font-extrabold text-xl dark:text-white">CSS</h1>
+          <p className="font-normal dark:text-white">& Tailwind</p>
         </div>
       </div>
 
@@ -224,7 +255,9 @@ const Home = () => {
 
       <div className="flex flex-col gap-10">
         <div className="w-full flex justify-center">
-          <div className="w-6xl text-4xl font-bold">Pattern Vault</div>
+          <div className="w-6xl text-4xl font-bold dark:text-white">
+            Pattern Vault
+          </div>
         </div>
 
         {/* navbar */}
@@ -234,9 +267,9 @@ const Home = () => {
               boxShadow:
                 "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px",
             }}
-            className="w-6xl border p-4 border-[#e8e8e8] rounded-xl flex justify-center"
+            className="w-6xl border-2 p-4  border-[rgba(255,255,255,0.2)] rounded-xl flex justify-center"
           >
-            <ul className="flex text-md text-gray-500  gap-20">
+            <ul className="flex text-md dark:text-white text-gray-500  gap-20">
               <li>All Patterns</li>
               <li>Gradients</li>
               <li>Decorative</li>
@@ -248,8 +281,8 @@ const Home = () => {
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <div className="flex relative justify-center items-center">
-            <div className="h-6 absolute font-bold left-0 translate-x-2 w-6">
+          <div className="flex  relative justify-center items-center">
+            <div className="h-6  absolute font-bold left-0 translate-x-2 w-6">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -264,7 +297,7 @@ const Home = () => {
                 <g id="SVGRepo_iconCarrier">
                   <path
                     d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
-                    stroke="#000000"
+                    stroke={darkTheme ? "#ffffff" : "#000000"}
                     strokeWidth="0.672"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -278,13 +311,13 @@ const Home = () => {
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
                 }}
-                className="w-6xl rounded-md p-2 px-9 font-semibold border focus:outline-0 border-[#ebe9e9] "
+                className="w-6xl dark:placeholder:text-white border-[rgba(255,255,255,0.2)]  rounded-md p-2 px-9 font-semibold border-2 focus:outline-0  "
               />
             </div>
           </div>
         </div>
         <div className="w-full flex justify-center">
-          <div className="w-6xl font-semibold text-[16px]">
+          <div className="w-6xl font-semibold dark:text-white text-[16px]">
             {gridPatterns.length} patterns
           </div>
         </div>
@@ -293,7 +326,7 @@ const Home = () => {
             {gridPatterns.map((e) => {
               return (
                 <PatternCards
-                wholeStyle={e}
+                  wholeStyle={e}
                   id={e.id}
                   key={e.id}
                   style={e.style}

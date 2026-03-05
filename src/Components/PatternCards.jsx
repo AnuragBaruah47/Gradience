@@ -8,46 +8,52 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const PatternCards = ({ style, name, id ,wholeStyle }) => {
+const PatternCards = ({ style, name, id, wholeStyle }) => {
   const { setTheme } = themeStore();
 
+  const darkTheme = themeStore((state) => state.darkTheme);
   const clearStyle = styleStore((s) => s.clearStyle);
 
   const setStyle = styleStore((s) => s.setStyle);
 
-  const changeBackgroundOnClick = () => {
-    clearStyle();
-    const selected = gridPatterns.find((e) => e.id === id);
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: 0,
-    });
-    if (selected) {
-      setStyle(selected.style);
-      if (id.includes("dark")) {
-        document.querySelector("html").classList.add("dark");
-        setTheme("dark");
-      } else {
-        document.querySelector("html").classList.remove("dark");
-        setTheme("light");
-      }
-    }
-  };
+const changeBackgroundOnClick = () => {
+  clearStyle();
 
+  const selected = gridPatterns.find((e) => e.id === id);
+  if (!selected) return;
+
+  gsap.to(window, {
+    duration: 1,
+    scrollTo: 0,
+  });
+
+  setStyle(selected.style);
+
+  const root = document.documentElement;
+
+  if (selected.theme === "dark") {
+    root.classList.add("dark");
+    setTheme(true);
+  } else {
+    root.classList.remove("dark");
+    setTheme(false);
+  }
+  console.log(darkTheme);
   
+};
   return (
-    <div className="group border-[#e4e2e2] hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit border">
+    <div className="group dark:border-[#1E2129] dark:border-2 ring-[0.1px]  ring-[#1E2129] hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit ">
       <div
         style={{
-          background:
-            "linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%)",
+          backgroundImage:
+            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
         }}
         className="h-68 w-65 hover:scale-105 rounded-xl absolute z-10 
-               transition-transform duration-500 
-               translate-y-80
-               cursor-pointer
-               group-hover:translate-y-0
-               "
+  transition-transform
+  bg-[#aaaaaa] duration-500 
+  translate-y-80
+  cursor-pointer
+  group-hover:translate-y-0"
       >
         <div className="w-full opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1200 translate-y-16 gap-3 flex justify-center flex-col items-center">
           <div className="text-md w-58 text-center font-medium text-white">

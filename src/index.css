@@ -31,3 +31,76 @@ body {
 * {
   font-family: "Inter", sans-serif;
 }
+
+/* keyframes */
+
+ @keyframes crimsonPulse {
+    0% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+    50% {
+      transform: scale(1.04);
+      filter: brightness(1.15);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(1);
+    }
+  }
+
+    @keyframes corePulseTeal {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.18); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+
+   @keyframes corePulseAmber {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.04); filter: brightness(1.16); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+
+    @keyframes corePulseViolet {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.18); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+
+    @keyframes corePulseBlue {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.04); filter: brightness(1.15); }
+    100% { transform: scale(1); filter: brightness(1); }
+  }
+
+
+     @keyframes darkPulseCyan {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
+
+    @keyframes darkPulseViolet {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
+
+
+    @keyframes darkPulseGamma {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
+
+    @keyframes darkPulseCrimson {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
+
+    @keyframes darkPulseRose {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+  }
