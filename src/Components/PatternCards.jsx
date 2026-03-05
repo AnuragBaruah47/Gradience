@@ -16,33 +16,45 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
 
   const setStyle = styleStore((s) => s.setStyle);
 
-const changeBackgroundOnClick = () => {
-  clearStyle();
+  const changeBackgroundOnClick = () => {
+    clearStyle();
 
-  const selected = gridPatterns.find((e) => e.id === id);
-  if (!selected) return;
+    const selected = gridPatterns.find((e) => e.id === id);
+    if (!selected) return;
 
-  gsap.to(window, {
-    duration: 1,
-    scrollTo: 0,
-  });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 0,
+    });
 
-  setStyle(selected.style);
+    setStyle(selected.style);
 
-  const root = document.documentElement;
+    const root = document.documentElement;
 
-  if (selected.theme === "dark") {
-    root.classList.add("dark");
-    setTheme(true);
-  } else {
-    root.classList.remove("dark");
-    setTheme(false);
-  }
-  console.log(darkTheme);
-  
-};
+    if (selected.theme === "dark") {
+      root.classList.add("dark");
+      setTheme(true);
+    } else {
+      root.classList.remove("dark");
+      setTheme(false);
+    }
+    console.log(darkTheme);
+  };
   return (
-    <div className="group dark:border-[#1E2129] dark:border-2 ring-[0.1px]  ring-[#1E2129] hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit ">
+    <div
+      style={
+        darkTheme
+          ? {
+              boxShadow:
+                "rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px",
+            }
+          : {
+              boxShadow:
+                "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
+            }
+      }
+      className="group hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit "
+    >
       <div
         style={{
           backgroundImage:

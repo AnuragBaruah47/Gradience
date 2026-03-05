@@ -53,7 +53,7 @@ const Home = () => {
         />
       </div>
       <div className="w-full gap-2  flex justify-center">
-        <button className="flex dark:text-white cursor-pointer items-center px-2 py-2 border border-[#ebe9e9] dark:border-[#1E2129] rounded-xl hover:text-gray-500 transition-all ease-in-out duration-200">
+        <button className="flex dark:bg-[rgba(0,0,0,0.4)] bg-[rgba(255,255,255,0.4)] dark:text-white cursor-pointer items-center px-2 py-2 border border-[#ebe9e9] dark:border-[#1E2129] rounded-xl hover:text-gray-500 transition-all ease-in-out duration-200">
           <div className="text-md  font-semibold">Buy Me A Coffee</div>
           <div className="h-8 w-8">
             <svg
@@ -106,7 +106,7 @@ const Home = () => {
             </svg>
           </div>
         </button>
-        <button className="flex dark:border-[#1E2129] dark:text-white cursor-pointer items-center px-2 py-2 hover:text-gray-500 transition-all ease-in-out duration-200 border border-[#ebe9e9] rounded-xl">
+        <button className="flex bg-[rgba(255,255,255,0.4)] dark:bg-[rgba(0,0,0,0.4)] dark:border-[#1E2129] dark:text-white cursor-pointer items-center px-2 py-2 hover:text-gray-500 transition-all ease-in-out duration-200 border border-[#ebe9e9] rounded-xl">
           <div className="text-md font-semibold">Browse Patterns</div>
           <div className="h-8 w-8">
             <svg
