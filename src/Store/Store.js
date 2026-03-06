@@ -15,3 +15,11 @@ export const themeStore = create((set) => ({
       darkTheme: value,
     }),
 }));
+export const copyStore = create((set) => ({
+  copy: false,
+
+  setCopy: (value) =>
+    set({
+      copy: value,
+    }),
+}));

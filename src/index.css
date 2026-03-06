@@ -110,11 +110,22 @@ body {
     50% { background-position: 60% 60%, 40% 40%; }
     100% { background-position: 20% 30%, 80% 70%; }
   }
+    @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
   
     @keyframes nebulaDrift {
     0% { background-position: 20% 30%, 80% 70%; }
     50% { background-position: 60% 55%, 40% 45%; }
     100% { background-position: 20% 30%, 80% 70%; }
+  }
+
+    @keyframes orbFloat {
+    0% { background-position: 20% 40%, 80% 60%; }
+    50% { background-position: 40% 60%, 60% 40%; }
+    100% { background-position: 20% 40%, 80% 60%; }
   }
 
    @keyframes nebulaDrift {
@@ -208,20 +219,3 @@ body {
   }
 
   
-  @keyframes plasmaMoveA {
-    0% { transform: translate(-20%, -20%) scale(1); }
-    50% { transform: translate(20%, 10%) scale(1.2); }
-    100% { transform: translate(-20%, -20%) scale(1); }
-  }
-
-  @keyframes plasmaMoveB {
-    0% { transform: translate(10%, 30%) scale(1.1); }
-    50% { transform: translate(-30%, -20%) scale(1.3); }
-    100% { transform: translate(10%, 30%) scale(1.1); }
-  }
-
-  @keyframes plasmaMoveC {
-    0% { transform: translate(30%, -20%) scale(1.2); }
-    50% { transform: translate(-10%, 40%) scale(1.4); }
-    100% { transform: translate(30%, -20%) scale(1.2); }
-  }

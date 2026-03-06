@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NewsCard from "../Components/NewsCard";
 import Cards from "../Components/Cards";
 import CopySvg from "../Components/CopySvg";
@@ -6,11 +6,17 @@ import EyeSvg from "../Components/EyeSvg";
 import MathSvg from "../Components/MathSvg";
 import { gridPatterns } from "../Patterns";
 import PatternCards from "../Components/PatternCards";
-import { themeStore } from "../Store/Store";
+import { themeStore, copyStore } from "../Store/Store";
 import { Link } from "react-router-dom";
+import { Toaster, toast } from "sonner";
 
 const Home = () => {
+  const [query, setQuery] = useState("");
+  console.log(query);
+  
+
   const darkTheme = themeStore((state) => state.darkTheme);
+
   return (
     <div className="flex flex-col gap-10 mt-2">
       <div className="w-full flex justify-center">
@@ -205,31 +211,35 @@ const Home = () => {
       <div className="w-full dark:text-white flex text-[18px] font-medium flex-col items-center justify-center">
         <div className="flex gap-1 flex-col">
           <div>
-  Inspired by the work of.
-          <Link className="pl-1.5 font-extrabold hover:underline" to={"https://github.com/megh-bari"}>
-            Megh Bari
-          </Link>
+            Inspired by the work of.
+            <Link
+              className="pl-1.5 font-extrabold hover:underline"
+              to={"https://github.com/megh-bari"}
+            >
+              Megh Bari
+            </Link>
           </div>
-          <div>
-    Huge respect to the original creator.
-          </div>
-        
-      
+          <div>Huge respect to the original creator.</div>
         </div>
         <div className="flex gap-2 font-extrabold">
           <div>
-           
-            <Link className="hover:underline" to={"https://github.com/megh-bari/pattern-craft"}>
+            <Link
+              className="hover:underline"
+              to={"https://github.com/megh-bari/pattern-craft"}
+            >
               GitHub
             </Link>
           </div>
           <div className="flex ">
-              
-          <div>
-            <Link className="hover:underline" to={"https://patterncraft.fun/"}>Website</Link>
+            <div>
+              <Link
+                className="hover:underline"
+                to={"https://patterncraft.fun/"}
+              >
+                Website
+              </Link>
+            </div>
           </div>
-          </div>
-       
         </div>
       </div>
 
@@ -307,6 +317,7 @@ const Home = () => {
             </div>
             <div>
               <input
+                onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search..."
                 style={{
                   boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
@@ -323,18 +334,31 @@ const Home = () => {
         </div>
         <div className="w-full flex items-center justify-center">
           <div className="w-6xl grid grid-cols-4 gap-4">
-            {gridPatterns.map((e) => {
-              return (
-                <PatternCards
-                  wholeStyle={e}
-                  id={e.id}
-                  key={e.id}
-                  style={e.style}
-                  name={e.name}
-                  className={"shadow-2xl"}
-                />
-              );
-            })}
+            {query
+              ? gridPatterns.map((e) => {
+                  return (
+                    <PatternCards
+                      wholeStyle={e}
+                      id={e.id}
+                      key={e.id}
+                      style={e.style}
+                      name={e.name}
+                      className={"shadow-2xl"}
+                    />
+                  );
+                })
+              : gridPatterns.map((e) => {
+                  return (
+                    <PatternCards
+                      wholeStyle={e}
+                      id={e.id}
+                      key={e.id}
+                      style={e.style}
+                      name={e.name}
+                      className={"shadow-2xl"}
+                    />
+                  );
+                })}
           </div>
         </div>
       </div>

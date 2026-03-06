@@ -5,6 +5,7 @@ import { styleStore } from "../Store/Store";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { Toaster } from "sonner";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -46,6 +47,12 @@ const Layout = () => {
       <div className="nav">
         <Navbar />
         <Outlet />
+        <Toaster
+          toastOptions={{
+            duration: 2000,
+          }}
+          position="bottom-right"
+        />
       </div>
     </div>
   );
