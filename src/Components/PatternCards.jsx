@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { cn } from "../Utils";
 import CopySvg from "./CopySvg";
 import { copyStore, styleStore, themeStore } from "../Store/Store";
@@ -10,7 +10,7 @@ import { toast } from "sonner";
 gsap.registerPlugin(ScrollToPlugin);
 
 const PatternCards = ({ style, name, id, wholeStyle }) => {
-  const [preview, setPreview] = useState(true);
+  const [preview, setPreview] = useState(false);
   const [copy, setCopy] = useState(false);
   const { setTheme } = themeStore();
 
@@ -21,39 +21,39 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
   const styleBackGround = styleStore((s) => s.style);
   const setCopyValue = copyStore((s) => s.setCopy);
 
-  const changeBackgroundOnClick = () => {
-    clearStyle();
-    if(styleBackGround){
-      document.querySelector("html").classList.remove("dark");
+  useEffect(() => {
+    if (!preview) {
+      clearStyle();
+      return;
     }
-    setPreview((e) => !e);
 
-    if (preview) {
-      const selected = gridPatterns.find((e) => e.id === id);
-      if (!selected) return;
+    const selected = gridPatterns.find((e) => e.id === id);
+    if (!selected) return;
 
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: 0,
-      });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: 0,
+    });
 
-      setStyle(selected.style);
+    setStyle(selected.style);
 
-      const root = document.documentElement;
+    const root = document.documentElement;
 
-      if (selected.theme === "dark") {
-        root.classList.add("dark");
-        setTheme(true);
-      } else {
-        root.classList.remove("dark");
-        setTheme(false);
-      }
+    if (selected.theme === "dark") {
+      root.classList.add("dark");
+      setTheme(true);
     } else {
-      gsap.to(window, {
-        duration: 1,
-        scrollTo: 0,
-      });
+      root.classList.remove("dark");
+      setTheme(false);
     }
+  }, [preview]);
+
+  const previewButton = () => {
+    setPreview(true);
+  };
+
+  const hideButton = () => {
+    setPreview(false);
   };
 
   const copyStyle = async () => {
@@ -105,7 +105,7 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
               color: wholeStyle.theme === "dark" ? "#ffffff" : "#000000",
             }}
           >
-           Animated
+            Animated
           </div>
           <div className="h-3 w-3">
             <svg
@@ -153,43 +153,83 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
             {name}
           </div>
           <div>
-            <button
-              onClick={() => changeBackgroundOnClick()}
-              className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
-            >
-              <div className="h-6 text-white w-6">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    {" "}
-                    <path
-                      d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
-                      stroke="#FFFFFF"
-                      strokeWidth="2"
+            {preview ? (
+              <button
+                onClick={() => hideButton()}
+                className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
+              >
+                <div className="h-6 text-white w-6">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>{" "}
-                    <path
-                      d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
-                      stroke="#FFFFFF"
-                      strokeWidth="1.056"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      {" "}
+                      <path
+                        d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
+                        stroke="#FFFFFF"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>{" "}
+                      <path
+                        d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
+                        stroke="#FFFFFF"
+                        strokeWidth="1.056"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>{" "}
+                    </g>
+                  </svg>
+                </div>
+                <div className="text-white">Hide</div>
+              </button>
+            ) : (
+              <button
+                onClick={() => previewButton()}
+                className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
+              >
+                <div className="h-6 text-white w-6">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                    ></path>{" "}
-                  </g>
-                </svg>
-              </div>
-              <div className="text-white">{preview ? "Preview" : "Hide"}</div>
-            </button>
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      {" "}
+                      <path
+                        d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
+                        stroke="#FFFFFF"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>{" "}
+                      <path
+                        d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
+                        stroke="#FFFFFF"
+                        strokeWidth="1.056"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      ></path>{" "}
+                    </g>
+                  </svg>
+                </div>
+                <div className="text-white">Preview</div>
+              </button>
+            )}
           </div>
           <div>
             <button
