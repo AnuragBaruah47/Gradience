@@ -13,11 +13,6 @@ const Layout = () => {
   const styleBackGround = styleStore((s) => s.style);
 
   useEffect(() => {
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: 0,
-    });
-
     const lenis = new Lenis({
       lerp: 0.06,
       smoothWheel: true,
@@ -25,7 +20,6 @@ const Layout = () => {
       touchMultiplier: 1.5,
     });
 
-    // Sync Lenis with GSAP ticker
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });

@@ -1,72 +1,56 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { cn } from "../Utils";
 import CopySvg from "./CopySvg";
 import { copyStore, styleStore, themeStore } from "../Store/Store";
-import { gridPatterns } from "../Patterns";
+
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { toast } from "sonner";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const PatternCards = ({ style, name, id, wholeStyle }) => {
-  const [preview, setPreview] = useState(false);
+const PatternCards = ({ patterns }) => {
   const [copy, setCopy] = useState(false);
-  const { setTheme } = themeStore();
 
   const darkTheme = themeStore((state) => state.darkTheme);
-  const clearStyle = styleStore((s) => s.clearStyle);
 
-  const setStyle = styleStore((s) => s.setStyle);
-  const styleBackGround = styleStore((s) => s.style);
   const setCopyValue = copyStore((s) => s.setCopy);
 
-  useEffect(() => {
-    if (!preview) {
-      clearStyle();
-      return;
-    }
+  const clearStyle = styleStore((s) => s.clearStyle);
+  const setStyle = styleStore((s) => s.setStyle);
+  const setId = styleStore((s) => s.setId);
+  const id = styleStore((s) => s.id);
 
-    const selected = gridPatterns.find((e) => e.id === id);
-    if (!selected) return;
+  const preview = id === patterns.id;
+
+  useEffect(() => {
+    if (preview) {
+      setStyle(patterns.style);
+    } else {
+      clearStyle();
+    }
 
     gsap.to(window, {
       duration: 1,
       scrollTo: 0,
+      ease: "power2.out",
     });
-
-    setStyle(selected.style);
-
-    const root = document.documentElement;
-
-    if (selected.theme === "dark") {
-      root.classList.add("dark");
-      setTheme(true);
-    } else {
-      root.classList.remove("dark");
-      setTheme(false);
-    }
   }, [preview]);
-
-  const previewButton = () => {
-    setPreview(true);
-  };
-
-  const hideButton = () => {
-    setPreview(false);
-  };
 
   const copyStyle = async () => {
     try {
-      await navigator.clipboard.writeText(wholeStyle.code);
+      await navigator.clipboard.writeText(patterns.code);
+
       setCopy(true);
       setCopyValue(true);
+
       toast.success("Copied!", {
         style: {
           background: "#333",
           color: "#fff",
         },
       });
+
       setTimeout(() => {
         setCopy(false);
         setCopyValue(false);
@@ -75,6 +59,15 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
       console.error("Copy failed", err);
     }
   };
+
+  const togglePreview = () => {
+    if (preview) {
+      setId(null);
+    } else {
+      setId(patterns.id);
+    }
+  };
+
   return (
     <div
       style={
@@ -88,191 +81,73 @@ const PatternCards = ({ style, name, id, wholeStyle }) => {
                 "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
             }
       }
-      className="group hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit "
+      className="group hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit"
     >
-      {wholeStyle.animated && (
+      {patterns.animated && (
         <div
           style={{
             backgroundColor:
-              wholeStyle.theme === "dark"
+              patterns.theme === "dark"
                 ? "rgba(255,255,255,0.1)"
                 : "rgba(0,0,0,0.1)",
           }}
-          className="absolute gap-1 flex px-2 py-1 right-2 top-2 dark:text-white font-medium text-xs bg-[rgba(0,0,0,0.1)] z-20 rounded-md"
+          className="absolute gap-1 flex px-2 py-1 right-2 top-2 dark:text-white font-medium text-xs z-20 rounded-md"
         >
           <div
             style={{
-              color: wholeStyle.theme === "dark" ? "#ffffff" : "#000000",
+              color: patterns.theme === "dark" ? "#ffffff" : "#000000",
             }}
           >
             Animated
           </div>
-          <div className="h-3 w-3">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              stroke="#000000"
-            >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                {" "}
-                <path
-                  d="M15.2516 10.689C14.265 9.50847 13.7716 8.91821 13.2045 9.00913C12.6375 9.10004 12.3722 9.81193 11.8416 11.2357L11.7043 11.604C11.5535 12.0086 11.4781 12.2109 11.3314 12.3599C11.1848 12.509 10.9834 12.5878 10.5806 12.7456L10.214 12.8892C8.79667 13.4443 8.08803 13.7218 8.00721 14.2891C7.92639 14.8564 8.52692 15.3378 9.72797 16.3004L10.0387 16.5495C10.38 16.8231 10.5507 16.9599 10.6494 17.1471C10.7482 17.3343 10.7639 17.5508 10.7954 17.9837L10.824 18.3779C10.9347 19.9015 10.9901 20.6633 11.5072 20.923C12.0244 21.1827 12.6608 20.7683 13.9337 19.9395L14.263 19.7251C14.6247 19.4896 14.8056 19.3718 15.0133 19.3385C15.2211 19.3052 15.4322 19.3601 15.8543 19.47L16.2387 19.57C17.7244 19.9565 18.4673 20.1498 18.8677 19.743C19.2681 19.3362 19.061 18.5987 18.6466 17.1238L18.5394 16.7422C18.4216 16.3231 18.3628 16.1135 18.3924 15.9057C18.422 15.6979 18.5367 15.5154 18.7662 15.1503L18.9751 14.818C19.7826 13.5332 20.1864 12.8909 19.9167 12.3798C19.647 11.8687 18.8826 11.8273 17.3536 11.7446L16.958 11.7231C16.5235 11.6996 16.3063 11.6879 16.1168 11.5927C15.9274 11.4976 15.7872 11.3299 15.5068 10.9944L15.2516 10.689Z"
-                  fill="#66FF00"
-                ></path>{" "}
-                <path
-                  opacity="0.5"
-                  d="M10.3312 4.252C11.6467 2.67797 12.3045 1.89095 13.0606 2.01217C13.8167 2.13339 14.1705 3.08257 14.8779 4.98092L15.0609 5.47204C15.262 6.0115 15.3625 6.28122 15.5581 6.47991C15.7537 6.6786 16.0222 6.78376 16.5592 6.99409L17.048 7.18557C18.9378 7.9257 19.8826 8.29576 19.9904 9.05216C20.0982 9.80855 19.2974 10.4503 17.696 11.7339L17.2817 12.066C16.8267 12.4308 16.5991 12.6131 16.4674 12.8628C16.3357 13.1124 16.3147 13.4011 16.2728 13.9783L16.2346 14.5039C16.087 16.5353 16.0132 17.5511 15.3237 17.8973C14.6342 18.2436 13.7856 17.6911 12.0884 16.586L11.6493 16.3001C11.167 15.9861 10.9259 15.8291 10.6489 15.7847C10.3719 15.7403 10.0905 15.8135 9.52753 15.96L9.01504 16.0933C7.0341 16.6087 6.04363 16.8664 5.50972 16.324C4.97581 15.7816 5.25206 14.7983 5.80455 12.8317L5.94749 12.323C6.10449 11.7641 6.18299 11.4847 6.14351 11.2076C6.10404 10.9306 5.95106 10.6872 5.6451 10.2004L5.36654 9.75727C4.28985 8.04433 3.75151 7.18787 4.11106 6.50639C4.4706 5.82491 5.48992 5.76974 7.52857 5.65941L8.05599 5.63086C8.63531 5.59951 8.92497 5.58383 9.17756 5.45699C9.43014 5.33015 9.61705 5.1065 9.99088 4.65922L10.3312 4.252Z"
-                  fill="#66FF00"
-                ></path>{" "}
-              </g>
-            </svg>
-          </div>
         </div>
       )}
+
       <div
         style={{
           backgroundImage:
             "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
         }}
-        className="h-68 w-65 hover:scale-105 rounded-xl absolute z-10 
-  transition-transform
-  bg-[#aaaaaa] duration-500 
-  translate-y-80
-  cursor-pointer
-  group-hover:translate-y-0"
+        className="h-68 w-65 hover:scale-105 rounded-xl absolute z-10 transition-transform bg-[#aaaaaa] duration-500 translate-y-80 cursor-pointer group-hover:translate-y-0"
       >
         <div className="w-full opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1200 translate-y-16 gap-3 flex justify-center flex-col items-center">
           <div className="text-md w-58 text-center font-medium text-white">
-            {name}
+            {patterns.name}
           </div>
-          <div>
-            {preview ? (
-              <button
-                onClick={() => hideButton()}
-                className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
-              >
-                <div className="h-6 text-white w-6">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <path
-                        d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
-                        stroke="#FFFFFF"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                      <path
-                        d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
-                        stroke="#FFFFFF"
-                        strokeWidth="1.056"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                    </g>
-                  </svg>
-                </div>
-                <div className="text-white">Hide</div>
-              </button>
-            ) : (
-              <button
-                onClick={() => previewButton()}
-                className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
-              >
-                <div className="h-6 text-white w-6">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <path
-                        d="M15.0007 12C15.0007 13.6569 13.6576 15 12.0007 15C10.3439 15 9.00073 13.6569 9.00073 12C9.00073 10.3431 10.3439 9 12.0007 9C13.6576 9 15.0007 10.3431 15.0007 12Z"
-                        stroke="#FFFFFF"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                      <path
-                        d="M12.0012 5C7.52354 5 3.73326 7.94288 2.45898 12C3.73324 16.0571 7.52354 19 12.0012 19C16.4788 19 20.2691 16.0571 21.5434 12C20.2691 7.94291 16.4788 5 12.0012 5Z"
-                        stroke="#FFFFFF"
-                        strokeWidth="1.056"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                    </g>
-                  </svg>
-                </div>
-                <div className="text-white">Preview</div>
-              </button>
-            )}
-          </div>
-          <div>
-            <button
-              style={{ backgroundColor: copy ? "#66FF00" : "#ffffff" }}
-              onClick={() => copyStyle()}
-              className="flex active:scale-95 active:bg-gray-600w hover:cursor-pointer h-10 w-50 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 bg-white rounded-xl"
-            >
-              <div className="h-6  text-white w-6">
-                {copy ? (
-                  <svg
-                    viewBox="0 -0.5 25 25"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <path
-                        d="M5.5 12.5L10.167 17L19.5 8"
-                        stroke="#000000"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                    </g>
-                  </svg>
-                ) : (
-                  <CopySvg />
-                )}
-              </div>
-              <div className="">{copy ? "Copied" : "Copy"}</div>
-            </button>
-          </div>
+
+          <button
+            onClick={togglePreview}
+            className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
+          >
+            <div className="text-white">{preview ? "Hide" : "Preview"}</div>
+          </button>
+
+          <button
+            style={{ backgroundColor: copy ? "#66FF00" : "#ffffff" }}
+            onClick={copyStyle}
+            className="flex active:scale-95 h-10 w-50 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 rounded-xl"
+          >
+            <div className="h-6 w-6">
+              {copy ? (
+                <svg viewBox="0 -0.5 25 25">
+                  <path
+                    d="M5.5 12.5L10.167 17L19.5 8"
+                    stroke="#000"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+              ) : (
+                <CopySvg />
+              )}
+            </div>
+
+            <div>{copy ? "Copied" : "Copy"}</div>
+          </button>
         </div>
       </div>
 
       <div
-        style={style}
+        style={patterns.style}
         className={cn(
           "h-68 w-65 rounded-xl cursor-pointer shadow-2xs transition-all duration-500 hover:scale-105",
         )}

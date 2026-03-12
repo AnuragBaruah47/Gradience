@@ -2,11 +2,13 @@ import { create } from "zustand";
 
 export const styleStore = create((set) => ({
   style: null,
+  id: null,
 
   setStyle: (newStyle) => set({ style: newStyle }),
-
+  setId: (newId) => set({ id: newId }),
   clearStyle: () => set({ style: null }),
 }));
+
 export const themeStore = create((set) => ({
   darkTheme: false,
 
@@ -15,6 +17,7 @@ export const themeStore = create((set) => ({
       darkTheme: value,
     }),
 }));
+
 export const copyStore = create((set) => ({
   copy: false,
 
