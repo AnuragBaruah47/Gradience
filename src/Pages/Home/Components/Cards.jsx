@@ -1,5 +1,5 @@
 import React from "react";
-import { themeStore } from "../Store/Store";
+
 
 const Cards = ({ p, h, symbol }) => {
   return (

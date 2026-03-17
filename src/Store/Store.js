@@ -18,11 +18,4 @@ export const themeStore = create((set) => ({
     }),
 }));
 
-export const copyStore = create((set) => ({
-  copy: false,
 
-  setCopy: (value) =>
-    set({
-      copy: value,
-    }),
-}));

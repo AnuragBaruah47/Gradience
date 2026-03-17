@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import NewsCard from "../Components/NewsCard";
 import Cards from "../Components/Cards";
-import CopySvg from "../Components/CopySvg";
-import EyeSvg from "../Components/EyeSvg";
-import MathSvg from "../Components/MathSvg";
-import { gridPatterns } from "../Patterns";
-import PatternCards from "../Components/PatternCards";
-import { themeStore } from "../Store/Store";
+import CopySvg from "../../../Shared/Components/CopySvg";
+import EyeSvg from "../../../Shared/Components/EyeSvg";
+import MathSvg from "../../../Shared/Components/MathSvg";
+import { gridPatterns } from "../../../Feature/Patterns/Data/Data";
+import PatternCards from "../../../Feature/Patterns/Components/PatternCards";
+import { themeStore } from "../../../Store/Store";
+import { querySearch } from "../../services/service";
 
 const Home = () => {
   const [category, setCategory] = useState("all");
@@ -17,13 +18,16 @@ const Home = () => {
     setCategory(keyword);
   };
 
-  useEffect(() => {}, [query]);
-
+  const querySetOnInput = (value) => {
+    setQuery(value);
+    console.log(value);
+  };
   const filteredPatterns =
     category === "all"
       ? gridPatterns
       : gridPatterns.filter((pattern) => pattern.category === category);
 
+  const searchedPattern = querySearch(query, filteredPatterns);
   const baseBtn =
     "h-[40px] w-[165px] cursor-pointer flex items-center justify-center rounded-[14px] transition-all";
 
@@ -127,6 +131,7 @@ const Home = () => {
             <ul className="flex py-2 text-[16px] justify-center items-center dark:text-white text-gray-500 ">
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "all" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("all")}
@@ -137,6 +142,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "gradients" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("gradients")}
@@ -147,6 +153,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "effects" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("effects")}
@@ -157,6 +164,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "decorative" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("decorative")}
@@ -167,6 +175,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "geometric" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("geometric")}
@@ -177,6 +186,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "animated" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("animated")}
@@ -187,6 +197,7 @@ const Home = () => {
 
               <li>
                 <button
+                  type="button"
                   className={baseBtn}
                   style={category === "favorite" ? activeBtn : {}}
                   onClick={() => onClickSetCategory("favorite")}
@@ -202,18 +213,17 @@ const Home = () => {
         <div className="w-full flex justify-center">
           <input
             placeholder="Search..."
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => querySetOnInput(e.target.value)}
             className="w-6xl border border-[rgba(97,97,97,0.2)] rounded-md p-2 font-semibold focus:outline-none dark:text-white"
           />
         </div>
 
         <div className="w-full flex justify-center">
           <div className="w-6xl font-semibold dark:text-white text-[16px]">
-            {filteredPatterns.length} patterns
+            {filteredPatterns.length} Patterns
           </div>
         </div>
 
-        {/* PATTERN GRID */}
         <div className="w-full flex justify-center">
           <div className="w-6xl grid grid-cols-4 gap-4">
             {filteredPatterns.map((pattern) => (
@@ -231,4 +241,3 @@ const Home = () => {
 };
 
 export default Home;
-

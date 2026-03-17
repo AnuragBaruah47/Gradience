@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { cn } from "../Utils";
-import CopySvg from "./CopySvg";
-import { copyStore, styleStore, themeStore } from "../Store/Store";
-
+import { cn } from "../../../Utils";
+import CopySvg from "../../../Shared/Components/CopySvg";
+import { styleStore, themeStore } from "../../../Store/Store";
+import { scrollToConfig } from "../Services/service";
+import { copyStyle } from "../Services/service";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import { toast } from "sonner";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -13,9 +13,6 @@ const PatternCards = ({ patterns }) => {
   const [copy, setCopy] = useState(false);
 
   const darkTheme = themeStore((state) => state.darkTheme);
-
-  const setCopyValue = copyStore((s) => s.setCopy);
-
   const clearStyle = styleStore((s) => s.clearStyle);
   const setStyle = styleStore((s) => s.setStyle);
   const setId = styleStore((s) => s.setId);
@@ -29,44 +26,27 @@ const PatternCards = ({ patterns }) => {
     } else {
       clearStyle();
     }
-
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: 0,
-      ease: "power2.out",
-    });
   }, [preview]);
 
-  const copyStyle = async () => {
-    try {
-      await navigator.clipboard.writeText(patterns.code);
-
-      setCopy(true);
-      setCopyValue(true);
-
-      toast.success("Copied!", {
-        style: {
-          background: "#333",
-          color: "#fff",
-        },
-      });
-
-      setTimeout(() => {
-        setCopy(false);
-        setCopyValue(false);
-      }, 2000);
-    } catch (err) {
-      console.error("Copy failed", err);
-    }
+  const toggleCopy = () => {
+    setCopy(true);
+    copyStyle(patterns);
+    setTimeout(() => {
+      setCopy(false);
+    }, 2000);
   };
 
-  const togglePreview = () => {
-    if (preview) {
-      setId(null);
-    } else {
-      setId(patterns.id);
-    }
-  };
+const togglePreview = () => {
+  if (preview) {
+    setId(null);
+  } else {
+    setId(patterns.id);
+  }
+
+  setTimeout(() => {
+    gsap.to(window, scrollToConfig);
+  }, 200);
+};
 
   return (
     <div
@@ -116,7 +96,7 @@ const PatternCards = ({ patterns }) => {
           </div>
 
           <button
-            onClick={togglePreview}
+            onClick={() => togglePreview()}
             className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
           >
             <div className="text-white">{preview ? "Hide" : "Preview"}</div>
@@ -124,7 +104,7 @@ const PatternCards = ({ patterns }) => {
 
           <button
             style={{ backgroundColor: copy ? "#66FF00" : "#ffffff" }}
-            onClick={copyStyle}
+            onClick={() => toggleCopy()}
             className="flex active:scale-95 h-10 w-50 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 rounded-xl"
           >
             <div className="h-6 w-6">

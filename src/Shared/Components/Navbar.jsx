@@ -1,5 +1,5 @@
 import React from "react";
-import { themeStore } from "../Store/Store";
+import { themeStore } from "../../Store/Store";
 
 const Navbar = () => {
 const darkTheme = themeStore((state) => state.darkTheme);

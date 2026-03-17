@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../Components/Navbar";
+
 import { styleStore } from "../Store/Store";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { Toaster } from "sonner";
+import Navbar from "../Shared/Components/Navbar";
 
 gsap.registerPlugin(ScrollToPlugin);
 

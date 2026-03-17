@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -7,7 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Layout from "./Layout/Layout";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Page/Home";
 
 function App() {
   const router = createBrowserRouter(
