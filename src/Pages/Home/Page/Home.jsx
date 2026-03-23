@@ -12,7 +12,15 @@ import { querySearch } from "../../services/service";
 const Home = () => {
   const [category, setCategory] = useState("all");
   const [query, setQuery] = useState("");
+  const [favourites, setFavourites] = useState([]);
+
   const darkTheme = themeStore((state) => state.darkTheme);
+
+
+  useEffect(() => {
+    const data = localStorage.getItem("favourites");
+    setFavourites(data ? JSON.parse(data) : []);
+  }, []);
 
   const onClickSetCategory = (keyword) => {
     setCategory(keyword);
@@ -20,14 +28,18 @@ const Home = () => {
 
   const querySetOnInput = (value) => {
     setQuery(value);
-    console.log(value);
   };
-  const filteredPatterns =
-    category === "all"
+
+
+  const basePatterns =
+    category === "favorite"
+      ? favourites
+      : category === "all"
       ? gridPatterns
       : gridPatterns.filter((pattern) => pattern.category === category);
 
-  const searchedPattern = querySearch(query, filteredPatterns);
+  const finalPatterns = querySearch(query, basePatterns);
+
   const baseBtn =
     "h-[40px] w-[165px] cursor-pointer flex items-center justify-center rounded-[14px] transition-all";
 
@@ -42,7 +54,7 @@ const Home = () => {
         <NewsCard />
       </div>
 
-      <div className="w-full flex justify-center">
+<div className="w-full flex justify-center">
         <div className="flex flex-col gap-2">
           <div className="text-6xl flex font-semibold">
             <div className="dark:text-amber-50">Design Mod</div>
@@ -113,129 +125,76 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="w-full flex justify-center">
-          <div
-            style={
-              darkTheme
-                ? {
-                    boxShadow:
-                      "rgba(255,255,255,0.16) 0px 10px 36px 0px, rgba(255,255,255,0.06) 0px 0px 0px 1px",
-                  }
-                : {
-                    boxShadow:
-                      "rgba(0,0,0,0.16) 0px 10px 36px 0px, rgba(0,0,0,0.06) 0px 0px 0px 1px",
-                  }
-            }
-            className="border border-[rgba(97,97,97,0.2)] rounded-xl flex justify-center"
-          >
-            <ul className="flex py-2 text-[16px] justify-center items-center dark:text-white text-gray-500 ">
-              <li>
+
+      <div className="w-full flex justify-center">
+        <div
+          style={
+            darkTheme
+              ? {
+                  boxShadow:
+                    "rgba(255,255,255,0.16) 0px 10px 36px 0px, rgba(255,255,255,0.06) 0px 0px 0px 1px",
+                }
+              : {
+                  boxShadow:
+                    "rgba(0,0,0,0.16) 0px 10px 36px 0px, rgba(0,0,0,0.06) 0px 0px 0px 1px",
+                }
+          }
+          className="border rounded-xl flex justify-center"
+        >
+          <ul className="flex py-2 text-[16px]">
+            {[
+              "all",
+              "gradients",
+              "effects",
+              "decorative",
+              "geometric",
+              "animated",
+              "favorite",
+            ].map((cat) => (
+              <li key={cat}>
                 <button
-                  type="button"
                   className={baseBtn}
-                  style={category === "all" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("all")}
+                  style={category === cat ? activeBtn : {}}
+                  onClick={() => onClickSetCategory(cat)}
                 >
-                  All
+                  {cat}
                 </button>
               </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "gradients" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("gradients")}
-                >
-                  Gradients
-                </button>
-              </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "effects" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("effects")}
-                >
-                  Effects
-                </button>
-              </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "decorative" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("decorative")}
-                >
-                  Decorative
-                </button>
-              </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "geometric" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("geometric")}
-                >
-                  Geometric
-                </button>
-              </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "animated" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("animated")}
-                >
-                  Animated
-                </button>
-              </li>
-
-              <li>
-                <button
-                  type="button"
-                  className={baseBtn}
-                  style={category === "favorite" ? activeBtn : {}}
-                  onClick={() => onClickSetCategory("favorite")}
-                >
-                  Favorite
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* SEARCH */}
-        <div className="w-full flex justify-center">
-          <input
-            placeholder="Search..."
-            onChange={(e) => querySetOnInput(e.target.value)}
-            className="w-6xl border border-[rgba(97,97,97,0.2)] rounded-md p-2 font-semibold focus:outline-none dark:text-white"
-          />
-        </div>
-
-        <div className="w-full flex justify-center">
-          <div className="w-6xl font-semibold dark:text-white text-[16px]">
-            {filteredPatterns.length} Patterns
-          </div>
-        </div>
-
-        <div className="w-full flex justify-center">
-          <div className="w-6xl grid grid-cols-4 gap-4">
-            {filteredPatterns.map((pattern) => (
-              <PatternCards
-                patterns={pattern}
-                key={pattern.id}
-                className="shadow-2xl"
-              />
             ))}
-          </div>
+          </ul>
         </div>
       </div>
+
+      {/* SEARCH */}
+      <div className="w-full flex justify-center">
+        <input
+          placeholder="Search..."
+          onChange={(e) => querySetOnInput(e.target.value)}
+          className="w-6xl border rounded-md p-2"
+        />
+      </div>
+
+      {/* COUNT */}
+      <div className="w-full flex justify-center">
+        <div className="w-6xl font-semibold">
+          {finalPatterns.length} Patterns
+        </div>
+      </div>
+
+      {/* GRID */}
+      <div className="w-full flex justify-center">
+        <div className="w-6xl grid grid-cols-4 gap-4">
+          {finalPatterns.map((pattern) => (
+            <PatternCards
+              key={pattern.id}
+              patterns={pattern}
+              favourites={favourites}
+              setFavourites={setFavourites}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
     </div>
   );
 };

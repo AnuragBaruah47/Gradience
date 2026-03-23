@@ -17,5 +17,3 @@ export const themeStore = create((set) => ({
       darkTheme: value,
     }),
 }));
-
-
