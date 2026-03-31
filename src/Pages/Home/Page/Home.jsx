@@ -8,6 +8,8 @@ import { gridPatterns } from "../../../Feature/Patterns/Data/Data";
 import PatternCards from "../../../Feature/Patterns/Components/PatternCards";
 import { themeStore } from "../../../Store/Store";
 import { querySearch } from "../../services/service";
+import Colorpallete from "../../../Feature/Color_Pallete_Generator/Component/Colorpallete";
+
 
 const Home = () => {
   const [category, setCategory] = useState("all");
@@ -15,6 +17,7 @@ const Home = () => {
   const [favourites, setFavourites] = useState([]);
 
   const darkTheme = themeStore((state) => state.darkTheme);
+
 
 
   useEffect(() => {
@@ -117,8 +120,12 @@ const Home = () => {
         </div>
       </div>
 
+       <div>
+        <Colorpallete/>
+      </div>
+
       {/* PATTERN SECTION */}
-      <div className="flex flex-col gap-10">
+      {/* <div className="flex flex-col gap-10">
         <div className="w-full flex justify-center">
           <div className="w-6xl text-4xl font-bold dark:text-white">
             Pattern Vault
@@ -165,7 +172,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* SEARCH */}
+
       <div className="w-full flex justify-center">
         <input
           placeholder="Search..."
@@ -174,15 +181,15 @@ const Home = () => {
         />
       </div>
 
-      {/* COUNT */}
+  
       <div className="w-full flex justify-center">
         <div className="w-6xl font-semibold">
           {finalPatterns.length} Patterns
         </div>
       </div>
 
-      {/* GRID */}
-      <div className="w-full flex justify-center">
+ 
+       <div className="w-full flex justify-center">
         <div className="w-6xl grid grid-cols-4 gap-4">
           {finalPatterns.map((pattern) => (
             <PatternCards
@@ -193,8 +200,9 @@ const Home = () => {
             />
           ))}
         </div>
-      </div>
-    </div>
+      </div> 
+    
+      </div> */}
     </div>
   );
 };
