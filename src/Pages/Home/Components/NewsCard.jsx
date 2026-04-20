@@ -9,16 +9,16 @@ const NewsCard = () => {
 
   return (
     <div
-      className="border flex items-center overflow-clip gap-2 dark:border-[#1E2129] border-[#ebe9e9] w-fit rounded-full  p-3 h-fit"
+      className="border flex items-center overflow-clip gap-2 dark:border-[#1E2129] border-[#ebe9e9] w-fit rounded-full p-2 h-fit"
       style={{
         boxShadow:
           "rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px",
       }}
     >
       <div className="flex gap-1">
-        <div className="dark:text-cyan-400 text-cyan-900">Animated</div>
-        <div className="text-black dark:text-white">
-          gradients dropping very soon.
+        <div className=" text-[14px] dark:text-cyan-400 font-bold text-cyan-900">Gradient</div>
+        <div className="text-black text-[14px] dark:text-white">
+          editor dropping very soon.
         </div>
       </div>
       <div className="h-5 w-5">

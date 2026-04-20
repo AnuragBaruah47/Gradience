@@ -41,6 +41,7 @@ const Layout = () => {
 
       <div className="nav">
         <Navbar />
+
         <Outlet />
         <Toaster
           toastOptions={{

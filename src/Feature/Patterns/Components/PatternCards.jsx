@@ -1,17 +1,34 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { cn } from "../../../Utils";
 import CopySvg from "../../../Shared/Components/CopySvg";
+import EyeSvg from "../../../Shared/Components/EyeSvg";
 import { styleStore, themeStore } from "../../../Store/Store";
 import { copyStyle, scrollToConfig } from "../Services/service";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-import EyeSvg from "../../../Shared/Components/EyeSvg";
-import StarSvg from "../../../Shared/Components/StarSvg";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const PatternCards = ({ patterns, favourites, setFavourites }) => {
+const StarIcon = ({ filled }) => (
+  <svg
+    width="14" height="14" viewBox="0 0 24 24"
+    fill={filled ? "gold" : "none"}
+    stroke={filled ? "gold" : "currentColor"}
+    strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+  >
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+);
+
+const CheckIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 6L9 17l-5-5" />
+  </svg>
+);
+
+const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
   const [copy, setCopy] = useState(false);
+  const cardRef = useRef(null);
 
   const darkTheme = themeStore((state) => state.darkTheme);
   const clearStyle = styleStore((s) => s.clearStyle);
@@ -20,167 +37,149 @@ const PatternCards = ({ patterns, favourites, setFavourites }) => {
   const id = styleStore((s) => s.id);
 
   const preview = id === patterns.id;
-
   const isFavourite = favourites.some((f) => f.id === patterns.id);
 
   useEffect(() => {
-    if (preview) {
-      setStyle(patterns.style);
-    } else {
-      clearStyle();
-    }
+    if (!cardRef.current) return;
+    gsap.fromTo(cardRef.current,
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, duration: 0.4, ease: "power2.out", delay: index * 0.045 }
+    );
+  }, []);
+
+  useEffect(() => {
+    if (preview) setStyle(patterns.style);
+    else clearStyle();
   }, [preview]);
 
   const toggleCopy = () => {
     setCopy(true);
     copyStyle(patterns);
+
+    gsap.fromTo(cardRef.current.querySelector(".copy-btn"),
+      { scale: 0.85 },
+      { scale: 1, duration: 0.3, ease: "back.out(2)" }
+    );
     setTimeout(() => setCopy(false), 2000);
   };
 
   const togglePreview = () => {
     setId(preview ? null : patterns.id);
-
-    setTimeout(() => {
-      gsap.to(window, scrollToConfig);
-    }, 200);
+    setTimeout(() => gsap.to(window, scrollToConfig), 200);
   };
 
   const toggleFavourite = () => {
-    let updated;
-
-    if (isFavourite) {
-      updated = favourites.filter((f) => f.id !== patterns.id);
-    } else {
-      updated = [...favourites, patterns];
-    }
-
+    const updated = isFavourite
+      ? favourites.filter((f) => f.id !== patterns.id)
+      : [...favourites, patterns];
     setFavourites(updated);
     localStorage.setItem("favourites", JSON.stringify(updated));
+
+    gsap.fromTo(cardRef.current.querySelector(".fav-btn"),
+      { scale: 0.7 },
+      { scale: 1, duration: 0.35, ease: "back.out(2.5)" }
+    );
   };
 
   return (
     <div
-      style={
+      ref={cardRef}
+      className={cn(
+        "group relative overflow-hidden rounded-[14px] cursor-pointer opacity-0",
+        "border transition-[border-color,box-shadow] duration-200",
+        "hover:-translate-y-1 hover:scale-[1.01] hover:shadow-xl",
+        "transition-[transform,border-color,box-shadow] duration-280",
+        "ease-[cubic-bezier(0.34,1.56,0.64,1)]",
         darkTheme
-          ? {
-              boxShadow:
-                "rgba(255, 255, 255, 0.16) 0px 10px 36px 0px, rgba(255, 255, 255, 0.06) 0px 0px 0px 1px",
-            }
-          : {
-              boxShadow:
-                "rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px",
-            }
-      }
-      className="group hover:scale-105 ease-in-out transition-all duration-350 overflow-hidden relative rounded-xl h-fit w-fit"
+          ? "border-white/10 bg-white/5 hover:border-white/20 hover:shadow-black/40"
+          : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10"
+      )}
     >
+      {/* Live badge */}
       {patterns.animated && (
-        <div
-          style={{
-            backgroundColor:
-              patterns.theme === "dark"
-                ? "rgba(255,255,255,0.1)"
-                : "rgba(0,0,0,0.1)",
-          }}
-          className="absolute gap-1 flex px-2 py-1 right-2 top-2 dark:text-white font-medium text-xs z-20 rounded-md"
-        >
-          <div
-            style={{
-              color: patterns.theme === "dark" ? "#ffffff" : "#000000",
-            }}
-          >
-            Animated
-          </div>
+        <div className="absolute top-2 left-2 z-20 px-2 py-0.5 rounded-md text-[10px] font-medium tracking-[.05em] uppercase bg-black/40 text-white">
+          Live
         </div>
       )}
 
-      <div
-        style={{
-          backgroundImage:
-            "linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%)",
-        }}
-        className="h-68 w-65 hover:scale-105 rounded-xl absolute z-10 transition-transform bg-[#aaaaaa] duration-500 translate-y-80 cursor-pointer group-hover:translate-y-0"
+      <button
+        onClick={toggleFavourite}
+        className={cn(
+          "fav-btn absolute top-2 right-2 z-20 w-6.75 h-6.75 rounded-[7px] border-none",
+          "flex items-center justify-center transition-all duration-150",
+          "bg-black/35 backdrop-blur-sm",
+          isFavourite
+            ? "opacity-100"
+            : "opacity-0 group-hover:opacity-100",
+          "hover:scale-110 active:scale-95",
+          
+          darkTheme ? "text-white" : "text-white"
+        )}
       >
-        <div className="w-full opacity-0 group-hover:opacity-100 transition-all ease-in-out duration-1200 translate-y-16 gap-3 flex justify-center flex-col items-center">
-          <div className="text-md w-58 text-center font-medium text-white">
+        <StarIcon filled={isFavourite} />
+      </button>
+
+      <div className="h-28 w-full overflow-hidden relative">
+        <div
+          style={patterns.style}
+          className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+        />
+      </div>
+
+      <div className={cn(
+        "px-3 py-2.5 flex items-center justify-between",
+        darkTheme ? "border-t border-white/8" : "border-t border-black/6"
+      )}>
+        <div className="min-w-0">
+          <div className={cn("text-[12px] font-medium truncate", darkTheme ? "text-white" : "text-gray-900")}>
             {patterns.name}
           </div>
+          <div className={cn("text-[11px] mt-0.5 capitalize", darkTheme ? "text-white/40" : "text-gray-400")}>
+            {patterns.category}
+          </div>
+        </div>
+        <div className={cn(
+          "flex gap-1 ml-2 shrink-0",
+          "opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0",
+          "transition-[opacity,transform] duration-200"
+        )}>
           <button
-            onClick={() => toggleFavourite()}
-            className="absolute z-100 right-5 -top-10"
+            onClick={togglePreview}
+            title={preview ? "Hide" : "Preview"}
+            className={cn(
+              "w-7 h-7 rounded-[7px] flex items-center justify-center",
+              "border transition-all duration-150 active:scale-90",
+              "hover:scale-110",
+              preview
+                ? darkTheme
+                  ? "bg-white text-black border-white"
+                  : "bg-gray-900 text-white border-gray-900"
+                : darkTheme
+                  ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
+                  : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
+            )}
           >
-            <div className="h-6 w-6">
-              {isFavourite ? (
-                <div>
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="yellow"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      {" "}
-                      <path
-                        d="M11.2691 4.41115C11.5006 3.89177 11.6164 3.63208 11.7776 3.55211C11.9176 3.48263 12.082 3.48263 12.222 3.55211C12.3832 3.63208 12.499 3.89177 12.7305 4.41115L14.5745 8.54808C14.643 8.70162 14.6772 8.77839 14.7302 8.83718C14.777 8.8892 14.8343 8.93081 14.8982 8.95929C14.9705 8.99149 15.0541 9.00031 15.2213 9.01795L19.7256 9.49336C20.2911 9.55304 20.5738 9.58288 20.6997 9.71147C20.809 9.82316 20.8598 9.97956 20.837 10.1342C20.8108 10.3122 20.5996 10.5025 20.1772 10.8832L16.8125 13.9154C16.6877 14.0279 16.6252 14.0842 16.5857 14.1527C16.5507 14.2134 16.5288 14.2807 16.5215 14.3503C16.5132 14.429 16.5306 14.5112 16.5655 14.6757L17.5053 19.1064C17.6233 19.6627 17.6823 19.9408 17.5989 20.1002C17.5264 20.2388 17.3934 20.3354 17.2393 20.3615C17.0619 20.3915 16.8156 20.2495 16.323 19.9654L12.3995 17.7024C12.2539 17.6184 12.1811 17.5765 12.1037 17.56C12.0352 17.5455 11.9644 17.5455 11.8959 17.56C11.8185 17.5765 11.7457 17.6184 11.6001 17.7024L7.67662 19.9654C7.18404 20.2495 6.93775 20.3915 6.76034 20.3615C6.60623 20.3354 6.47319 20.2388 6.40075 20.1002C6.31736 19.9408 6.37635 19.6627 6.49434 19.1064L7.4341 14.6757C7.46898 14.5112 7.48642 14.429 7.47814 14.3503C7.47081 14.2807 7.44894 14.2134 7.41394 14.1527C7.37439 14.0842 7.31195 14.0279 7.18708 13.9154L3.82246 10.8832C3.40005 10.5025 3.18884 10.3122 3.16258 10.1342C3.13978 9.97956 3.19059 9.82316 3.29993 9.71147C3.42581 9.58288 3.70856 9.55304 4.27406 9.49336L8.77835 9.01795C8.94553 9.00031 9.02911 8.99149 9.10139 8.95929C9.16534 8.93081 9.2226 8.8892 9.26946 8.83718C9.32241 8.77839 9.35663 8.70162 9.42508 8.54808L11.2691 4.41115Z"
-                        stroke="#FFFFFF"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      ></path>{" "}
-                    </g>
-                  </svg>
-                </div>
-              ) : (
-                <StarSvg />
-              )}
-            </div>
+            <EyeSvg className="w-3.5 h-3.5" />
           </button>
 
           <button
-            onClick={() => togglePreview()}
-            className="flex hover:cursor-pointer h-10 w-50 justify-center items-center hover:scale-105 transition-all ease-in-out duration-300 bg-black rounded-xl"
+            onClick={toggleCopy}
+            title={copy ? "Copied!" : "Copy"}
+            className={cn(
+              "copy-btn w-7 h-7 rounded-[7px] flex items-center justify-center",
+              "border transition-all duration-150 active:scale-90",
+              "hover:scale-110",
+              copy
+                ? "bg-green-500 border-green-500 text-white"
+                : darkTheme
+                  ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
+                  : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
+            )}
           >
-            <div className="h-5 w-5">
-              {" "}
-              <EyeSvg />
-            </div>
-            <div className="text-white">{preview ? "Hide" : "Preview"}</div>
-          </button>
-
-          <button
-            style={{ backgroundColor: copy ? "#66FF00" : "#ffffff" }}
-            onClick={() => toggleCopy()}
-            className="flex active:scale-95 h-10 w-50 items-center justify-center hover:scale-105 transition-all ease-in-out duration-300 rounded-xl"
-          >
-            <div className="h-6 w-6">
-              {copy ? (
-                <svg viewBox="0 -0.5 25 25">
-                  <path
-                    d="M5.5 12.5L10.167 17L19.5 8"
-                    stroke="#000"
-                    strokeWidth="1.5"
-                  />
-                </svg>
-              ) : (
-                <CopySvg />
-              )}
-            </div>
-
-            <div>{copy ? "Copied" : "Copy"}</div>
+            {copy ? <CheckIcon /> : <CopySvg className="w-3.5 h-3.5" />}
           </button>
         </div>
       </div>
-
-      <div
-        style={patterns.style}
-        className={cn(
-          "h-68 w-65 rounded-xl cursor-pointer shadow-2xs transition-all duration-500 hover:scale-105",
-        )}
-      />
     </div>
   );
 };
