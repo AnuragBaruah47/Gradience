@@ -39,8 +39,14 @@ const Layout = () => {
         className="min-h-screen -z-10 fixed w-full"
       />
 
-      <div className="nav">
-        <Navbar />
+      <div className="relative">
+        <div className="w-full flex justify-center">
+   <div className="absolute z-100">
+             <Navbar />
+        </div>
+     
+        </div>
+     
 
         <Outlet />
         <Toaster

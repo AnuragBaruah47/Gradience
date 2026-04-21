@@ -154,7 +154,7 @@ const GradientGenerator = () => {
         onClick={generate}
         disabled={loading}
         className={cn(
-          "w-full h-11 rounded-xl border-none cursor-pointer",
+          "  h-11 rounded-xl border-none cursor-pointer",
           "flex items-center justify-center gap-2",
           "text-[14px] font-medium font-sans",
           "bg-gray-900 text-white dark:bg-white dark:text-black",

@@ -65,7 +65,7 @@ const Swatch = ({ color, index }) => {
       className="relative flex-1 cursor-pointer opacity-0 overflow-hidden transition-[flex] duration-350  ease-in-out hover:flex-[2.2]"
       style={{ backgroundColor: color.hex }}
     >
-      {/* Content — slides up on hover */}
+
       <div className="absolute inset-0 flex flex-col justify-end items-center pb-4 px-2 gap-1
         opacity-0 hover:opacity-100 transition-opacity duration-200">
         <div
@@ -144,8 +144,6 @@ const Colorpallete = () => {
 
   return (
     <div className="flex flex-col overflow-hidden rounded-2xl border border-black/8 dark:border-white/10">
-
-      {/* Toolbar */}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-black/6 dark:border-white/8 bg-white dark:bg-gray-950 gap-3">
         <div className="flex items-center gap-2">
           <span className="text-[14px] font-medium dark:text-white">Color palette</span>
@@ -158,7 +156,7 @@ const Colorpallete = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          {/* Harmony pills */}
+    
           <div className="flex gap-0.5 bg-gray-100 dark:bg-white/5 rounded-[9px] p-0.5 border border-black/6 dark:border-white/8">
             {HARMONIES.map((h) => (
               <button
@@ -175,7 +173,6 @@ const Colorpallete = () => {
             ))}
           </div>
 
-          {/* Custom button */}
           <button
             onClick={() => setModalOpen(true)}
             className="flex items-center gap-1.5 h-8.5 px-3.5 rounded-[9px] text-[12px] font-medium
@@ -187,14 +184,13 @@ const Colorpallete = () => {
         </div>
       </div>
 
-      {/* Swatches */}
       <div className="flex h-80">
         {palette?.map((color, i) => (
           <Swatch key={color.hex + i} color={color} index={i} />
         ))}
       </div>
 
-      {/* Modal */}
+  
       {modalOpen && (
         <div
           className="absolute inset-0 z-50 flex items-center justify-center bg-black/45"

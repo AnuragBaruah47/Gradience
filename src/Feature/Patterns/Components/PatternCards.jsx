@@ -32,9 +32,11 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
 
   const darkTheme = themeStore((state) => state.darkTheme);
   const clearStyle = styleStore((s) => s.clearStyle);
+const setTheme = themeStore((s) => s.setTheme);
   const setStyle = styleStore((s) => s.setStyle);
   const setId = styleStore((s) => s.setId);
   const id = styleStore((s) => s.id);
+  const style = styleStore((s)=>s.style)
 
   const preview = id === patterns.id;
   const isFavourite = favourites.some((f) => f.id === patterns.id);
@@ -66,6 +68,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
   const togglePreview = () => {
     setId(preview ? null : patterns.id);
     setTimeout(() => gsap.to(window, scrollToConfig), 200);
+    setTheme(style.theme)
   };
 
   const toggleFavourite = () => {
@@ -95,7 +98,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
           : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10"
       )}
     >
-      {/* Live badge */}
+   
       {patterns.animated && (
         <div className="absolute top-2 left-2 z-20 px-2 py-0.5 rounded-md text-[10px] font-medium tracking-[.05em] uppercase bg-black/40 text-white">
           Live

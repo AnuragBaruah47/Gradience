@@ -11,7 +11,6 @@ export const styleStore = create((set) => ({
 
 export const themeStore = create((set) => ({
   darkTheme: false,
-
   setTheme: (value) =>
     set({
       darkTheme: value,

@@ -1,6 +1,6 @@
 export const FeatureCard = ({ icon, title, description, bgColor }) => {
   return (
-  <div className="flex items-center shadow-md cursor-pointer gap-4 p-4 rounded-2xl bg-white border border-black/10 hover:shadow-[5px_5px_0_rgba(240,46,170,0.4),10px_10px_0_rgba(240,46,170,0.3),15px_15px_0_rgba(240,46,170,0.2),20px_20px_0_rgba(240,46,170,0.1),25px_25px_0_rgba(240,46,170,0.05)] duration-700 ease-in-out transition-all">
+  <div className="flex items-center shadow-md cursor-pointer gap-4 p-4 rounded-2xl bg-white border border-black/10 duration-700 ease-in-out transition-all">
       <div
         className={` group p-2  rounded-xl ${bgColor}`}
       >
