@@ -6,12 +6,10 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
   {/* Aurora Bloom Background */}
   <div
@@ -31,14 +29,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Horizon Glow Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -46,7 +41,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #6366f1 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -56,14 +50,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #7c3aed 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Royal Halo Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -71,7 +62,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #7c3aed 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -81,14 +71,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #7c3aed 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Amethyst Pulse Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -96,7 +83,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #7c3aed 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -106,14 +92,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #38bdf8 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Sky Radiance Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -121,7 +104,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #38bdf8 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -131,14 +113,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #38bdf8 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Ocean Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -146,7 +125,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #38bdf8 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -156,14 +134,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #10b981 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Emerald Aura Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -171,7 +146,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #10b981 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -181,14 +155,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Verdant Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -196,7 +167,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #10b981 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -206,14 +176,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f59e0b 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Solar Flare Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -221,7 +188,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #f59e0b 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -231,14 +197,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Golden Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -246,7 +209,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #f59e0b 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -256,14 +218,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #ec4899 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Rose Bloom Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -271,7 +230,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #ec4899 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -281,14 +239,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Blush Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -296,7 +251,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #ec4899 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -306,14 +260,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #475569 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Slate Halo Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -321,10 +272,8 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #ffffff 40%, #475569 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
-
   {
     id: "slate-horizon",
     name: "Slate Horizon",
@@ -332,14 +281,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #475569 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Slate Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -347,7 +293,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #ffffff 40%, #475569 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -357,14 +302,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Midnight Bloom Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -372,7 +314,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -382,14 +323,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #0d1a36 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Midnight Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -397,7 +335,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #0d1a36 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -407,14 +344,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b0707 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Crimson Abyss Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -422,7 +356,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b0707 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -432,14 +365,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b0707 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Crimson Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -447,7 +377,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b0707 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -457,14 +386,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #072607 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Emerald Void Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -472,7 +398,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #072607 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -482,14 +407,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #072607 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Emerald Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -497,7 +419,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #072607 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -507,14 +428,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b092b 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Violet Abyss Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -522,7 +440,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #2b092b 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -532,14 +449,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b092b 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Violet Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -547,7 +461,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #2b092b 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -557,14 +470,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #010133 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Azure Depths Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -572,7 +482,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #010133 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -582,14 +491,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #010133 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Azure Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -597,7 +503,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #010133 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -607,14 +512,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Orchid Nebula Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -622,7 +524,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 10%, #000000 40%, #350136 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -632,14 +533,11 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #350136 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Orchid Horizon Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -647,7 +545,6 @@ export const gridPatterns = [
         "radial-gradient(125% 125% at 50% 90%, #000000 40%, #350136 100%)"
     }}
   />
-  {/* Your Content */}
 </div>`,
   },
   {
@@ -657,14 +554,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(120% 120% at 50% 50%, #ffffff 35%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Center Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -681,14 +575,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(120% 120% at 0% 0%, #ffffff 35%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Corner Glow Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -705,14 +596,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(120% 120% at 100% 0%, #ffffff 35%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Corner Right Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -729,14 +617,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(120% 120% at 0% 100%, #ffffff 35%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Corner Bottom Left Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -753,14 +638,11 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background:
         "radial-gradient(120% 120% at 100% 100%, #ffffff 35%, #6366f1 100%)",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Corner Bottom Right Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -777,7 +659,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -785,9 +666,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 80% 80%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Dual Aurora Glow Background */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -807,7 +686,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -815,9 +693,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 100% 100%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Dual Horizon Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -837,7 +713,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -845,9 +720,7 @@ export const gridPatterns = [
       radial-gradient(circle 500px at 75% 30%, #a78bfa, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Twin Halo */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -867,7 +740,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -876,9 +748,7 @@ export const gridPatterns = [
       radial-gradient(circle 500px at 50% 80%, #a78bfa, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Tri Aurora Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -899,7 +769,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -907,9 +776,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 80% 80%, #0ea5e9, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cosmic Dual Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -929,7 +796,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -937,9 +803,7 @@ export const gridPatterns = [
       radial-gradient(circle 500px at 70% 30%, #ec4899, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Nebula Twin Light */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -959,7 +823,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -968,9 +831,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 50% 80%, #0ea5e9, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Deep Space Tri Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -991,16 +852,13 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
       radial-gradient(circle 700px at -10% 50%, #6366f1, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Edge Left */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1019,16 +877,13 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
       radial-gradient(circle 700px at 110% 50%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Edge Right */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1047,16 +902,13 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
       radial-gradient(circle 700px at 50% -20%, #6366f1, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Edge Top */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1075,16 +927,13 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
       radial-gradient(circle 700px at 50% 120%, #6366f1, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Edge Bottom */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1103,7 +952,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1111,9 +959,7 @@ export const gridPatterns = [
       radial-gradient(circle 700px at 110% 50%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Dual Edge Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1133,7 +979,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1141,9 +986,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 80% 80%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Cross Light */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1163,16 +1006,13 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
       radial-gradient(circle 900px at 50% 30%, #6366f1, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Spotlight */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1191,7 +1031,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1199,9 +1038,7 @@ export const gridPatterns = [
       radial-gradient(circle 700px at 70% 40%, #38bdf8, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Halo Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1221,7 +1058,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1230,9 +1066,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 50% 80%, #0ea5e9, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cosmic Glow Canvas */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1253,7 +1087,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1262,9 +1095,7 @@ export const gridPatterns = [
       radial-gradient(circle 700px at 50% 80%, #a78bfa, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Bloom Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1285,7 +1116,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1293,9 +1123,7 @@ export const gridPatterns = [
       radial-gradient(circle 800px at 80% 60%, #1e40af, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Celestial Dual Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1315,7 +1143,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1324,9 +1151,7 @@ export const gridPatterns = [
       radial-gradient(circle 600px at 50% 75%, #22c55e, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Nebula Glow Matrix */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1347,7 +1172,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "linear-gradient(to bottom, #ffffff, #f8fafc)",
       backgroundImage: `
@@ -1355,9 +1179,7 @@ export const gridPatterns = [
       linear-gradient(to bottom, #ffffff, #f8fafc)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Horizon Blend */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1377,7 +1199,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "linear-gradient(180deg, #000000, #020617)",
       backgroundImage: `
@@ -1385,9 +1206,7 @@ export const gridPatterns = [
       radial-gradient(circle 700px at 70% 70%, #0ea5e9, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Nebula Gradient Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1407,7 +1226,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "linear-gradient(135deg, #020617, #000000)",
       backgroundImage: `
@@ -1415,9 +1233,7 @@ export const gridPatterns = [
       radial-gradient(circle 700px at 80% 20%, #1e40af, transparent)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cosmic Light Sweep */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1430,6 +1246,9 @@ export const gridPatterns = [
   />
 </div>`,
   },
+
+  // ── MESH ──────────────────────────────────────────────────────────────────
+
   {
     id: "aurora-mesh-field",
     name: "Aurora Mesh Field",
@@ -1437,7 +1256,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1446,9 +1264,7 @@ export const gridPatterns = [
       radial-gradient(circle at 40% 80%, #a78bfa, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Mesh Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1469,7 +1285,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1478,9 +1293,7 @@ export const gridPatterns = [
       radial-gradient(circle at 50% 75%, #1e40af, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Nebula Mesh Gradient */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1501,7 +1314,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1510,9 +1322,7 @@ export const gridPatterns = [
       radial-gradient(circle at 60% 80%, #22c55e, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cosmic Mesh Bloom */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1533,7 +1343,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1543,9 +1352,7 @@ export const gridPatterns = [
       radial-gradient(circle at 80% 80%, #22c55e, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Aurora Mesh Grid */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1567,7 +1374,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1577,9 +1383,7 @@ export const gridPatterns = [
       radial-gradient(circle at 70% 70%, #22c55e, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Nebula Mesh Spectrum */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1601,7 +1405,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1612,9 +1415,7 @@ export const gridPatterns = [
       radial-gradient(circle at 50% 40%, #a855f7, transparent 50%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cosmic Mesh Canvas */}
   <div
     className="absolute inset-0 z-0"
     style={{
@@ -1637,7 +1438,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1647,19 +1447,17 @@ export const gridPatterns = [
     `,
       filter: "blur(40px)",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Blur Mesh */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 20% 30%, rgba(99,102,241,0.5), transparent 60%),
         radial-gradient(circle at 80% 30%, rgba(56,189,248,0.5), transparent 60%),
         radial-gradient(circle at 50% 80%, rgba(167,139,250,0.5), transparent 60%)
       \`,
-      filter:"blur(40px)"
+      filter: "blur(40px)"
     }}
   />
 </div>`,
@@ -1671,7 +1469,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1681,19 +1478,17 @@ export const gridPatterns = [
     `,
       filter: "blur(45px)",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Nebula Blur Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 25% 25%, rgba(124,58,237,0.6), transparent 60%),
         radial-gradient(circle at 75% 35%, rgba(14,165,233,0.6), transparent 60%),
         radial-gradient(circle at 50% 80%, rgba(30,64,175,0.6), transparent 60%)
       \`,
-      filter:"blur(45px)"
+      filter: "blur(45px)"
     }}
   />
 </div>`,
@@ -1705,7 +1500,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1716,20 +1510,18 @@ export const gridPatterns = [
     `,
       filter: "blur(50px)",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Blur Canvas */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020617",
-      backgroundImage:\`
+      background: "#020617",
+      backgroundImage: \`
         radial-gradient(circle at 20% 30%, rgba(124,58,237,0.5), transparent 60%),
         radial-gradient(circle at 80% 20%, rgba(30,64,175,0.5), transparent 60%),
         radial-gradient(circle at 40% 75%, rgba(14,165,233,0.5), transparent 60%),
         radial-gradient(circle at 70% 80%, rgba(34,197,94,0.5), transparent 60%)
       \`,
-      filter:"blur(50px)"
+      filter: "blur(50px)"
     }}
   />
 </div>`,
@@ -1741,7 +1533,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1750,14 +1541,12 @@ export const gridPatterns = [
       url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E")
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Noise Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 25% 30%, rgba(99,102,241,0.5), transparent 60%),
         radial-gradient(circle at 75% 30%, rgba(56,189,248,0.5), transparent 60%),
         url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E")
@@ -1773,7 +1562,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1783,14 +1571,12 @@ export const gridPatterns = [
       url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E")
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Grain Canvas */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020617",
-      backgroundImage:\`
+      background: "#020617",
+      backgroundImage: \`
         radial-gradient(circle at 20% 40%, rgba(124,58,237,0.5), transparent 60%),
         radial-gradient(circle at 80% 30%, rgba(30,64,175,0.5), transparent 60%),
         radial-gradient(circle at 50% 80%, rgba(14,165,233,0.5), transparent 60%),
@@ -1800,6 +1586,9 @@ export const gridPatterns = [
   />
 </div>`,
   },
+
+  // ── DECORATIVE (continued) ────────────────────────────────────────────────
+
   {
     id: "aurora-atmosphere",
     name: "Aurora Atmosphere",
@@ -1807,7 +1596,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "linear-gradient(to bottom, #ffffff, #f1f5f9)",
       backgroundImage: `
@@ -1815,14 +1603,12 @@ export const gridPatterns = [
       radial-gradient(circle at 30% 40%, rgba(56,189,248,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Atmosphere */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"linear-gradient(to bottom, #ffffff, #f1f5f9)",
-      backgroundImage:\`
+      background: "linear-gradient(to bottom, #ffffff, #f1f5f9)",
+      backgroundImage: \`
         radial-gradient(circle at 50% 10%, rgba(99,102,241,0.5), transparent 60%),
         radial-gradient(circle at 30% 40%, rgba(56,189,248,0.4), transparent 60%)
       \`
@@ -1837,7 +1623,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "linear-gradient(to bottom, #020617, #000000)",
       backgroundImage: `
@@ -1845,14 +1630,12 @@ export const gridPatterns = [
       radial-gradient(circle at 70% 70%, rgba(14,165,233,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Nebula Horizon Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"linear-gradient(to bottom, #020617, #000000)",
-      backgroundImage:\`
+      background: "linear-gradient(to bottom, #020617, #000000)",
+      backgroundImage: \`
         radial-gradient(circle at 50% 90%, rgba(124,58,237,0.6), transparent 60%),
         radial-gradient(circle at 70% 70%, rgba(14,165,233,0.4), transparent 60%)
       \`
@@ -1860,7 +1643,6 @@ export const gridPatterns = [
   />
 </div>`,
   },
-
   {
     id: "aurora-light-wave",
     name: "Aurora Light Wave",
@@ -1868,7 +1650,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1876,14 +1657,12 @@ export const gridPatterns = [
       radial-gradient(circle at 30% 30%, rgba(99,102,241,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Light Wave */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         linear-gradient(120deg, #ffffff 40%, #e0e7ff 70%, #bae6fd 100%),
         radial-gradient(circle at 30% 30%, rgba(99,102,241,0.4), transparent 60%)
       \`
@@ -1898,7 +1677,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1906,14 +1684,12 @@ export const gridPatterns = [
       radial-gradient(circle at 60% 40%, rgba(124,58,237,0.5), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Nebula Gradient Band */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020617",
-      backgroundImage:\`
+      background: "#020617",
+      backgroundImage: \`
         linear-gradient(120deg, #020617 40%, #1e1b4b 70%, #312e81 100%),
         radial-gradient(circle at 60% 40%, rgba(124,58,237,0.5), transparent 60%)
       \`
@@ -1928,7 +1704,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -1936,14 +1711,12 @@ export const gridPatterns = [
       radial-gradient(circle at 30% 60%, rgba(14,165,233,0.5), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Light Flow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         linear-gradient(140deg, #000000 40%, #1e293b 70%, #020617 100%),
         radial-gradient(circle at 30% 60%, rgba(14,165,233,0.5), transparent 60%)
       \`
@@ -1958,7 +1731,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -1967,14 +1739,12 @@ export const gridPatterns = [
       radial-gradient(circle at 70% 60%, rgba(56,189,248,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Gradient Layers */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         linear-gradient(180deg, #ffffff 40%, #f1f5f9 100%),
         radial-gradient(circle at 40% 20%, rgba(99,102,241,0.5), transparent 60%),
         radial-gradient(circle at 70% 60%, rgba(56,189,248,0.4), transparent 60%)
@@ -1990,7 +1760,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -1999,14 +1768,12 @@ export const gridPatterns = [
       radial-gradient(circle at 70% 70%, rgba(14,165,233,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Nebula Light Layers */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020617",
-      backgroundImage:\`
+      background: "#020617",
+      backgroundImage: \`
         linear-gradient(180deg, #020617 40%, #000000 100%),
         radial-gradient(circle at 30% 30%, rgba(124,58,237,0.5), transparent 60%),
         radial-gradient(circle at 70% 70%, rgba(14,165,233,0.4), transparent 60%)
@@ -2022,7 +1789,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -2031,14 +1797,12 @@ export const gridPatterns = [
       radial-gradient(circle at 80% 30%, rgba(30,64,175,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Depth Gradient */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         linear-gradient(180deg, #000000 40%, #020617 100%),
         radial-gradient(circle at 20% 40%, rgba(124,58,237,0.5), transparent 60%),
         radial-gradient(circle at 80% 30%, rgba(30,64,175,0.4), transparent 60%)
@@ -2054,7 +1818,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -2062,14 +1825,12 @@ export const gridPatterns = [
       linear-gradient(180deg, #ffffff, #f8fafc)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Spotlight Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 50% 30%, rgba(99,102,241,0.6), transparent 60%),
         linear-gradient(180deg, #ffffff, #f8fafc)
       \`
@@ -2084,7 +1845,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#020617",
       backgroundImage: `
@@ -2092,14 +1852,12 @@ export const gridPatterns = [
       linear-gradient(180deg, #020617, #000000)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Nebula Glow Spotlight */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020617",
-      backgroundImage:\`
+      background: "#020617",
+      backgroundImage: \`
         radial-gradient(circle at 50% 40%, rgba(124,58,237,0.6), transparent 60%),
         linear-gradient(180deg, #020617, #000000)
       \`
@@ -2114,7 +1872,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -2122,14 +1879,12 @@ export const gridPatterns = [
       linear-gradient(180deg, #000000, #020617)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Focus Light */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(14,165,233,0.5), transparent 60%),
         linear-gradient(180deg, #000000, #020617)
       \`
@@ -2137,7 +1892,6 @@ export const gridPatterns = [
   />
 </div>`,
   },
-
   {
     id: "aurora-edge-halo",
     name: "Aurora Edge Halo",
@@ -2145,7 +1899,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -2154,14 +1907,12 @@ export const gridPatterns = [
       linear-gradient(180deg, #ffffff, #f8fafc)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Edge Halo */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 50% -10%, rgba(99,102,241,0.5), transparent 60%),
         radial-gradient(circle at 50% 110%, rgba(56,189,248,0.4), transparent 60%),
         linear-gradient(180deg, #ffffff, #f8fafc)
@@ -2177,7 +1928,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -2187,14 +1937,12 @@ export const gridPatterns = [
       radial-gradient(circle at 120% 50%, rgba(34,197,94,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cosmic Border Light */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% -20%, rgba(124,58,237,0.4), transparent 60%),
         radial-gradient(circle at 50% 120%, rgba(30,64,175,0.4), transparent 60%),
         radial-gradient(circle at -20% 50%, rgba(14,165,233,0.4), transparent 60%),
@@ -2204,6 +1952,9 @@ export const gridPatterns = [
   />
 </div>`,
   },
+
+  // ── GEOMETRIC ─────────────────────────────────────────────────────────────
+
   {
     id: "soft-grid-lines",
     name: "Soft Grid Lines",
@@ -2211,7 +1962,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2220,18 +1970,16 @@ export const gridPatterns = [
     `,
       backgroundSize: "40px 40px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Soft Grid Lines */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)
       \`,
-      backgroundSize:"40px 40px"
+      backgroundSize: "40px 40px"
     }}
   />
 </div>`,
@@ -2243,7 +1991,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2251,17 +1998,15 @@ export const gridPatterns = [
     `,
       backgroundSize: "24px 24px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Dot Matrix */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle, rgba(0,0,0,0.15) 1px, transparent 1px)
       \`,
-      backgroundSize:"24px 24px"
+      backgroundSize: "24px 24px"
     }}
   />
 </div>`,
@@ -2273,7 +2018,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2286,14 +2030,12 @@ export const gridPatterns = [
       )
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Diagonal Lines */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         repeating-linear-gradient(
           45deg,
           rgba(0,0,0,0.05),
@@ -2307,103 +2049,12 @@ export const gridPatterns = [
 </div>`,
   },
   {
-    id: "glass-glow",
-    name: "Glass Glow",
-    category: "effects",
-    theme: "light",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#ffffff",
-      backdropFilter: "blur(40px)",
-      backgroundImage: `
-      radial-gradient(circle at 50% 30%, rgba(99,102,241,0.35), transparent 60%)
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Glass Glow */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#ffffff",
-      backdropFilter:"blur(40px)",
-      backgroundImage:\`
-        radial-gradient(circle at 50% 30%, rgba(99,102,241,0.35), transparent 60%)
-      \`
-    }}
-  />
-</div>`,
-  },
-  {
-    id: "noise-overlay",
-    name: "Noise Overlay",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E")
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Noise Overlay */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#000000",
-      backgroundImage:\`
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E")
-      \`
-    }}
-  />
-</div>`,
-  },
-  {
-    id: "gradient-blur-glow",
-    name: "Gradient Blur Glow",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#020617",
-      backgroundImage: `
-      radial-gradient(circle at 40% 40%, rgba(124,58,237,0.5), transparent 60%),
-      radial-gradient(circle at 70% 70%, rgba(14,165,233,0.5), transparent 60%)
-    `,
-      filter: "blur(40px)",
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Gradient Blur Glow */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#020617",
-      backgroundImage:\`
-        radial-gradient(circle at 40% 40%, rgba(124,58,237,0.5), transparent 60%),
-        radial-gradient(circle at 70% 70%, rgba(14,165,233,0.5), transparent 60%)
-      \`,
-      filter:"blur(40px)"
-    }}
-  />
-</div>`,
-  },
-  {
     id: "hex-grid",
     name: "Hex Grid",
     category: "geometric",
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2423,28 +2074,14 @@ export const gridPatterns = [
       )
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Hex Grid */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
-        repeating-linear-gradient(
-          60deg,
-          rgba(0,0,0,0.05) 0px,
-          rgba(0,0,0,0.05) 2px,
-          transparent 2px,
-          transparent 40px
-        ),
-        repeating-linear-gradient(
-          -60deg,
-          rgba(0,0,0,0.05) 0px,
-          rgba(0,0,0,0.05) 2px,
-          transparent 2px,
-          transparent 40px
-        )
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
+        repeating-linear-gradient(60deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 40px),
+        repeating-linear-gradient(-60deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 40px)
       \`
     }}
   />
@@ -2457,7 +2094,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2477,28 +2113,14 @@ export const gridPatterns = [
       )
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Cross Hatch */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
-        repeating-linear-gradient(
-          45deg,
-          rgba(0,0,0,0.04),
-          rgba(0,0,0,0.04) 2px,
-          transparent 2px,
-          transparent 20px
-        ),
-        repeating-linear-gradient(
-          -45deg,
-          rgba(0,0,0,0.04),
-          rgba(0,0,0,0.04) 2px,
-          transparent 2px,
-          transparent 20px
-        )
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
+        repeating-linear-gradient(45deg, rgba(0,0,0,0.04), rgba(0,0,0,0.04) 2px, transparent 2px, transparent 20px),
+        repeating-linear-gradient(-45deg, rgba(0,0,0,0.04), rgba(0,0,0,0.04) 2px, transparent 2px, transparent 20px)
       \`
     }}
   />
@@ -2511,7 +2133,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2531,34 +2152,19 @@ export const gridPatterns = [
       )
     `,
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Wave Grid */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
-        repeating-linear-gradient(
-          0deg,
-          rgba(0,0,0,0.04),
-          rgba(0,0,0,0.04) 1px,
-          transparent 1px,
-          transparent 30px
-        ),
-        repeating-linear-gradient(
-          90deg,
-          rgba(0,0,0,0.04),
-          rgba(0,0,0,0.04) 1px,
-          transparent 1px,
-          transparent 30px
-        )
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
+        repeating-linear-gradient(0deg, rgba(0,0,0,0.04), rgba(0,0,0,0.04) 1px, transparent 1px, transparent 30px),
+        repeating-linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.04) 1px, transparent 1px, transparent 30px)
       \`
     }}
   />
 </div>`,
   },
-
   {
     id: "isometric-grid",
     name: "Isometric Grid",
@@ -2566,7 +2172,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2576,19 +2181,17 @@ export const gridPatterns = [
     `,
       backgroundSize: "40px 40px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Isometric Grid */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(60deg, rgba(0,0,0,0.04) 1px, transparent 1px),
         linear-gradient(-60deg, rgba(0,0,0,0.04) 1px, transparent 1px),
         linear-gradient(0deg, rgba(0,0,0,0.04) 1px, transparent 1px)
       \`,
-      backgroundSize:"40px 40px"
+      backgroundSize: "40px 40px"
     }}
   />
 </div>`,
@@ -2600,7 +2203,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2609,18 +2211,16 @@ export const gridPatterns = [
     `,
       backgroundSize: "30px 30px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Square Mesh */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px)
       \`,
-      backgroundSize:"30px 30px"
+      backgroundSize: "30px 30px"
     }}
   />
 </div>`,
@@ -2632,7 +2232,6 @@ export const gridPatterns = [
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -2640,17 +2239,15 @@ export const gridPatterns = [
     `,
       backgroundSize: "20px 20px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Dot Wave */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle, rgba(0,0,0,0.12) 1px, transparent 1px)
       \`,
-      backgroundSize:"20px 20px"
+      backgroundSize: "20px 20px"
     }}
   />
 </div>`,
@@ -2662,7 +2259,6 @@ export const gridPatterns = [
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#020617",
       backgroundImage: `
@@ -2671,392 +2267,16 @@ export const gridPatterns = [
     `,
       backgroundSize: "40px 40px",
     },
-
     code: `<div className="min-h-screen w-full relative">
-  {/* Tech Circuit Grid */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#020617",
-      backgroundImage:\`
-        linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px)
-      \`,
-      backgroundSize:"40px 40px"
-    }}
-  />
-</div>`,
-  },
-  {
-    id: "animated-gradient-flow",
-    name: "Animated Gradient Flow",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
-      background: "linear-gradient(270deg, #7c3aed, #0ea5e9, #22c55e)",
-      backgroundSize: "600% 600%",
-      animation: "gradientFlow 12s ease infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes gradientFlow {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background: "linear-gradient(270deg,#7c3aed,#0ea5e9,#22c55e)",
-      backgroundSize: "600% 600%",
-      animation: "gradientFlow 12s ease infinite"
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "floating-glow-orbs",
-    name: "Floating Glow Orbs",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
-      background: "#020617",
-      backgroundImage: `
-      radial-gradient(circle at 30% 40%, rgba(124,58,237,0.6), transparent 60%),
-      radial-gradient(circle at 70% 60%, rgba(14,165,233,0.6), transparent 60%)
-    `,
-      backgroundSize: "200% 200%",
-      animation: "orbFloat 5s ease-in-out infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes orbFloat {
-    0% { background-position: 20% 40%, 80% 60%; }
-    50% { background-position: 40% 60%, 60% 40%; }
-    100% { background-position: 20% 40%, 80% 60%; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#020617",
-      backgroundImage:\`
-        radial-gradient(circle at 30% 40%, rgba(124,58,237,0.6), transparent 60%),
-        radial-gradient(circle at 70% 60%, rgba(14,165,233,0.6), transparent 60%)
-      \`,
-      backgroundSize:"200% 200%",
-      animation:"orbFloat 18s ease-in-out infinite"
-    }}
-  />
-
-</div>`,
-  },
-
-  {
-    id: "animated-mesh-gradient",
-    name: "Animated Mesh Gradient",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
-      background: "#020617",
-      backgroundImage: `
-      radial-gradient(circle at 20% 30%, rgba(124,58,237,0.5), transparent 60%),
-      radial-gradient(circle at 80% 70%, rgba(14,165,233,0.5), transparent 60%)
-    `,
-      backgroundSize: "200% 200%",
-      animation: "meshMove 20s ease infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes meshMove {
-    0% { background-position: 20% 30%, 80% 70%; }
-    50% { background-position: 40% 60%, 60% 40%; }
-    100% { background-position: 20% 30%, 80% 70%; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#020617",
-      backgroundImage:\`
-        radial-gradient(circle at 20% 30%, rgba(124,58,237,0.5), transparent 60%),
-        radial-gradient(circle at 80% 70%, rgba(14,165,233,0.5), transparent 60%)
-      \`,
-      backgroundSize:"200% 200%",
-      animation:"meshMove 20s ease infinite"
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "aurora-wave-motion",
-    name: "Aurora Wave Motion",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
-      background: "linear-gradient(270deg,#6366f1,#0ea5e9,#22c55e)",
-      backgroundSize: "400% 400%",
-      animation: "auroraWave 12s ease infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes auroraWave {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"linear-gradient(270deg,#6366f1,#0ea5e9,#22c55e)",
-      backgroundSize:"400% 400%",
-      animation:"auroraWave 12s ease infinite"
-    }}
-  />
-</div>`,
-  },
-  {
-    id: "grid-scan-effect",
-    name: "Grid Scan Effect",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
       backgroundColor: "#020617",
-      backgroundImage: `
-      linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px)
-    `,
-      backgroundSize: "40px 40px",
-      animation: "gridScan 6s linear infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes gridScan {
-    0% { background-position: 0 0, 0 0; }
-    100% { background-position: 0 40px, 40px 0; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundColor:"#020617",
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px)
       \`,
-      backgroundSize:"40px 40px",
-      animation:"gridScan 6s linear infinite"
-    }}
-  />
-</div>`,
-  },
-
-  {
-    id: "floating-gradient-clouds",
-    name: "Floating Gradient Clouds",
-    category: "animated",
-    theme: "dark",
-    animated: true,
-    badge: "Animated",
-
-    style: {
-      background: "#020617",
-      backgroundImage: `
-      radial-gradient(circle at 30% 40%, rgba(124,58,237,0.5), transparent 60%),
-      radial-gradient(circle at 70% 60%, rgba(14,165,233,0.5), transparent 60%)
-    `,
-      backgroundSize: "300% 300%",
-      animation: "cloudFloat 25s ease infinite",
-    },
-
-    animatedContainer: `
-  <style>
-  @keyframes cloudFloat {
-    0% { background-position: 20% 40%, 80% 60%; }
-    50% { background-position: 40% 60%, 60% 40%; }
-    100% { background-position: 20% 40%, 80% 60%; }
-  }
-  </style>
-  `,
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#020617",
-      backgroundImage:\`
-        radial-gradient(circle at 30% 40%, rgba(124,58,237,0.5), transparent 60%),
-        radial-gradient(circle at 70% 60%, rgba(14,165,233,0.5), transparent 60%)
-      \`,
-      backgroundSize:"300% 300%",
-      animation:"cloudFloat 25s ease infinite"
-    }}
-  />
-</div>`,
-  },
-  {
-    id: "glow-ring",
-    name: "Glow Ring",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#020617",
-      backgroundImage: `
-      radial-gradient(circle at center,
-      transparent 40%,
-      rgba(99,102,241,0.4) 41%,
-      transparent 50%)
-    `,
-    },
-
-    code: `<div className="absolute inset-0"
-style={{
-background:"#020617",
-backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,241,0.4) 41%, transparent 50%)"
-}} />`,
-  },
-
-  {
-    id: "spotlight-beam",
-    name: "Spotlight Beam",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#000",
-      backgroundImage: `
-      radial-gradient(circle at top,
-      rgba(14,165,233,0.5),
-      transparent 70%)
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Spotlight Beam */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#000",
-      backgroundImage:\`
-        radial-gradient(circle at top,
-        rgba(14,165,233,0.5),
-        transparent 70%)
-      \`
-    }}
-  />
-</div>`,
-  },
-
-  {
-    id: "vignette-effect",
-    name: "Vignette Effect",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#000",
-      backgroundImage: `
-      radial-gradient(circle at center,
-      transparent 40%,
-      rgba(0,0,0,0.8) 100%)
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Vignette Effect */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#000",
-      backgroundImage:\`
-        radial-gradient(circle at center,
-        transparent 40%,
-        rgba(0,0,0,0.8) 100%)
-      \`
-    }}
-  />
-</div>`,
-  },
-
-  {
-    id: "glow-corners",
-    name: "Glow Corners",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
-      background: "#000",
-      backgroundImage: `
-      radial-gradient(circle at 0% 0%, rgba(14,165,233,0.35), transparent 60%),
-      radial-gradient(circle at 100% 0%, rgba(124,58,237,0.35), transparent 60%),
-      radial-gradient(circle at 0% 100%, rgba(236,72,153,0.35), transparent 60%),
-      radial-gradient(circle at 100% 100%, rgba(34,197,94,0.35), transparent 60%)
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Glow Corners */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#000",
-      backgroundImage:\`
-        radial-gradient(circle at 0% 0%, rgba(14,165,233,0.35), transparent 60%),
-        radial-gradient(circle at 100% 0%, rgba(124,58,237,0.35), transparent 60%),
-        radial-gradient(circle at 0% 100%, rgba(236,72,153,0.35), transparent 60%),
-        radial-gradient(circle at 100% 100%, rgba(34,197,94,0.35), transparent 60%)
-      \`
+      backgroundSize: "40px 40px"
     }}
   />
 </div>`,
@@ -3068,7 +2288,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3078,18 +2297,17 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         radial-gradient(circle 800px at 100% 200px, #d5c5ff, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
 </div>`,
@@ -3101,7 +2319,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3111,18 +2328,17 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         radial-gradient(circle 800px at 0% 200px, #d5c5ff, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
 </div>`,
@@ -3134,7 +2350,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3145,19 +2360,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
         radial-gradient(circle 500px at 20% 80%, rgba(139,92,246,0.3), transparent),
         radial-gradient(circle 500px at 80% 20%, rgba(59,130,246,0.3), transparent)
       \`,
-      backgroundSize:"48px 48px, 48px 48px, 100% 100%, 100% 100%"
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%"
     }}
   />
 </div>`,
@@ -3169,7 +2383,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3180,19 +2393,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, rgba(229,231,235,0.8) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(229,231,235,0.8) 1px, transparent 1px),
         radial-gradient(circle 500px at 20% 20%, rgba(139,92,246,0.3), transparent),
         radial-gradient(circle 500px at 80% 80%, rgba(59,130,246,0.3), transparent)
       \`,
-      backgroundSize:"48px 48px, 48px 48px, 100% 100%, 100% 100%"
+      backgroundSize: "48px 48px, 48px 48px, 100% 100%, 100% 100%"
     }}
   />
 </div>`,
@@ -3204,7 +2416,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3215,19 +2426,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "20px 20px, 20px 20px, 100% 100%, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
         radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
       \`,
-      backgroundSize:"20px 20px, 20px 20px, 100% 100%, 100% 100%"
+      backgroundSize: "20px 20px, 20px 20px, 100% 100%, 100% 100%"
     }}
   />
 </div>`,
@@ -3239,7 +2449,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3250,19 +2459,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
         radial-gradient(circle 600px at 100% 200px, #d5c5ff, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%, 100% 100%"
     }}
   />
 </div>`,
@@ -3274,7 +2482,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       backgroundColor: "#ffffff",
       backgroundImage: `
@@ -3288,13 +2495,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       backgroundSize:
         "96px 64px, 96px 64px, 100% 100%, 100% 100%, 100% 100%, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
   <div
     className="absolute inset-0 z-0 pointer-events-none"
     style={{
-      backgroundColor:"#ffffff",
-      backgroundImage:\`
+      backgroundColor: "#ffffff",
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         radial-gradient(circle 600px at 0% 200px, #d5c5ff, transparent),
@@ -3302,19 +2508,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
         radial-gradient(circle 600px at 50% 0px, #d5c5ff, transparent),
         radial-gradient(circle 600px at 50% 100%, #d5c5ff, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%, 100% 100%, 100% 100%, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%, 100% 100%, 100% 100%, 100% 100%"
     }}
   />
 </div>`,
   },
-
   {
     id: "blue-gradient-grid-left",
     name: "Blue Gradient Grid Left",
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3324,21 +2529,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         radial-gradient(circle 800px at 0% 200px, #bfdbfe, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3347,7 +2549,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3357,21 +2559,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "90px 70px, 90px 70px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #f1f5f9 1px, transparent 1px),
         linear-gradient(to bottom, #f1f5f9 1px, transparent 1px),
         radial-gradient(circle 700px at 50% 150px, #fecdd3, transparent)
       \`,
-      backgroundSize:"90px 70px, 90px 70px, 100% 100%"
+      backgroundSize: "90px 70px, 90px 70px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3380,7 +2579,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3390,21 +2589,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "80px 80px, 80px 80px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         radial-gradient(circle 700px at 50% 0px, #bbf7d0, transparent)
       \`,
-      backgroundSize:"80px 80px, 80px 80px, 100% 100%"
+      backgroundSize: "80px 80px, 80px 80px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3413,7 +2609,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3423,21 +2619,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "100px 70px, 100px 70px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #f1f5f9 1px, transparent 1px),
         linear-gradient(to bottom, #f1f5f9 1px, transparent 1px),
         radial-gradient(circle 800px at 50% 100%, #fed7aa, transparent)
       \`,
-      backgroundSize:"100px 70px, 100px 70px, 100% 100%"
+      backgroundSize: "100px 70px, 100px 70px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3446,7 +2639,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3456,21 +2649,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         radial-gradient(circle 900px at 100% 300px, #a5f3fc, transparent)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3479,7 +2669,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3489,21 +2679,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "90px 60px, 90px 60px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #f1f5f9 1px, transparent 1px),
         linear-gradient(to bottom, #f1f5f9 1px, transparent 1px),
         radial-gradient(circle 700px at 100% 0%, #ddd6fe, transparent)
       \`,
-      backgroundSize:"90px 60px, 90px 60px, 100% 100%"
+      backgroundSize: "90px 60px, 90px 60px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3512,7 +2699,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3522,21 +2709,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "90px 90px, 90px 90px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         conic-gradient(from 180deg at 50% 50%, #e9d5ff, transparent, #e9d5ff)
       \`,
-      backgroundSize:"90px 90px, 90px 90px, 100% 100%"
+      backgroundSize: "90px 90px, 90px 90px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3545,7 +2729,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3555,21 +2739,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #f0f0f0 1px, transparent 1px),
         linear-gradient(to bottom, #f0f0f0 1px, transparent 1px),
         conic-gradient(from 0deg at 100% 200px, #bfdbfe, transparent, #bfdbfe)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3578,7 +2759,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3588,21 +2769,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "80px 80px, 80px 80px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         conic-gradient(from 90deg at 50% 150px, #fecdd3, transparent, #fecdd3)
       \`,
-      backgroundSize:"80px 80px, 80px 80px, 100% 100%"
+      backgroundSize: "80px 80px, 80px 80px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3611,7 +2789,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3621,21 +2799,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "90px 70px, 90px 70px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         conic-gradient(from 270deg at 0% 200px, #bbf7d0, transparent, #bbf7d0)
       \`,
-      backgroundSize:"90px 70px, 90px 70px, 100% 100%"
+      backgroundSize: "90px 70px, 90px 70px, 100% 100%"
     }}
   />
-
 </div>`,
   },
   {
@@ -3644,7 +2819,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "New",
     category: "geometric",
     theme: "light",
-
+    animated: false,
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3654,32 +2829,217 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       backgroundSize: "96px 64px, 96px 64px, 100% 100%",
     },
-
     code: `<div className="min-h-screen w-full bg-white relative">
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      backgroundImage:\`
+      backgroundImage: \`
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px),
         conic-gradient(from 45deg at 75% 200px, #a5f3fc, transparent, #a5f3fc)
       \`,
-      backgroundSize:"96px 64px, 96px 64px, 100% 100%"
+      backgroundSize: "96px 64px, 96px 64px, 100% 100%"
     }}
   />
-
 </div>`,
   },
 
+  // ── EFFECTS ───────────────────────────────────────────────────────────────
+
+  {
+    id: "glass-glow",
+    name: "Glass Glow",
+    category: "effects",
+    theme: "light",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#ffffff",
+      backdropFilter: "blur(40px)",
+      backgroundImage: `
+      radial-gradient(circle at 50% 30%, rgba(99,102,241,0.35), transparent 60%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#ffffff",
+      backdropFilter: "blur(40px)",
+      backgroundImage: \`
+        radial-gradient(circle at 50% 30%, rgba(99,102,241,0.35), transparent 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "noise-overlay",
+    name: "Noise Overlay",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E")
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#000000",
+      backgroundImage: \`
+        url("data:image/svg+xml,...")
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "gradient-blur-glow",
+    name: "Gradient Blur Glow",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#020617",
+      backgroundImage: `
+      radial-gradient(circle at 40% 40%, rgba(124,58,237,0.5), transparent 60%),
+      radial-gradient(circle at 70% 70%, rgba(14,165,233,0.5), transparent 60%)
+    `,
+      filter: "blur(40px)",
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#020617",
+      backgroundImage: \`
+        radial-gradient(circle at 40% 40%, rgba(124,58,237,0.5), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(14,165,233,0.5), transparent 60%)
+      \`,
+      filter: "blur(40px)"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "glow-ring",
+    name: "Glow Ring",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#020617",
+      backgroundImage: `
+      radial-gradient(circle at center,
+      transparent 40%,
+      rgba(99,102,241,0.4) 41%,
+      transparent 50%)
+    `,
+    },
+    code: `<div className="absolute inset-0" style={{
+  background: "#020617",
+  backgroundImage: "radial-gradient(circle at center, transparent 40%, rgba(99,102,241,0.4) 41%, transparent 50%)"
+}} />`,
+  },
+  {
+    id: "spotlight-beam",
+    name: "Spotlight Beam",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#000",
+      backgroundImage: `
+      radial-gradient(circle at top,
+      rgba(14,165,233,0.5),
+      transparent 70%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#000",
+      backgroundImage: \`
+        radial-gradient(circle at top, rgba(14,165,233,0.5), transparent 70%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "vignette-effect",
+    name: "Vignette Effect",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#000",
+      backgroundImage: `
+      radial-gradient(circle at center,
+      transparent 40%,
+      rgba(0,0,0,0.8) 100%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#000",
+      backgroundImage: \`
+        radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.8) 100%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "glow-corners",
+    name: "Glow Corners",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#000",
+      backgroundImage: `
+      radial-gradient(circle at 0% 0%, rgba(14,165,233,0.35), transparent 60%),
+      radial-gradient(circle at 100% 0%, rgba(124,58,237,0.35), transparent 60%),
+      radial-gradient(circle at 0% 100%, rgba(236,72,153,0.35), transparent 60%),
+      radial-gradient(circle at 100% 100%, rgba(34,197,94,0.35), transparent 60%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#000",
+      backgroundImage: \`
+        radial-gradient(circle at 0% 0%, rgba(14,165,233,0.35), transparent 60%),
+        radial-gradient(circle at 100% 0%, rgba(124,58,237,0.35), transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(236,72,153,0.35), transparent 60%),
+        radial-gradient(circle at 100% 100%, rgba(34,197,94,0.35), transparent 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
   {
     id: "cosmic-sparkle",
     name: "Cosmic Sparkle",
     category: "effects",
     badge: "New",
     theme: "dark",
-    description: "Starry night sky effect with magenta and cyan glow",
-
+    animated: false,
     style: {
       background: `
       radial-gradient(circle at 50% 50%, rgba(255,0,255,0.08) 0%, transparent 45%),
@@ -3695,7 +3055,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       filter: "contrast(1.05) brightness(1.05) blur(0.5px)",
     },
-
     code: `<div className="min-h-screen w-full relative">
   <div
     className="absolute inset-0 z-0"
@@ -3705,7 +3064,7 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
         radial-gradient(circle at 50% 50%, rgba(0,255,255,0.08) 10%, transparent 55%),
         radial-gradient(circle at 50% 50%, #111 0%, #1a1a1a 100%)
       \`,
-      backgroundBlendMode:"soft-light"
+      backgroundBlendMode: "soft-light"
     }}
   />
 </div>`,
@@ -3717,7 +3076,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3726,14 +3084,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 50% 80%, rgba(167,139,250,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Aurora Sparkle */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 30% 20%, rgba(99,102,241,0.4), transparent 60%),
         radial-gradient(circle at 70% 30%, rgba(56,189,248,0.4), transparent 60%),
         radial-gradient(circle at 50% 80%, rgba(167,139,250,0.4), transparent 60%)
@@ -3749,7 +3105,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "light",
     animated: false,
     badge: "New",
-
     style: {
       background: "#ffffff",
       backgroundImage: `
@@ -3758,14 +3113,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 50% 80%, rgba(250,204,21,0.4), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Sunset Glow Sparkle */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#ffffff",
-      backgroundImage:\`
+      background: "#ffffff",
+      backgroundImage: \`
         radial-gradient(circle at 25% 30%, rgba(251,146,60,0.45), transparent 60%),
         radial-gradient(circle at 75% 40%, rgba(236,72,153,0.45), transparent 60%),
         radial-gradient(circle at 50% 80%, rgba(250,204,21,0.4), transparent 60%)
@@ -3781,7 +3134,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -3789,14 +3141,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 70% 70%, rgba(34,197,94,0.45), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Emerald Glow Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 30% 30%, rgba(16,185,129,0.5), transparent 60%),
         radial-gradient(circle at 70% 70%, rgba(34,197,94,0.45), transparent 60%)
       \`
@@ -3811,7 +3161,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -3819,390 +3168,17 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 70% 70%, rgba(124,58,237,0.5), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Electric Purple Field */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 35% 25%, rgba(168,85,247,0.55), transparent 60%),
         radial-gradient(circle at 70% 70%, rgba(124,58,237,0.5), transparent 60%)
       \`
     }}
   />
-</div>`,
-  },
-
-  {
-    id: "center-spotlight-crimson",
-    name: "Crimson Spotlight",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      radial-gradient(
-        circle at center,
-        rgba(239, 68, 68, 0.12) 0%,
-        rgba(239, 68, 68, 0.06) 20%,
-        rgba(0, 0, 0, 0.0) 60%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage: \`
-        radial-gradient(
-          circle at center,
-          rgba(239,68,68,0.12) 0%,
-          rgba(239,68,68,0.06) 20%,
-          rgba(0,0,0,0) 60%
-        )
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "center-spotlight-blue",
-    name: "Blue Spotlight",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      radial-gradient(
-        circle at center,
-        rgba(59, 130, 246, 0.12) 0%,
-        rgba(59, 130, 246, 0.06) 20%,
-        rgba(0, 0, 0, 0) 60%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage:\`
-        radial-gradient(
-          circle at center,
-          rgba(59,130,246,0.12) 0%,
-          rgba(59,130,246,0.06) 20%,
-          rgba(0,0,0,0) 60%
-        )
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "center-spotlight-emerald",
-    name: "Emerald Spotlight",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      radial-gradient(
-        circle at center,
-        rgba(16, 185, 129, 0.12) 0%,
-        rgba(16, 185, 129, 0.06) 20%,
-        rgba(0, 0, 0, 0) 60%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage:\`
-        radial-gradient(
-          circle at center,
-          rgba(16,185,129,0.12) 0%,
-          rgba(16,185,129,0.06) 20%,
-          rgba(0,0,0,0) 60%
-        )
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "center-spotlight-violet",
-    name: "Violet Spotlight",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      radial-gradient(
-        circle at center,
-        rgba(168, 85, 247, 0.12) 0%,
-        rgba(168, 85, 247, 0.06) 20%,
-        rgba(0, 0, 0, 0) 60%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage:\`
-        radial-gradient(
-          circle at center,
-          rgba(168,85,247,0.12) 0%,
-          rgba(168,85,247,0.06) 20%,
-          rgba(0,0,0,0) 60%
-        )
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "center-spotlight-amber",
-    name: "Amber Spotlight",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#000000",
-      backgroundImage: `
-      radial-gradient(
-        circle at center,
-        rgba(245, 158, 11, 0.12) 0%,
-        rgba(245, 158, 11, 0.06) 20%,
-        rgba(0, 0, 0, 0) 60%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      backgroundImage:\`
-        radial-gradient(
-          circle at center,
-          rgba(245,158,11,0.12) 0%,
-          rgba(245,158,11,0.06) 20%,
-          rgba(0,0,0,0) 60%
-        )
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "sapphire-sky-glow",
-    name: "Sapphire Sky Glow",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: `
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.25), transparent 70%),
-      #000000
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative bg-black">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:\`
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.25), transparent 70%),
-        #000000
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "emerald-horizon-glow",
-    name: "Emerald Horizon Glow",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: `
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16,185,129,0.25), transparent 70%),
-      #000000
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative bg-black">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:\`
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16,185,129,0.25), transparent 70%),
-        #000000
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "violet-aura-glow",
-    name: "Violet Aura Glow",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: `
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168,85,247,0.25), transparent 70%),
-      #000000
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative bg-black">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:\`
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168,85,247,0.25), transparent 70%),
-        #000000
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "crimson-flame-glow",
-    name: "Crimson Flame Glow",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: `
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(239,68,68,0.25), transparent 70%),
-      #000000
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative bg-black">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:\`
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(239,68,68,0.25), transparent 70%),
-        #000000
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "amber-sun-glow",
-    name: "Amber Sun Glow",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: `
-      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.25), transparent 70%),
-      #000000
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative bg-black">
-
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:\`
-        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.25), transparent 70%),
-        #000000
-      \`
-    }}
-  />
-
-</div>`,
-  },
-  {
-    id: "copper-bronze",
-    name: "Copper & Bronze",
-    category: "gradients",
-    badge: "New",
-    theme: "dark",
-
-    style: {
-      background: "#1c1917",
-      backgroundImage: `
-      radial-gradient(circle at 50% 50%,
-        rgba(194,65,12,0.18) 0%,
-        rgba(194,65,12,0.1) 25%,
-        rgba(194,65,12,0.04) 35%,
-        transparent 50%
-      )
-    `,
-      backgroundSize: "100% 100%",
-    },
-
-    code: `<div className="min-h-screen w-full bg-stone-900 relative">
-
-  {/* Copper Bronze Glow */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#1c1917",
-      backgroundImage:\`
-        radial-gradient(circle at 50% 50%,
-          rgba(194,65,12,0.18) 0%,
-          rgba(194,65,12,0.1) 25%,
-          rgba(194,65,12,0.04) 35%,
-          transparent 50%
-        )
-      \`
-    }}
-  />
-
 </div>`,
   },
   {
@@ -4212,21 +3188,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(14,165,233,0.65), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Sapphire Core */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(14,165,233,0.65), transparent 60%)
       \`
     }}
@@ -4240,21 +3213,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(16,185,129,0.65), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Emerald Core */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(16,185,129,0.65), transparent 60%)
       \`
     }}
@@ -4268,21 +3238,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(124,58,237,0.65), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Violet Core */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(124,58,237,0.65), transparent 60%)
       \`
     }}
@@ -4296,21 +3263,18 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(220,38,38,0.65), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Crimson Core */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(220,38,38,0.65), transparent 60%)
       \`
     }}
@@ -4324,35 +3288,31 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(245,158,11,0.65), transparent 60%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Amber Core */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(245,158,11,0.65), transparent 60%)
       \`
     }}
   />
 </div>`,
   },
-
   {
     id: "crimson-core-glow",
     name: "Crimson Core Glow",
     category: "effects",
     badge: "New",
     theme: "dark",
-
+    animated: false,
     style: {
       background: `
       linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -4364,33 +3324,17 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       #050505
     `,
     },
-
     code: `<div className="min-h-screen w-full bg-black relative">
-
-  {/* Crimson Core Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:\`
+      background: \`
         linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%),
-        radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%),
-        radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%),
-        radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%),
-        radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%),
         #050505
       \`
     }}
   />
-
-  <div
-    className="absolute inset-0 z-0 pointer-events-none"
-    style={{
-      backgroundImage:"radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)",
-      opacity:0.95
-    }}
-  />
-
 </div>`,
   },
   {
@@ -4400,7 +3344,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -4408,14 +3351,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 50% 50%, rgba(16,185,129,0.35), transparent 70%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Emerald Core Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(16,185,129,0.7), transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(16,185,129,0.35), transparent 70%)
       \`
@@ -4430,7 +3371,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -4438,14 +3378,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 50% 50%, rgba(124,58,237,0.35), transparent 70%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Violet Core Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(124,58,237,0.7), transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(124,58,237,0.35), transparent 70%)
       \`
@@ -4460,7 +3398,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: false,
     badge: "New",
-
     style: {
       background: "#000000",
       backgroundImage: `
@@ -4468,14 +3405,12 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       radial-gradient(circle at 50% 50%, rgba(245,158,11,0.35), transparent 70%)
     `,
     },
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Amber Core Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(245,158,11,0.7), transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(245,158,11,0.35), transparent 70%)
       \`
@@ -4483,7 +3418,568 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
   />
 </div>`,
   },
+  {
+    id: "teal-core-glow",
+    name: "Teal Core Glow",
+    category: "effects",
+    theme: "dark",
+    animated: false,
+    badge: "New",
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(circle at 50% 50%, rgba(20,184,166,0.7), transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(20,184,166,0.35), transparent 70%)
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#000000",
+      backgroundImage: \`
+        radial-gradient(circle at 50% 50%, rgba(20,184,166,0.7), transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(20,184,166,0.35), transparent 70%)
+      \`
+    }}
+  />
+</div>`,
+  },
 
+  // ── GRADIENTS ─────────────────────────────────────────────────────────────
+
+  {
+    id: "center-spotlight-crimson",
+    name: "Crimson Spotlight",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(
+        circle at center,
+        rgba(239, 68, 68, 0.12) 0%,
+        rgba(239, 68, 68, 0.06) 20%,
+        rgba(0, 0, 0, 0.0) 60%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, rgba(239,68,68,0.12) 0%, rgba(239,68,68,0.06) 20%, rgba(0,0,0,0) 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "center-spotlight-blue",
+    name: "Blue Spotlight",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(
+        circle at center,
+        rgba(59, 130, 246, 0.12) 0%,
+        rgba(59, 130, 246, 0.06) 20%,
+        rgba(0, 0, 0, 0) 60%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, rgba(59,130,246,0.12) 0%, rgba(59,130,246,0.06) 20%, rgba(0,0,0,0) 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "center-spotlight-emerald",
+    name: "Emerald Spotlight",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(
+        circle at center,
+        rgba(16, 185, 129, 0.12) 0%,
+        rgba(16, 185, 129, 0.06) 20%,
+        rgba(0, 0, 0, 0) 60%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, rgba(16,185,129,0.12) 0%, rgba(16,185,129,0.06) 20%, rgba(0,0,0,0) 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "center-spotlight-violet",
+    name: "Violet Spotlight",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(
+        circle at center,
+        rgba(168, 85, 247, 0.12) 0%,
+        rgba(168, 85, 247, 0.06) 20%,
+        rgba(0, 0, 0, 0) 60%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, rgba(168,85,247,0.12) 0%, rgba(168,85,247,0.06) 20%, rgba(0,0,0,0) 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "center-spotlight-amber",
+    name: "Amber Spotlight",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#000000",
+      backgroundImage: `
+      radial-gradient(
+        circle at center,
+        rgba(245, 158, 11, 0.12) 0%,
+        rgba(245, 158, 11, 0.06) 20%,
+        rgba(0, 0, 0, 0) 60%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundImage: \`
+        radial-gradient(circle at center, rgba(245,158,11,0.12) 0%, rgba(245,158,11,0.06) 20%, rgba(0,0,0,0) 60%)
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "sapphire-sky-glow",
+    name: "Sapphire Sky Glow",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: `
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.25), transparent 70%),
+      #000000
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(59,130,246,0.25), transparent 70%),
+        #000000
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "emerald-horizon-glow",
+    name: "Emerald Horizon Glow",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: `
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16,185,129,0.25), transparent 70%),
+      #000000
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16,185,129,0.25), transparent 70%),
+        #000000
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "violet-aura-glow",
+    name: "Violet Aura Glow",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: `
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168,85,247,0.25), transparent 70%),
+      #000000
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(168,85,247,0.25), transparent 70%),
+        #000000
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "crimson-flame-glow",
+    name: "Crimson Flame Glow",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: `
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(239,68,68,0.25), transparent 70%),
+      #000000
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(239,68,68,0.25), transparent 70%),
+        #000000
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "amber-sun-glow",
+    name: "Amber Sun Glow",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: `
+      radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.25), transparent 70%),
+      #000000
+    `,
+    },
+    code: `<div className="min-h-screen w-full relative bg-black">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: \`
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(245,158,11,0.25), transparent 70%),
+        #000000
+      \`
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "copper-bronze",
+    name: "Copper & Bronze",
+    category: "gradients",
+    badge: "New",
+    theme: "dark",
+    animated: false,
+    style: {
+      background: "#1c1917",
+      backgroundImage: `
+      radial-gradient(circle at 50% 50%,
+        rgba(194,65,12,0.18) 0%,
+        rgba(194,65,12,0.1) 25%,
+        rgba(194,65,12,0.04) 35%,
+        transparent 50%
+      )
+    `,
+      backgroundSize: "100% 100%",
+    },
+    code: `<div className="min-h-screen w-full bg-stone-900 relative">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#1c1917",
+      backgroundImage: \`
+        radial-gradient(circle at 50% 50%, rgba(194,65,12,0.18) 0%, rgba(194,65,12,0.1) 25%, rgba(194,65,12,0.04) 35%, transparent 50%)
+      \`
+    }}
+  />
+</div>`,
+  },
+
+  // ── ANIMATED ──────────────────────────────────────────────────────────────
+
+  {
+    id: "animated-gradient-flow",
+    name: "Animated Gradient Flow",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      background: "linear-gradient(270deg, #7c3aed, #0ea5e9, #22c55e)",
+      backgroundSize: "600% 600%",
+      animation: "gradientFlow 12s ease infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "linear-gradient(270deg,#7c3aed,#0ea5e9,#22c55e)",
+      backgroundSize: "600% 600%",
+      animation: "gradientFlow 12s ease infinite"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "floating-glow-orbs",
+    name: "Floating Glow Orbs",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      background: "#020617",
+      backgroundImage: `
+      radial-gradient(circle at 30% 40%, rgba(124,58,237,0.6), transparent 60%),
+      radial-gradient(circle at 70% 60%, rgba(14,165,233,0.6), transparent 60%)
+    `,
+      backgroundSize: "200% 200%",
+      animation: "orbFloat 5s ease-in-out infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes orbFloat {
+    0% { background-position: 20% 40%, 80% 60%; }
+    50% { background-position: 40% 60%, 60% 40%; }
+    100% { background-position: 20% 40%, 80% 60%; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#020617",
+      backgroundImage: \`
+        radial-gradient(circle at 30% 40%, rgba(124,58,237,0.6), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(14,165,233,0.6), transparent 60%)
+      \`,
+      backgroundSize: "200% 200%",
+      animation: "orbFloat 18s ease-in-out infinite"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "animated-mesh-gradient",
+    name: "Animated Mesh Gradient",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      background: "#020617",
+      backgroundImage: `
+      radial-gradient(circle at 20% 30%, rgba(124,58,237,0.5), transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(14,165,233,0.5), transparent 60%)
+    `,
+      backgroundSize: "200% 200%",
+      animation: "meshMove 20s ease infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes meshMove {
+    0% { background-position: 20% 30%, 80% 70%; }
+    50% { background-position: 40% 60%, 60% 40%; }
+    100% { background-position: 20% 30%, 80% 70%; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#020617",
+      backgroundImage: \`
+        radial-gradient(circle at 20% 30%, rgba(124,58,237,0.5), transparent 60%),
+        radial-gradient(circle at 80% 70%, rgba(14,165,233,0.5), transparent 60%)
+      \`,
+      backgroundSize: "200% 200%",
+      animation: "meshMove 20s ease infinite"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "aurora-wave-motion",
+    name: "Aurora Wave Motion",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      background: "linear-gradient(270deg,#6366f1,#0ea5e9,#22c55e)",
+      backgroundSize: "400% 400%",
+      animation: "auroraWave 12s ease infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes auroraWave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "linear-gradient(270deg,#6366f1,#0ea5e9,#22c55e)",
+      backgroundSize: "400% 400%",
+      animation: "auroraWave 12s ease infinite"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "grid-scan-effect",
+    name: "Grid Scan Effect",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      backgroundColor: "#020617",
+      backgroundImage: `
+      linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px)
+    `,
+      backgroundSize: "40px 40px",
+      animation: "gridScan 6s linear infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes gridScan {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 0 40px, 40px 0; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      backgroundColor: "#020617",
+      backgroundImage: \`
+        linear-gradient(rgba(56,189,248,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.08) 1px, transparent 1px)
+      \`,
+      backgroundSize: "40px 40px",
+      animation: "gridScan 6s linear infinite"
+    }}
+  />
+</div>`,
+  },
+  {
+    id: "floating-gradient-clouds",
+    name: "Floating Gradient Clouds",
+    category: "animated",
+    theme: "dark",
+    animated: true,
+    badge: "Animated",
+    style: {
+      background: "#020617",
+      backgroundImage: `
+      radial-gradient(circle at 30% 40%, rgba(124,58,237,0.5), transparent 60%),
+      radial-gradient(circle at 70% 60%, rgba(14,165,233,0.5), transparent 60%)
+    `,
+      backgroundSize: "300% 300%",
+      animation: "cloudFloat 25s ease infinite",
+    },
+    animatedContainer: `
+  <style>
+  @keyframes cloudFloat {
+    0% { background-position: 20% 40%, 80% 60%; }
+    50% { background-position: 40% 60%, 60% 40%; }
+    100% { background-position: 20% 40%, 80% 60%; }
+  }
+  </style>
+  `,
+    code: `<div className="min-h-screen w-full relative overflow-hidden">
+  <div
+    className="absolute inset-0 z-0"
+    style={{
+      background: "#020617",
+      backgroundImage: \`
+        radial-gradient(circle at 30% 40%, rgba(124,58,237,0.5), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(14,165,233,0.5), transparent 60%)
+      \`,
+      backgroundSize: "300% 300%",
+      animation: "cloudFloat 25s ease infinite"
+    }}
+  />
+</div>`,
+  },
   {
     id: "crimson-core-glow-animated",
     name: "Crimson Core Glow Animated",
@@ -4491,7 +3987,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     badge: "Animated",
     theme: "dark",
     animated: true,
-
     style: {
       background: `
       linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
@@ -4504,285 +3999,289 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     `,
       animation: "crimsonPulse 6s ease-in-out infinite",
     },
-
     animatedContainer: `
   <style>
   @keyframes crimsonPulse {
-    0% {
-      transform: scale(1);
-      filter: brightness(1);
-    }
-    50% {
-      transform: scale(1.04);
-      filter: brightness(1.15);
-    }
-    100% {
-      transform: scale(1);
-      filter: brightness(1);
-    }
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.04); filter: brightness(1.15); }
+    100% { transform: scale(1); filter: brightness(1); }
   }
   </style>
   `,
-
     code: `<div className="min-h-screen w-full bg-black relative overflow-hidden">
-
-  {/* Crimson Core Glow */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:\`
+      background: \`
         linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
         radial-gradient(68% 58% at 50% 50%, #c81e3a 0%, #a51d35 16%, #7d1a2f 32%, #591828 46%, #3c1722 60%, #2a151d 72%, #1f1317 84%, #141013 94%, #0a0a0a 100%),
-        radial-gradient(90% 75% at 50% 50%, rgba(228,42,66,0.06) 0%, rgba(228,42,66,0) 55%),
-        radial-gradient(150% 120% at 8% 8%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%),
-        radial-gradient(150% 120% at 92% 92%, rgba(0,0,0,0) 42%, #0b0a0a 82%, #070707 100%),
-        radial-gradient(60% 50% at 50% 60%, rgba(240,60,80,0.06), rgba(0,0,0,0) 60%),
         #050505
       \`,
-      animation:"crimsonPulse 6s ease-in-out infinite"
+      animation: "crimsonPulse 6s ease-in-out infinite"
     }}
   />
-
-  {/* Soft vignette */}
-  <div
-    className="absolute inset-0 z-0 pointer-events-none"
-    style={{
-      backgroundImage:"radial-gradient(circle at 50% 50%, rgba(0,0,0,0) 55%, rgba(0,0,0,0.5) 100%)",
-      opacity:0.95
-    }}
-  />
-
 </div>`,
   },
-
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "sapphire-core-glow-animated",
     name: "Sapphire Core Glow Animated",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(56,189,248,0.6), transparent 60%)
     `,
+      animation: "coreGlowPulse 4s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes coreGlowPulse {
+    0% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(1.2) blur(1px); }
+    100% { filter: brightness(1) blur(0px); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Sapphire Core Glow Animated */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(56,189,248,0.6), transparent 60%)
-      \`
+      \`,
+      animation: "coreGlowPulse 4s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "violet-core-glow-animated",
     name: "Violet Core Glow Animated",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(167,139,250,0.6), transparent 60%)
     `,
+      animation: "coreGlowPulse 4s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes coreGlowPulse {
+    0% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(1.2) blur(1px); }
+    100% { filter: brightness(1) blur(0px); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Violet Core Glow Animated */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(167,139,250,0.6), transparent 60%)
-      \`
+      \`,
+      animation: "coreGlowPulse 4s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "amber-core-glow-animated",
     name: "Amber Core Glow Animated",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(245,158,11,0.6), transparent 60%)
     `,
+      animation: "coreGlowPulse 4s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes coreGlowPulse {
+    0% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(1.2) blur(1px); }
+    100% { filter: brightness(1) blur(0px); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Amber Core Glow Animated */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(245,158,11,0.6), transparent 60%)
-      \`
+      \`,
+      animation: "coreGlowPulse 4s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "cyan-core-glow-animated",
     name: "Cyan Core Glow Animated",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(6,182,212,0.6), transparent 60%)
     `,
+      animation: "coreGlowPulse 4s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes coreGlowPulse {
+    0% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(1.2) blur(1px); }
+    100% { filter: brightness(1) blur(0px); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Cyan Core Glow Animated */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
-        radial-gradient(circle at 50% 50%, rgba(6,182,212,0.6), transparent 60%)
-      \`
-    }}
-  />
-</div>`,
-  },
-
-  {
-    id: "teal-core-glow",
-    name: "Teal Core Glow",
-    category: "effects",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-
-    style: {
       background: "#000000",
-      backgroundImage: `
-      radial-gradient(circle at 50% 50%, rgba(20,184,166,0.7), transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(20,184,166,0.35), transparent 70%)
-    `,
-    },
-
-    code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Teal Core Glow */}
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:"#000000",
-      backgroundImage:\`
-        radial-gradient(circle at 50% 50%, rgba(20,184,166,0.7), transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(20,184,166,0.35), transparent 70%)
-      \`
+      backgroundImage: \`
+        radial-gradient(circle at 50% 50%, rgba(6,182,212,0.6), transparent 60%)
+      \`,
+      animation: "coreGlowPulse 4s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "teal-core-glow-animated",
     name: "Teal Core Glow Animated",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 50%, rgba(20,184,166,0.6), transparent 60%)
     `,
+      animation: "coreGlowPulse 4s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes coreGlowPulse {
+    0% { filter: brightness(1) blur(0px); }
+    50% { filter: brightness(1.2) blur(1px); }
+    100% { filter: brightness(1) blur(0px); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Teal Core Glow Animated */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 50%, rgba(20,184,166,0.6), transparent 60%)
-      \`
+      \`,
+      animation: "coreGlowPulse 4s ease-in-out infinite"
     }}
   />
 </div>`,
   },
-
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "pulse-glow-rose-dark",
     name: "Pulse Glow Rose Dark",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 60%, rgba(244,63,94,0.6), transparent 65%)
     `,
+      animation: "pulseGlow 3s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes pulseGlow {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Pulse Glow Rose Dark */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 60%, rgba(244,63,94,0.6), transparent 65%)
-      \`
+      \`,
+      animation: "pulseGlow 3s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "pulse-glow-gamma-dark",
     name: "Pulse Glow Gamma Dark",
     category: "animated",
     theme: "dark",
     animated: true,
-    badge: "New",
-
+    badge: "Animated",
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 60%, rgba(168,85,247,0.65), transparent 65%)
     `,
+      animation: "pulseGlow 3s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes pulseGlow {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Pulse Glow Gamma Dark */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 60%, rgba(168,85,247,0.65), transparent 65%)
-      \`
+      \`,
+      animation: "pulseGlow 3s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "pulse-glow-violet-dark",
     name: "Pulse Glow Violet Dark",
@@ -4790,27 +4289,36 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 60%, rgba(139,92,246,0.65), transparent 65%)
     `,
+      animation: "pulseGlow 3s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes pulseGlow {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Pulse Glow Violet Dark */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 60%, rgba(139,92,246,0.65), transparent 65%)
-      \`
+      \`,
+      animation: "pulseGlow 3s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "pulse-glow-cyan-dark",
     name: "Pulse Glow Cyan Dark",
@@ -4818,27 +4326,36 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 50% 60%, rgba(6,182,212,0.65), transparent 65%)
     `,
+      animation: "pulseGlow 3s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes pulseGlow {
+    0% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 0.7; transform: scale(1); }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Pulse Glow Cyan Dark */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 50% 60%, rgba(6,182,212,0.65), transparent 65%)
-      \`
+      \`,
+      animation: "pulseGlow 3s ease-in-out infinite"
     }}
   />
 </div>`,
   },
+  // FIX: Added animation + animatedContainer (was missing both)
   {
     id: "deep-crimson-drift",
     name: "Deep Crimson Drift",
@@ -4846,30 +4363,39 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#000000",
       backgroundImage: `
       radial-gradient(circle at 30% 40%, rgba(220,38,38,0.55), transparent 65%),
       radial-gradient(circle at 70% 70%, rgba(127,29,29,0.45), transparent 70%)
     `,
+      backgroundSize: "200% 200%",
+      animation: "crimsonDrift 10s ease-in-out infinite",
     },
-
+    animatedContainer: `
+  <style>
+  @keyframes crimsonDrift {
+    0% { background-position: 30% 40%, 70% 70%; }
+    50% { background-position: 60% 60%, 40% 40%; }
+    100% { background-position: 30% 40%, 70% 70%; }
+  }
+  </style>
+  `,
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-  {/* Deep Crimson Drift */}
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#000000",
-      backgroundImage:\`
+      background: "#000000",
+      backgroundImage: \`
         radial-gradient(circle at 30% 40%, rgba(220,38,38,0.55), transparent 65%),
         radial-gradient(circle at 70% 70%, rgba(127,29,29,0.45), transparent 70%)
-      \`
+      \`,
+      backgroundSize: "200% 200%",
+      animation: "crimsonDrift 10s ease-in-out infinite"
     }}
   />
 </div>`,
   },
-
   {
     id: "multi-nebula-drift",
     name: "Multi Nebula Drift",
@@ -4877,7 +4403,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#040404",
       backgroundImage: `
@@ -4895,64 +4420,21 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       backgroundSize: "160% 160%",
       animation: "nebulaDrift 40s ease-in-out infinite",
     },
-
     animatedContainer: `
   <style>
-
   @keyframes nebulaDrift {
-
-    0% {
-      background-position:
-        20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%,
-        60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%;
-    }
-
-    50% {
-      background-position:
-        60% 60%, 40% 40%, 50% 80%, 70% 30%, 30% 70%,
-        20% 50%, 80% 50%, 40% 60%, 60% 30%, 50% 40%;
-    }
-
-    100% {
-      background-position:
-        20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%,
-        60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%;
-    }
-
+    0% { background-position: 20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%, 60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%; }
+    50% { background-position: 60% 60%, 40% 40%, 50% 80%, 70% 30%, 30% 70%, 20% 50%, 80% 50%, 40% 60%, 60% 30%, 50% 40%; }
+    100% { background-position: 20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%, 60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%; }
   }
-
   </style>
   `,
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <style>
-  { \`
-  @keyframes nebulaDrift {
-    0% {
-      background-position:
-        20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%,
-        60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%;
-    }
-    50% {
-      background-position:
-        60% 60%, 40% 40%, 50% 80%, 70% 30%, 30% 70%,
-        20% 50%, 80% 50%, 40% 60%, 60% 30%, 50% 40%;
-    }
-    100% {
-      background-position:
-        20% 30%, 80% 20%, 70% 70%, 30% 80%, 50% 50%,
-        60% 40%, 40% 20%, 20% 70%, 75% 45%, 45% 75%;
-    }
-  }
-  \`}
-  </style>
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#040404",
-      backgroundImage:\`
+      background: "#040404",
+      backgroundImage: \`
         radial-gradient(circle at 20% 30%, rgba(244,63,94,0.25), transparent 60%),
         radial-gradient(circle at 80% 20%, rgba(245,158,11,0.22), transparent 60%),
         radial-gradient(circle at 70% 70%, rgba(16,185,129,0.22), transparent 60%),
@@ -4964,11 +4446,10 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
         radial-gradient(circle at 75% 45%, rgba(249,115,22,0.22), transparent 60%),
         radial-gradient(circle at 45% 75%, rgba(34,197,94,0.22), transparent 60%)
       \`,
-      backgroundSize:"160% 160%",
-      animation:"nebulaDrift 40s ease-in-out infinite"
+      backgroundSize: "160% 160%",
+      animation: "nebulaDrift 40s ease-in-out infinite"
     }}
   />
-
 </div>`,
   },
   {
@@ -4978,7 +4459,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#020202",
       backgroundImage: `
@@ -5000,98 +4480,31 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       backgroundSize: "220% 220%",
       animation: "hyperFlow 5s linear infinite",
     },
-
     animatedContainer: `
   <style>
   @keyframes hyperFlow {
-
-    0% {
-      background-position:
-        10% 20%, 90% 10%, 80% 80%, 20% 90%,
-        50% 50%, 70% 30%, 30% 60%, 40% 20%,
-        60% 75%, 85% 45%, 15% 55%, 55% 15%,
-        75% 65%, 35% 85%;
-    }
-
-    50% {
-      background-position:
-        80% 70%, 20% 80%, 30% 30%, 70% 20%,
-        40% 60%, 60% 40%, 50% 20%, 80% 50%,
-        20% 40%, 30% 70%, 70% 50%, 50% 80%,
-        60% 20%, 40% 30%;
-    }
-
-    100% {
-      background-position:
-        10% 20%, 90% 10%, 80% 80%, 20% 90%,
-        50% 50%, 70% 30%, 30% 60%, 40% 20%,
-        60% 75%, 85% 45%, 15% 55%, 55% 15%,
-        75% 65%, 35% 85%;
-    }
-
+    0% { background-position: 10% 20%, 90% 10%, 80% 80%, 20% 90%, 50% 50%, 70% 30%, 30% 60%, 40% 20%, 60% 75%, 85% 45%, 15% 55%, 55% 15%, 75% 65%, 35% 85%; }
+    50% { background-position: 80% 70%, 20% 80%, 30% 30%, 70% 20%, 40% 60%, 60% 40%, 50% 20%, 80% 50%, 20% 40%, 30% 70%, 70% 50%, 50% 80%, 60% 20%, 40% 30%; }
+    100% { background-position: 10% 20%, 90% 10%, 80% 80%, 20% 90%, 50% 50%, 70% 30%, 30% 60%, 40% 20%, 60% 75%, 85% 45%, 15% 55%, 55% 15%, 75% 65%, 35% 85%; }
   }
   </style>
   `,
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <style>
-  { \`
-  @keyframes hyperFlow {
-
-    0% {
-      background-position:
-        10% 20%, 90% 10%, 80% 80%, 20% 90%,
-        50% 50%, 70% 30%, 30% 60%, 40% 20%,
-        60% 75%, 85% 45%, 15% 55%, 55% 15%,
-        75% 65%, 35% 85%;
-    }
-
-    50% {
-      background-position:
-        80% 70%, 20% 80%, 30% 30%, 70% 20%,
-        40% 60%, 60% 40%, 50% 20%, 80% 50%,
-        20% 40%, 30% 70%, 70% 50%, 50% 80%,
-        60% 20%, 40% 30%;
-    }
-
-    100% {
-      background-position:
-        10% 20%, 90% 10%, 80% 80%, 20% 90%,
-        50% 50%, 70% 30%, 30% 60%, 40% 20%,
-        60% 75%, 85% 45%, 15% 55%, 55% 15%,
-        75% 65%, 35% 85%;
-    }
-
-  }
-  \`}
-  </style>
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#020202",
-      backgroundImage:\`
+      background: "#020202",
+      backgroundImage: \`
         radial-gradient(circle at 10% 20%, rgba(255,80,80,0.35), transparent 60%),
         radial-gradient(circle at 90% 10%, rgba(255,180,60,0.35), transparent 60%),
         radial-gradient(circle at 80% 80%, rgba(80,255,120,0.35), transparent 60%),
         radial-gradient(circle at 20% 90%, rgba(80,220,255,0.35), transparent 60%),
-        radial-gradient(circle at 50% 50%, rgba(120,120,255,0.35), transparent 60%),
-        radial-gradient(circle at 70% 30%, rgba(200,100,255,0.35), transparent 60%),
-        radial-gradient(circle at 30% 60%, rgba(255,90,200,0.35), transparent 60%),
-        radial-gradient(circle at 40% 20%, rgba(255,140,90,0.35), transparent 60%),
-        radial-gradient(circle at 60% 75%, rgba(100,255,200,0.35), transparent 60%),
-        radial-gradient(circle at 85% 45%, rgba(100,180,255,0.35), transparent 60%),
-        radial-gradient(circle at 15% 55%, rgba(255,100,160,0.35), transparent 60%),
-        radial-gradient(circle at 55% 15%, rgba(200,255,120,0.35), transparent 60%),
-        radial-gradient(circle at 75% 65%, rgba(255,120,120,0.35), transparent 60%),
-        radial-gradient(circle at 35% 85%, rgba(140,120,255,0.35), transparent 60%)
+        radial-gradient(circle at 50% 50%, rgba(120,120,255,0.35), transparent 60%)
       \`,
-      backgroundSize:"220% 220%",
-      animation:"hyperFlow 5s linear infinite"
+      backgroundSize: "220% 220%",
+      animation: "hyperFlow 5s linear infinite"
     }}
   />
-
 </div>`,
   },
   {
@@ -5101,7 +4514,6 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
     theme: "dark",
     animated: true,
     badge: "Animated",
-
     style: {
       background: "#010101",
       backgroundImage: `
@@ -5122,91 +4534,32 @@ backgroundImage:"radial-gradient(circle at center, transparent 40%, rgba(99,102,
       filter: "blur(40px) saturate(140%)",
       animation: "auroraMesh 4s linear infinite",
     },
-
     animatedContainer: `
   <style>
   @keyframes auroraMesh {
-
-    0% {
-      background-position:
-      15% 20%, 85% 15%, 75% 75%, 25% 85%,
-      50% 40%, 65% 30%, 35% 60%, 45% 15%,
-      70% 55%, 90% 45%, 10% 55%, 55% 10%;
-    }
-
-    50% {
-      background-position:
-      75% 65%, 25% 75%, 40% 35%, 65% 30%,
-      30% 70%, 80% 40%, 60% 20%, 20% 50%,
-      50% 80%, 35% 45%, 70% 50%, 40% 60%;
-    }
-
-    100% {
-      background-position:
-      15% 20%, 85% 15%, 75% 75%, 25% 85%,
-      50% 40%, 65% 30%, 35% 60%, 45% 15%,
-      70% 55%, 90% 45%, 10% 55%, 55% 10%;
-    }
-
+    0% { background-position: 15% 20%, 85% 15%, 75% 75%, 25% 85%, 50% 40%, 65% 30%, 35% 60%, 45% 15%, 70% 55%, 90% 45%, 10% 55%, 55% 10%; }
+    50% { background-position: 75% 65%, 25% 75%, 40% 35%, 65% 30%, 30% 70%, 80% 40%, 60% 20%, 20% 50%, 50% 80%, 35% 45%, 70% 50%, 40% 60%; }
+    100% { background-position: 15% 20%, 85% 15%, 75% 75%, 25% 85%, 50% 40%, 65% 30%, 35% 60%, 45% 15%, 70% 55%, 90% 45%, 10% 55%, 55% 10%; }
   }
   </style>
   `,
-
     code: `<div className="min-h-screen w-full relative overflow-hidden">
-
-  <style>
-  { \`
-  @keyframes auroraMesh {
-
-    0% {
-      background-position:
-      15% 20%, 85% 15%, 75% 75%, 25% 85%,
-      50% 40%, 65% 30%, 35% 60%, 45% 15%,
-      70% 55%, 90% 45%, 10% 55%, 55% 10%;
-    }
-
-    50% {
-      background-position:
-      75% 65%, 25% 75%, 40% 35%, 65% 30%,
-      30% 70%, 80% 40%, 60% 20%, 20% 50%,
-      50% 80%, 35% 45%, 70% 50%, 40% 60%;
-    }
-
-    100% {
-      background-position:
-      15% 20%, 85% 15%, 75% 75%, 25% 85%,
-      50% 40%, 65% 30%, 35% 60%, 45% 15%,
-      70% 55%, 90% 45%, 10% 55%, 55% 10%;
-    }
-
-  }
-  \`}
-  </style>
-
   <div
     className="absolute inset-0 z-0"
     style={{
-      background:"#010101",
-      backgroundImage:\`
-      radial-gradient(circle at 15% 20%, rgba(255,80,80,0.35), transparent 60%),
-      radial-gradient(circle at 85% 15%, rgba(255,180,60,0.35), transparent 60%),
-      radial-gradient(circle at 75% 75%, rgba(80,255,140,0.35), transparent 60%),
-      radial-gradient(circle at 25% 85%, rgba(80,200,255,0.35), transparent 60%),
-      radial-gradient(circle at 50% 40%, rgba(120,120,255,0.35), transparent 60%),
-      radial-gradient(circle at 65% 30%, rgba(200,100,255,0.35), transparent 60%),
-      radial-gradient(circle at 35% 60%, rgba(255,90,200,0.35), transparent 60%),
-      radial-gradient(circle at 45% 15%, rgba(255,140,90,0.35), transparent 60%),
-      radial-gradient(circle at 70% 55%, rgba(100,255,200,0.35), transparent 60%),
-      radial-gradient(circle at 90% 45%, rgba(100,180,255,0.35), transparent 60%),
-      radial-gradient(circle at 10% 55%, rgba(255,100,160,0.35), transparent 60%),
-      radial-gradient(circle at 55% 10%, rgba(200,255,120,0.35), transparent 60%)
+      background: "#010101",
+      backgroundImage: \`
+        radial-gradient(circle at 15% 20%, rgba(255,80,80,0.35), transparent 60%),
+        radial-gradient(circle at 85% 15%, rgba(255,180,60,0.35), transparent 60%),
+        radial-gradient(circle at 75% 75%, rgba(80,255,140,0.35), transparent 60%),
+        radial-gradient(circle at 25% 85%, rgba(80,200,255,0.35), transparent 60%),
+        radial-gradient(circle at 50% 40%, rgba(120,120,255,0.35), transparent 60%)
       \`,
-      backgroundSize:"240% 240%",
-      filter:"blur(40px) saturate(140%)",
-      animation:"auroraMesh 4s linear infinite"
+      backgroundSize: "240% 240%",
+      filter: "blur(40px) saturate(140%)",
+      animation: "auroraMesh 4s linear infinite"
     }}
   />
-
 </div>`,
   },
 ];
