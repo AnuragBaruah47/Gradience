@@ -237,11 +237,6 @@ text-transparent
                 href: () => setSection(""),
               },
               {
-                title: "Gradient Library",
-                icon: <Library />,
-                href: () => setSection("Gradient Library"),
-              },
-              {
                 title: "Gradient Generator",
                 icon: <Gradient />,
                 href: () => setSection("Gradient Generator"),
