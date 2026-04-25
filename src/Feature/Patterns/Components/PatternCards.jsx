@@ -32,11 +32,11 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
 
   const darkTheme = themeStore((state) => state.darkTheme);
   const clearStyle = styleStore((s) => s.clearStyle);
-const setTheme = themeStore((s) => s.setTheme);
+  const setTheme = themeStore((s) => s.setTheme);
   const setStyle = styleStore((s) => s.setStyle);
   const setId = styleStore((s) => s.setId);
   const id = styleStore((s) => s.id);
-  const style = styleStore((s)=>s.style)
+  const style = styleStore((s) => s.style);
 
   const preview = id === patterns.id;
   const isFavourite = favourites.some((f) => f.id === patterns.id);
@@ -68,7 +68,11 @@ const setTheme = themeStore((s) => s.setTheme);
   const togglePreview = () => {
     setId(preview ? null : patterns.id);
     setTimeout(() => gsap.to(window, scrollToConfig), 200);
-    setTheme(style.theme)
+    if(patterns.theme === "dark"){
+      setTheme(true)
+    }else{
+      setTheme(false)
+    }
   };
 
   const toggleFavourite = () => {
@@ -84,41 +88,76 @@ const setTheme = themeStore((s) => s.setTheme);
     );
   };
 
+
+
+  const cardClasses = cn(
+    "group relative overflow-hidden rounded-[14px] cursor-pointer opacity-0",
+    "border transition-[border-color,box-shadow] duration-200",
+    "hover:-translate-y-1 hover:scale-[1.01] hover:shadow-xl",
+    "transition-[transform,border-color,box-shadow] duration-280",
+    "ease-[cubic-bezier(0.34,1.56,0.64,1)]",
+    darkTheme
+      ? "border-white/10 bg-white/5 hover:border-white/20 hover:shadow-black/40"
+      : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10"
+  );
+
+  const footerClasses = cn(
+    "px-3 py-2.5 flex items-center justify-between border-t",
+    darkTheme ? "border-white/8" : "border-black/6"
+  );
+
+  const nameClasses = cn(
+    "text-[12px] font-medium truncate",
+    darkTheme ? "text-white" : "text-gray-900"
+  );
+
+  const categoryClasses = cn(
+    "text-[11px] mt-0.5 capitalize",
+    darkTheme ? "text-white/40" : "text-gray-400"
+  );
+
+  const previewBtnClasses = cn(
+    "w-7 h-7 rounded-[7px] flex items-center justify-center",
+    "border transition-all duration-150 active:scale-90 hover:scale-110",
+    preview
+      ? darkTheme
+        ? "bg-gray-200 text-black border-white"
+        : "bg-gray-500 text-white border-gray-900"
+      : darkTheme
+        ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
+        : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
+  );
+
+  const copyBtnClasses = cn(
+    "copy-btn w-7 h-7 rounded-[7px] flex items-center justify-center",
+    "border transition-all duration-150 active:scale-90 hover:scale-110",
+    copy
+      ? "bg-green-500 border-green-500 text-white"
+      : darkTheme
+        ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
+        : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
+  );
+
+  const favBtnClasses = cn(
+    "fav-btn absolute top-2 right-2 z-20 w-6.75 h-6.75 rounded-[7px] border-none",
+    "flex items-center justify-center transition-all duration-150",
+    "bg-black/35 backdrop-blur-sm text-white",
+    "hover:scale-110 active:scale-95",
+    isFavourite ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+  );
+
+
+
   return (
-    <div
-      ref={cardRef}
-      className={cn(
-        "group relative overflow-hidden rounded-[14px] cursor-pointer opacity-0",
-        "border transition-[border-color,box-shadow] duration-200",
-        "hover:-translate-y-1 hover:scale-[1.01] hover:shadow-xl",
-        "transition-[transform,border-color,box-shadow] duration-280",
-        "ease-[cubic-bezier(0.34,1.56,0.64,1)]",
-        darkTheme
-          ? "border-white/10 bg-white/5 hover:border-white/20 hover:shadow-black/40"
-          : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10"
-      )}
-    >
-   
+    <div ref={cardRef} className={cardClasses}>
+
       {patterns.animated && (
         <div className="absolute top-2 left-2 z-20 px-2 py-0.5 rounded-md text-[10px] font-medium tracking-[.05em] uppercase bg-black/40 text-white">
           Live
         </div>
       )}
 
-      <button
-        onClick={toggleFavourite}
-        className={cn(
-          "fav-btn absolute top-2 right-2 z-20 w-6.75 h-6.75 rounded-[7px] border-none",
-          "flex items-center justify-center transition-all duration-150",
-          "bg-black/35 backdrop-blur-sm",
-          isFavourite
-            ? "opacity-100"
-            : "opacity-0 group-hover:opacity-100",
-          "hover:scale-110 active:scale-95",
-          
-          darkTheme ? "text-white" : "text-white"
-        )}
-      >
+      <button onClick={toggleFavourite} className={favBtnClasses}>
         <StarIcon filled={isFavourite} />
       </button>
 
@@ -129,56 +168,22 @@ const setTheme = themeStore((s) => s.setTheme);
         />
       </div>
 
-      <div className={cn(
-        "px-3 py-2.5 flex items-center justify-between",
-        darkTheme ? "border-t border-white/8" : "border-t border-black/6"
-      )}>
+      <div className={footerClasses}>
         <div className="min-w-0">
-          <div className={cn("text-[12px] font-medium truncate", darkTheme ? "text-white" : "text-gray-900")}>
-            {patterns.name}
-          </div>
-          <div className={cn("text-[11px] mt-0.5 capitalize", darkTheme ? "text-white/40" : "text-gray-400")}>
-            {patterns.category}
-          </div>
+          <div className={nameClasses}>{patterns.name}</div>
+          <div className={categoryClasses}>{patterns.category}</div>
         </div>
+
         <div className={cn(
           "flex gap-1 ml-2 shrink-0",
           "opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0",
           "transition-[opacity,transform] duration-200"
         )}>
-          <button
-            onClick={togglePreview}
-            title={preview ? "Hide" : "Preview"}
-            className={cn(
-              "w-7 h-7 rounded-[7px] flex items-center justify-center",
-              "border transition-all duration-150 active:scale-90",
-              "hover:scale-110",
-              preview
-                ? darkTheme
-                  ? "bg-white text-black border-white"
-                  : "bg-gray-900 text-white border-gray-900"
-                : darkTheme
-                  ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
-                  : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
-            )}
-          >
+          <button onClick={togglePreview} title={preview ? "Hide" : "Preview"} className={previewBtnClasses}>
             <EyeSvg className="w-3.5 h-3.5" />
           </button>
 
-          <button
-            onClick={toggleCopy}
-            title={copy ? "Copied!" : "Copy"}
-            className={cn(
-              "copy-btn w-7 h-7 rounded-[7px] flex items-center justify-center",
-              "border transition-all duration-150 active:scale-90",
-              "hover:scale-110",
-              copy
-                ? "bg-green-500 border-green-500 text-white"
-                : darkTheme
-                  ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
-                  : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800"
-            )}
-          >
+          <button onClick={toggleCopy} title={copy ? "Copied!" : "Copy"} className={copyBtnClasses}>
             {copy ? <CheckIcon /> : <CopySvg className="w-3.5 h-3.5" />}
           </button>
         </div>

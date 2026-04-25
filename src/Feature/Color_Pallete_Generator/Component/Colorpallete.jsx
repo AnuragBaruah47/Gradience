@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { copyColors, generateColor, generateColorOn,
   generateColorPalleteAnalogous, generateColorPalleteMonochromatic } from "../Services/Service";
+import { themeStore } from "../../../Store/Store";
+import { cn } from "../../../Utils";
 import CopySvg from "../../../Shared/Components/CopySvg";
 import gsap from "gsap";
 
@@ -62,10 +64,9 @@ const Swatch = ({ color, index }) => {
     <div
       ref={ref}
       onClick={handleCopy}
-      className="relative flex-1 cursor-pointer opacity-0 overflow-hidden transition-[flex] duration-350  ease-in-out hover:flex-[2.2]"
+      className="relative flex-1 cursor-pointer opacity-0 overflow-hidden transition-[flex] duration-350 ease-in-out hover:flex-[2.2]"
       style={{ backgroundColor: color.hex }}
     >
-
       <div className="absolute inset-0 flex flex-col justify-end items-center pb-4 px-2 gap-1
         opacity-0 hover:opacity-100 transition-opacity duration-200">
         <div
@@ -95,6 +96,8 @@ const Colorpallete = () => {
   const [inputHarmony, setInputHarmony] = useState("monochromatic");
   const [pickerColor, setPickerColor] = useState("#3b82f6");
   const modalRef = useRef(null);
+
+  const darkTheme = themeStore((state) => state.darkTheme);
 
   const regenerate = useCallback(() => {
     const base = generateColor();
@@ -142,43 +145,136 @@ const Colorpallete = () => {
     setInputColor("");
   };
 
+  // ── Derived class tokens (no dark: variants) ──────────────────────────────
+
+  const wrapperClasses = cn(
+    "flex flex-col overflow-hidden rounded-2xl border",
+    darkTheme ? "border-white/10" : "border-black/8"
+  );
+
+  const headerClasses = cn(
+    "flex items-center justify-between px-4 py-2.5 border-b gap-3",
+    darkTheme
+      ? "border-white/8 bg-gray-950"
+      : "border-black/6 bg-white"
+  );
+
+  const titleClasses = cn(
+    "text-[14px] font-medium",
+    darkTheme ? "text-white" : "text-gray-900"
+  );
+
+  const kbdClasses = cn(
+    "inline-flex items-center px-1.5 py-0.5 rounded-[5px] text-[11px] font-mono border",
+    darkTheme
+      ? "border-white/10 bg-white/5 text-white/40"
+      : "border-black/10 bg-gray-100 text-gray-500"
+  );
+
+  const hintClasses = cn(
+    "text-[12px]",
+    darkTheme ? "text-white/30" : "text-gray-400"
+  );
+
+  const segmentTrackClasses = cn(
+    "flex gap-0.5 rounded-[9px] p-0.5 border",
+    darkTheme
+      ? "bg-white/5 border-white/8"
+      : "bg-gray-100 border-black/6"
+  );
+
+  const segmentBtn = (active) => cn(
+    "px-3 py-1.5 rounded-[7px] text-[12px] capitalize transition-all duration-150",
+    active
+      ? darkTheme
+        ? "bg-gray-900 text-white font-medium shadow-sm"
+        : "bg-white text-gray-900 font-medium shadow-sm"
+      : darkTheme
+        ? "text-white/40 hover:text-white"
+        : "text-gray-500 hover:text-gray-800"
+  );
+
+  const customBtnClasses = cn(
+    "flex items-center gap-1.5 h-8.5 px-3.5 rounded-[9px] text-[12px] font-medium border-none cursor-pointer",
+    "hover:opacity-85 transition-all duration-150 hover:-translate-y-0.5 active:scale-[.97]",
+    darkTheme ? "bg-white text-black" : "bg-gray-900 text-white"
+  );
+
+  const modalPanelClasses = cn(
+    "relative w-[320px] rounded-2xl border p-6 flex flex-col gap-4",
+    darkTheme
+      ? "border-white/10 bg-gray-950"
+      : "border-black/8 bg-white"
+  );
+
+  const modalTitleClasses = cn(
+    "text-[15px] font-medium",
+    darkTheme ? "text-white" : "text-gray-900"
+  );
+
+  const closeBtnClasses = cn(
+    "absolute top-3.5 right-3.5 w-7 h-7 rounded-[7px] flex items-center justify-center border cursor-pointer transition-all duration-150",
+    darkTheme
+      ? "border-white/10 bg-white/5 text-white/50 hover:text-white"
+      : "border-black/8 bg-gray-100 text-gray-500 hover:text-gray-900"
+  );
+
+  const textInputClasses = cn(
+    "flex-1 h-9 px-3 text-[13px] rounded-[9px] border outline-none transition",
+    "focus:ring-2",
+    darkTheme
+      ? "border-white/10 bg-white/5 text-white placeholder-white/30 focus:ring-white/10"
+      : "border-black/10 bg-gray-50 text-gray-900 placeholder-gray-400 focus:ring-black/10"
+  );
+
+  const colorPickerClasses = cn(
+    "w-9 h-9 rounded-[9px] border cursor-pointer p-0.5",
+    darkTheme ? "border-white/10 bg-white/5" : "border-black/10 bg-gray-50"
+  );
+
+  const harmonyLabelClasses = cn(
+    "text-[12px]",
+    darkTheme ? "text-white/40" : "text-gray-500"
+  );
+
+  const selectClasses = cn(
+    "h-9 px-3 text-[13px] rounded-[9px] border outline-none cursor-pointer",
+    darkTheme
+      ? "border-white/10 bg-white/5 text-white"
+      : "border-black/10 bg-gray-50 text-gray-900"
+  );
+
+  const generateBtnClasses = cn(
+    "w-full h-10 rounded-[10px] border-none cursor-pointer text-[13px] font-medium",
+    "hover:opacity-85 transition-all duration-150 active:scale-[.97]",
+    darkTheme ? "bg-white text-black" : "bg-gray-900 text-white"
+  );
+
+  // ─────────────────────────────────────────────────────────────────────────
+
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl border border-black/8 dark:border-white/10">
-      <div className="flex items-center justify-between px-4 py-2.5 border-b border-black/6 dark:border-white/8 bg-white dark:bg-gray-950 gap-3">
+    <div className={wrapperClasses}>
+      <div className={headerClasses}>
         <div className="flex items-center gap-2">
-          <span className="text-[14px] font-medium dark:text-white">Color palette</span>
-          <kbd className={`inline-flex items-center px-1.5 py-0.5 rounded-[5px] text-[11px] font-mono
-            border border-black/10 dark:border-white/10
-            bg-gray-100 dark:bg-white/5 text-gray-500 dark:text-white/40`}>
-            Space
-          </kbd>
-          <span className="text-[12px] text-gray-400 dark:text-white/30">to generate</span>
+          <span className={titleClasses}>Color palette</span>
+          <kbd className={kbdClasses}>Space</kbd>
+          <span className={hintClasses}>to generate</span>
         </div>
 
         <div className="flex items-center gap-2">
-    
-          <div className="flex gap-0.5 bg-gray-100 dark:bg-white/5 rounded-[9px] p-0.5 border border-black/6 dark:border-white/8">
+          <div className={segmentTrackClasses}>
             {HARMONIES.map((h) => (
               <button
                 key={h}
                 onClick={() => handleHarmonyChange(h)}
-                className={`px-3 py-1.5 rounded-[7px] text-[12px] capitalize transition-all duration-150
-                  ${harmony === h
-                    ? "bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-medium shadow-sm"
-                    : "text-gray-500 dark:text-white/40 hover:text-gray-800 dark:hover:text-white"
-                  }`}
+                className={segmentBtn(harmony === h)}
               >
                 {h === "monochromatic" ? "Mono" : h === "complementary" ? "Complement" : h}
               </button>
             ))}
           </div>
 
-          <button
-            onClick={() => setModalOpen(true)}
-            className="flex items-center gap-1.5 h-8.5 px-3.5 rounded-[9px] text-[12px] font-medium
-              bg-gray-900 dark:bg-white text-white dark:text-black border-none cursor-pointer
-              hover:opacity-85 transition-all duration-150 hover:-translate-y-0.5 active:scale-[.97]"
-          >
+          <button onClick={() => setModalOpen(true)} className={customBtnClasses}>
             <SparkIcon /> Custom
           </button>
         </div>
@@ -190,57 +286,39 @@ const Colorpallete = () => {
         ))}
       </div>
 
-  
       {modalOpen && (
         <div
           className="absolute inset-0 z-50 flex items-center justify-center bg-black/45"
           onClick={(e) => { if (e.target === e.currentTarget) setModalOpen(false); }}
         >
-          <div
-            ref={modalRef}
-            className="relative w-[320px] rounded-2xl border border-black/8 dark:border-white/10
-              bg-white dark:bg-gray-950 p-6 flex flex-col gap-4"
-          >
-            <button
-              onClick={() => setModalOpen(false)}
-              className="absolute top-3.5 right-3.5 w-7 h-7 rounded-[7px] flex items-center justify-center
-                border border-black/8 dark:border-white/10 bg-gray-100 dark:bg-white/5
-                text-gray-500 dark:text-white/50 cursor-pointer hover:text-gray-900 dark:hover:text-white
-                transition-all duration-150"
-            >
+          <div ref={modalRef} className={modalPanelClasses}>
+            <button onClick={() => setModalOpen(false)} className={closeBtnClasses}>
               <CloseIcon />
             </button>
 
-            <div className="text-[15px] font-medium dark:text-white">Custom palette</div>
+            <div className={modalTitleClasses}>Custom palette</div>
 
             <div className="flex gap-2.5 items-center">
               <input
                 value={inputColor}
                 onChange={(e) => setInputColor(e.target.value)}
                 placeholder="#3b82f6"
-                className="flex-1 h-9 px-3 text-[13px] rounded-[9px]
-                  border border-black/10 dark:border-white/10
-                  bg-gray-50 dark:bg-white/5 dark:text-white dark:placeholder-white/30
-                  outline-none focus:ring-2 focus:ring-black/10 dark:focus:ring-white/10 transition"
+                className={textInputClasses}
               />
               <input
                 type="color"
                 value={pickerColor}
                 onChange={(e) => { setPickerColor(e.target.value); setInputColor(e.target.value); }}
-                className="w-9 h-9 rounded-[9px] border border-black/10 dark:border-white/10
-                  bg-gray-50 dark:bg-white/5 cursor-pointer p-0.5"
+                className={colorPickerClasses}
               />
             </div>
 
             <div className="flex flex-col gap-1.5">
-              <label className="text-[12px] text-gray-500 dark:text-white/40">Harmony</label>
+              <label className={harmonyLabelClasses}>Harmony</label>
               <select
                 value={inputHarmony}
                 onChange={(e) => setInputHarmony(e.target.value)}
-                className="h-9 px-3 text-[13px] rounded-[9px]
-                  border border-black/10 dark:border-white/10
-                  bg-gray-50 dark:bg-white/5 dark:text-white
-                  outline-none cursor-pointer"
+                className={selectClasses}
               >
                 {HARMONIES.map(h => (
                   <option key={h} value={h} className="capitalize">{h}</option>
@@ -248,13 +326,7 @@ const Colorpallete = () => {
               </select>
             </div>
 
-            <button
-              onClick={generateFromInput}
-              className="w-full h-10 rounded-[10px] border-none cursor-pointer
-                text-[13px] font-medium
-                bg-gray-900 dark:bg-white text-white dark:text-black
-                hover:opacity-85 transition-all duration-150 active:scale-[.97]"
-            >
+            <button onClick={generateFromInput} className={generateBtnClasses}>
               Generate
             </button>
           </div>

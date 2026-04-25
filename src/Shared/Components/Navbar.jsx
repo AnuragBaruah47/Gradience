@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { themeStore } from "../../Store/Store";
 import gsap from "gsap";
 
@@ -12,7 +12,7 @@ const Navbar = () => {
   const githubRef = useRef(null);
   const discordRef = useRef(null);
 
-  const iconColor = darkTheme ? "#888888" : "#888888";
+  const iconColor = "#888888";
 
   const handleEnter = (ref) => {
     gsap.to(ref.current, { scale: 1.2, duration: 0.3, ease: "power3.out" });
@@ -26,7 +26,11 @@ const Navbar = () => {
     "rounded-4xl transition-all duration-300 cursor-pointer p-1.5 hover:bg-white/10 hover:backdrop-blur-md hover:border-white/20 hover:shadow-lg";
 
   return (
-    <nav className="w-full dark:text-white py-8 flex items-center justify-center">
+    <nav
+      className={`w-full py-8 flex items-center justify-center ${
+        darkTheme ? "text-white" : "text-black"
+      }`}
+    >
       <div className="flex w-xl">
         <svg
           width="50px"
@@ -82,7 +86,7 @@ const Navbar = () => {
           </div>
           <h1
             style={{ color: textMuted }}
-            className="text-[20px] text-[#888888] font-medium"
+            className="text-[20px] font-medium"
           >
             Gradi
           </h1>
@@ -108,6 +112,7 @@ const Navbar = () => {
             <path d="M243.69531,70.46924A3.99949,3.99949,0,0,0,240,68l-32.79834-.00049a44.09747,44.09747,0,0,0-38.64307-23.99609A44.31838,44.31838,0,0,0,124,87.99951l-.00977,11.1709c-44.07861-9.38477-80.78418-45.62207-81.16308-46a4.00074,4.00074,0,0,0-6.7627,2.11426c-8.5205,46.86181,5.47461,78.11865,18.71534,96.08789a103.47267,103.47267,0,0,0,27.40136,25.87207C66.4668,197.58936,38.88574,208.14551,38.5957,208.25488a3.99983,3.99983,0,0,0-1.92382,5.96387c.26464.39746,2.78417,3.98145,9.53906,7.35889C54.73438,225.83936,66.10254,228,80,228c68.94678,0,126.47021-53.45166,131.624-121.96729l31.2041-31.2041A3.99939,3.99939,0,0,0,243.69531,70.46924Z" />
           </svg>
         </div>
+
         <div
           onMouseEnter={() => handleEnter(githubRef)}
           onMouseLeave={() => handleLeave(githubRef)}

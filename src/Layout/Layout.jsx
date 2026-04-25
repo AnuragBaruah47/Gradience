@@ -21,6 +21,7 @@ const Layout = () => {
       touchMultiplier: 1.5,
     });
 
+
     gsap.ticker.add((time) => {
       lenis.raf(time * 1000);
     });
