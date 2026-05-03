@@ -4,8 +4,8 @@ const HomeSvg = () => {
   return (
     <div className="">
       <svg
-      height={15}
-      width={15}
+      height={20}
+      width={20}
         fill="#000000"
         version="1.1"
         id="Capa_1"
