@@ -15,9 +15,7 @@ import { FloatingDock } from "../Components/Dock";
 import Library from "../Components/Library";
 import Gradient from "../Components/Gradient";
 import HomeSvg from "../Components/HomeSvg";
-import UpSvg from "../Components/UpSvg";
 import { styleStore } from "../../../Store/Store";
-import DownSvg from "../Components/DownSvg";
 import EyeSvg from "../../../Shared/Components/EyeSvg";
 
 const Home = () => {
