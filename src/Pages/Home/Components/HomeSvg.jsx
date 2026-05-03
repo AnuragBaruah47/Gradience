@@ -2,8 +2,10 @@ import React from "react";
 
 const HomeSvg = () => {
   return (
-    <div className="h-5 w-5">
+    <div className="">
       <svg
+      height={15}
+      width={15}
         fill="#000000"
         version="1.1"
         id="Capa_1"

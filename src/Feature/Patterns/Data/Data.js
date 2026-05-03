@@ -296,27 +296,6 @@ export const gridPatterns = [
 </div>`,
   },
   {
-    id: "midnight-bloom",
-    name: "Midnight Bloom",
-    category: "decorative",
-    theme: "dark",
-    animated: false,
-    badge: "New",
-    style: {
-      background:
-        "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
-    },
-    code: `<div className="min-h-screen w-full relative">
-  <div
-    className="absolute inset-0 z-0"
-    style={{
-      background:
-        "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)"
-    }}
-  />
-</div>`,
-  },
-  {
     id: "midnight-horizon",
     name: "Midnight Horizon",
     category: "decorative",

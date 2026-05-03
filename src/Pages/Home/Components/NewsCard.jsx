@@ -4,10 +4,14 @@ import { themeStore } from "../../../Store/Store";
 
 const NewsCard = () => {
   const darkTheme = themeStore((state) => state.darkTheme);
+  const prevTheme = themeStore((s) => s.prevTheme);
+  const savePrevTheme = themeStore((s) => s.savePrevTheme);
+  const clearPrevTheme = themeStore((s) => s.clearPrevTheme);
+  const setTheme = themeStore((s) => s.setTheme);
 
   return (
     <div
-      className={`border flex items-center overflow-clip gap-2 w-fit rounded-full p-2 h-fit ${
+      className={`border flex overflow-clip gap-2 w-fit rounded-full p-2 h-fit ${
         darkTheme ? "border-[#1E2129]" : "border-[#ebe9e9]"
       }`}
       style={{

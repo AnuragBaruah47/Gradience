@@ -11,51 +11,27 @@ import Navbar from "../Shared/Components/Navbar";
 gsap.registerPlugin(ScrollToPlugin);
 
 const Layout = () => {
+  const id = styleStore((s) => s.id);
   const styleBackGround = styleStore((s) => s.style);
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      lerp: 0.06,
-      smoothWheel: true,
-      wheelMultiplier: 0.8,
-      touchMultiplier: 1.5,
-    });
-
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0);
-
-    return () => {
-      lenis.destroy();
-    };
-  }, []);
+  const preview = id !== null;
 
   return (
     <div>
       <div
-        style={styleBackGround}
-        className="min-h-screen -z-10 fixed w-full"
+        style={preview ? styleBackGround : {}}
+        className="lg:min-h-screen -z-10 fixed w-full"
       />
 
       <div className="relative">
         <div className="w-full flex justify-center">
-   <div className="absolute z-100">
-             <Navbar />
+          <div className="xl:absolute xl:justify-center flex w-full xl:z-100">
+            <Navbar />
+          </div>
         </div>
-     
-        </div>
-     
 
         <Outlet />
-        <Toaster
-          toastOptions={{
-            duration: 2000,
-          }}
-          position="bottom-right"
-        />
+        <Toaster toastOptions={{ duration: 2000 }} position="bottom-right" />
       </div>
     </div>
   );

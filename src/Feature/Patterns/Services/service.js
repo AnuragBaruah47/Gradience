@@ -1,7 +1,11 @@
 import { toast } from "sonner";
+
 export const scrollToConfig = {
   duration: 1,
-  scrollTo: 0,
+  scrollTo: {
+    y: 0,
+    autoKill: true,
+  },
   ease: "power2.out",
 };
 
