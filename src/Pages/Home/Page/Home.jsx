@@ -17,6 +17,7 @@ import Gradient from "../Components/Gradient";
 import HomeSvg from "../Components/HomeSvg";
 import { styleStore } from "../../../Store/Store";
 import EyeSvg from "../../../Shared/Components/EyeSvg";
+import Down from "../Components/Down";
 
 const Home = () => {
   const setId = styleStore((s) => s.setId);
@@ -63,6 +64,23 @@ const Home = () => {
 
   return (
     <div>
+      {!!style && !!id && (
+        <button
+          onClick={() => {
+            const el = document.getElementById(id);
+            if (el) {
+              const top = el.getBoundingClientRect().top + window.scrollY - 200;
+              window.scrollTo({ top, behavior: "smooth" });
+            }
+          }}
+          className="fixed bottom-15 right-4 lg:right-10 lg:bottom-auto lg:top-[89%] lg:right-60 h-10 w-10 flex justify-center items-center p-2 bg-black active:scale-95 transition-all rounded-full z-300 shadow-lg ring-1 ring-white/20"
+        >
+          <div className="h-7 flex justify-center items-center w-7">
+            <Down />
+          </div>
+        </button>
+      )}
+
       {section === "" && (
         <div className="flex w-screen xl:translate-y-25 flex-col xl:gap-12 gap-10">
           <div className="w-full flex justify-center mt-5 lg:mt-10">
@@ -114,7 +132,6 @@ const Home = () => {
               iconBg="bg-purple-50"
               labelColor="#534AB7"
             />
-
             <FeatureCard
               icon={<Pallete />}
               title="Color Palette Builder"
@@ -388,27 +405,6 @@ const Home = () => {
                 title: "Color Pallete Generator",
                 icon: <Pallete />,
                 href: () => setSection("Color Pallete Generator"),
-              },
-              {
-                title: "Go To Preview",
-                icon: <EyeSvg />,
-                href: style
-                  ? () => {
-                      const el = document.getElementById(id);
-                      if (el) {
-                        const top =
-                          el.getBoundingClientRect().top + window.scrollY - 200;
-                        window.scrollTo({ top, behavior: "smooth" });
-                      }
-                    }
-                  : () => {
-                      const el = document.getElementById("grad");
-                      if (el) {
-                        const top =
-                          el.getBoundingClientRect().top + window.scrollY - 200;
-                        window.scrollTo({ top, behavior: "smooth" });
-                      }
-                    },
               },
             ]}
           />

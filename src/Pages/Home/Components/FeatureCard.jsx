@@ -6,7 +6,7 @@ export const FeatureCard = ({ icon, label, title, description, accentColor, icon
 
 
       <div className="flex items-start justify-between mb-3.5">
-        <div className={`w-10 h-10 rounded-[10px] flex items-center justify-center transition-transform duration-200 group-hover:scale-105 ${iconBg}`}>
+        <div className={`w-10 h-10 rounded-[10px] flex justify-center items-center transition-transform duration-200 group-hover:scale-105 ${iconBg}`}>
           {icon}
         </div>
         <svg
