@@ -62,7 +62,7 @@ const Home = () => {
   const finalPatterns = querySearch(query, basePatterns);
 
   return (
-    <div className="">
+    <div>
       {section === "" && (
         <div className="flex w-screen xl:translate-y-25 flex-col xl:gap-12 gap-10">
           <div className="w-full flex justify-center mt-5 lg:mt-10">
@@ -72,7 +72,7 @@ const Home = () => {
           <div className="w-full flex gap-2 flex-col items-center justify-center">
             <h1
               className={cn(
-                "text-5xl lg:text-7xl tracking-tighter text-center font-semibold w-120",
+                "text-5xl lg:text-7xl tracking-tighter text-center font-semibold",
                 darkTheme ? "text-white" : "text-black",
               )}
             >

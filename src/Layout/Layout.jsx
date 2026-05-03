@@ -17,10 +17,10 @@ const Layout = () => {
   const preview = id !== null;
 
   return (
-    <div>
+    <div className="">
       <div
         style={preview ? styleBackGround : {}}
-        className="lg:min-h-screen -z-10 fixed w-full"
+        className="h-screen lg:min-h-screen -z-10 fixed w-full"
       />
 
       <div className="relative">
