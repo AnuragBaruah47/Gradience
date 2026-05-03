@@ -125,20 +125,16 @@ export const copyColors = async (color) => {
 
 export const generateColorOn = (type, color) => {
   if (type === "monochromatic") {
-    console.log("monochromatic");
-    console.log(type, color, "here");
+  
     return generateColorPalleteMonochromatic(color);
   } else if (type === "analogous") {
-    console.log(type, color, "here");
-    console.log("analogous");
+   
     return generateColorPalleteAnalogous(color);
   } else if (type === "complementary") {
-    console.log(type, color, "here");
-    console.log("complementary");
+  
     return generateColorPalleteComplementory(color);
   } else {
-    console.log(type, color, "here");
-    console.log("defaut");
+  
     return generateColorPalleteAnalogous(generateColor());
   }
 };

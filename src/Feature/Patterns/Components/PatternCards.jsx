@@ -57,7 +57,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
 
   const preview = id === patterns.id;
   const isFavourite = favourites.some((f) => f.id === patterns.id);
-  console.log(darkTheme, id, style);
+ 
 
   useEffect(() => {
     if (!cardRef.current) return;

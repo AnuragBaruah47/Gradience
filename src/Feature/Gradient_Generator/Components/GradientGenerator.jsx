@@ -126,7 +126,7 @@ const GradientGenerator = () => {
     setGradient(createGradient());
   }, [type]);
 
-  console.log(history);
+
 
   const generate = () => {
     setLoading(true);
