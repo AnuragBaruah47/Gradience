@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeSvg = () => {
   return (
-    <div className="h-2 lg:h-5">
+    <div className="h-2 lg:h-5 lg:w-5">
       <svg
         fill="#000000"
         version="1.1"
