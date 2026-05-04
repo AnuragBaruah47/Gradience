@@ -4,8 +4,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-  will-change: transform;
-  font-display: swap;
   scroll-behavior: auto;
 }
 html::-webkit-scrollbar,
