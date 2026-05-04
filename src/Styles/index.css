@@ -4,6 +4,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
+  will-change: transform;
+  font-display: swap;
   scroll-behavior: auto;
 }
 html::-webkit-scrollbar,
@@ -392,28 +394,66 @@ body {
   }
 }
 
-  @keyframes cloudFloat {
-    0% { background-position: 20% 40%, 80% 60%; }
-    50% { background-position: 40% 60%, 60% 40%; }
-    100% { background-position: 20% 40%, 80% 60%; }
+@keyframes cloudFloat {
+  0% {
+    background-position:
+      20% 40%,
+      80% 60%;
   }
+  50% {
+    background-position:
+      40% 60%,
+      60% 40%;
+  }
+  100% {
+    background-position:
+      20% 40%,
+      80% 60%;
+  }
+}
 
- @keyframes gridScan {
-    0% { background-position: 0 0, 0 0; }
-    100% { background-position: 0 40px, 40px 0; }
+@keyframes gridScan {
+  0% {
+    background-position:
+      0 0,
+      0 0;
   }
+  100% {
+    background-position:
+      0 40px,
+      40px 0;
+  }
+}
 
-  @keyframes auroraWave {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+@keyframes auroraWave {
+  0% {
+    background-position: 0% 50%;
   }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
-  @keyframes meshMove {
-    0% { background-position: 20% 30%, 80% 70%; }
-    50% { background-position: 40% 60%, 60% 40%; }
-    100% { background-position: 20% 30%, 80% 70%; }
+@keyframes meshMove {
+  0% {
+    background-position:
+      20% 30%,
+      80% 70%;
   }
+  50% {
+    background-position:
+      40% 60%,
+      60% 40%;
+  }
+  100% {
+    background-position:
+      20% 30%,
+      80% 70%;
+  }
+}
 
 @keyframes auroraMesh {
   0% {
@@ -464,8 +504,3 @@ body {
       55% 10%;
   }
 }
-
-
-
-
-

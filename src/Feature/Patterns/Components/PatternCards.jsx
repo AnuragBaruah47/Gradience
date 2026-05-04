@@ -131,7 +131,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
       else if (patterns.theme === "dark") setPreviewTheme(true);
     } else {
       importToggleDown(false);
-
+      clearId(false)
       setTimeout(() => gsap.to(window, scrollToConfig), 200);
       setId(null);
       if (prevTheme !== null) {

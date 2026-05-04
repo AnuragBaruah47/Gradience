@@ -2,7 +2,7 @@ import tinycolor from "tinycolor2";
 import { toast } from "sonner";
 export const generateColorPalleteMonochromatic = (baseColor) => {
   let color = tinycolor(baseColor);
-  if (color.isValid()){
+  if (color.isValid()) {
     let monochromaticColors = [];
     const lightnessArray = [0.12, 0.28, 0.5, 0.72, 0.88];
     const shadeArray = ["VeryDark", "Dark", "Base", "Light", "VeryLight"];
@@ -25,7 +25,7 @@ export const generateColorPalleteMonochromatic = (baseColor) => {
 
 export const generateColorPalleteAnalogous = (baseColor) => {
   let color = tinycolor(baseColor);
-  if (color.isValid()){
+  if (color.isValid()) {
     let analogousColors = [];
     const lightnessArray = [0.1, 0.25, 0.5, 0.72, 0.9];
     const shadeArray = ["VeryDark", "Dark", "Base", "Light", "VeryLight"];
@@ -125,16 +125,28 @@ export const copyColors = async (color) => {
 
 export const generateColorOn = (type, color) => {
   if (type === "monochromatic") {
-  
     return generateColorPalleteMonochromatic(color);
   } else if (type === "analogous") {
-   
     return generateColorPalleteAnalogous(color);
   } else if (type === "complementary") {
-  
     return generateColorPalleteComplementory(color);
   } else {
-  
     return generateColorPalleteAnalogous(generateColor());
+  }
+};
+
+export const copyWhole = async (colors) => {
+  try {
+    const lines = colors
+      .map(
+        (c) =>
+          `${(c.shade || c.label || "").padEnd(12)} ${c.hex.toUpperCase()}`,
+      )
+      .join("\n");
+
+    const text = `/* Color Palette */\n${lines}`;
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    console.error("Failed to copy: ", err);
   }
 };
