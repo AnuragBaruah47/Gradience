@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import NewsCard from "../Components/NewsCard";
 import { gridPatterns } from "../../../Feature/Patterns/Data/Data";
 import PatternCards from "../../../Feature/Patterns/Components/PatternCards";
-import { themeStore } from "../../../Store/Store";
+import { themeStore, toggleArrow } from "../../../Store/Store";
 import { querySearch } from "../../services/service";
 import { FeatureCard } from "../Components/FeatureCard";
 import Colorpallete from "../../../Feature/Color_Pallete_Generator/Component/Colorpallete";
@@ -37,6 +37,9 @@ const Home = () => {
   const savePrevTheme = themeStore((s) => s.savePrevTheme);
   const clearPrevTheme = themeStore((s) => s.clearPrevTheme);
   const setTheme = themeStore((s) => s.setTheme);
+  const importDown = toggleArrow((s) => s.down);
+  const toggleImportDown = toggleArrow((s) => s.setArrow);
+  const clearId = styleStore((s) => s.clearId);
 
   useEffect(() => {
     const data = localStorage.getItem("favourites");
@@ -64,7 +67,7 @@ const Home = () => {
 
   return (
     <div>
-      {!!style && !!id && (
+      {importDown && (
         <button
           onClick={() => {
             const el = document.getElementById(id);
@@ -73,7 +76,7 @@ const Home = () => {
               window.scrollTo({ top, behavior: "smooth" });
             }
           }}
-          className="fixed bottom-15 right-4 lg:right-10 lg:bottom-auto lg:top-[89%] lg:right-60 h-10 w-10 flex justify-center items-center p-2 bg-black active:scale-95 transition-all rounded-full z-300 shadow-lg ring-1 ring-white/20"
+          className="fixed cursor-pointer bottom-15 right-4 lg:bottom-auto lg:top-[89%] lg:right-60 h-10 w-10 flex justify-center items-center p-2 bg-black active:scale-95 transition-all rounded-full z-300 shadow-lg ring-1 ring-white/20"
         >
           <div className="h-7 flex justify-center items-center w-7">
             <Down />
@@ -395,16 +398,29 @@ const Home = () => {
         <div className="w-fit border-[0.1px] border-[rgba(0,0,0,0.1)] rounded-2xl fixed bottom-0 lg:bottom-5 z-100">
           <FloatingDock
             items={[
-              { title: "Home", icon: <HomeSvg />, href: () => setSection("") },
+              {
+                title: "Home",
+                icon: <HomeSvg />,
+                href: () => {
+                  setSection("");
+                  id ? toggleImportDown(true) : toggleImportDown(false);
+                },
+              },
               {
                 title: "Gradient Generator",
                 icon: <Gradient />,
-                href: () => setSection("Gradient Generator"),
+                href: () => {
+                  toggleImportDown(false);
+                  setSection("Gradient Generator");
+                },
               },
               {
                 title: "Color Pallete Generator",
                 icon: <Pallete />,
-                href: () => setSection("Color Pallete Generator"),
+                href: () => {
+                  toggleImportDown(false);
+                  setSection("Color Pallete Generator");
+                },
               },
             ]}
           />

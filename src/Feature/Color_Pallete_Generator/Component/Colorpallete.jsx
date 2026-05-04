@@ -6,7 +6,7 @@ import {
   generateColorPalleteAnalogous,
   generateColorPalleteMonochromatic,
 } from "../Services/Service";
-import { themeStore } from "../../../Store/Store";
+import { themeStore, toggleArrow } from "../../../Store/Store";
 import { cn } from "../../../Utils";
 import gsap from "gsap";
 
@@ -109,7 +109,6 @@ const Swatch = ({ color, index, vertical }) => {
     setTimeout(() => setCopied(false), 1800);
   };
 
-   
   const tc = textColor(color.hex);
   const overlayBg =
     luminance(color.hex) > 0.45 ? "rgba(0,0,0,.1)" : "rgba(255,255,255,.15)";
@@ -200,7 +199,10 @@ const Colorpallete = () => {
   const clearPrevTheme = themeStore((s) => s.clearPrevTheme);
   const setTheme = themeStore((s) => s.setTheme);
 
+  const importToggleDown = toggleArrow((s) => s.setArrow);
+
   useEffect(() => {
+    importToggleDown(false);
     const check = () => setIsMobile(window.innerWidth < 640);
     check();
     window.addEventListener("resize", check);

@@ -5,7 +5,7 @@ import {
   linearGradientGenerate,
   conicGradientGenerate,
 } from "../Services/Service";
-import { themeStore } from "../../../Store/Store";
+import { themeStore, toggleArrow } from "../../../Store/Store";
 import gsap from "gsap";
 
 const LinearIcon = () => (
@@ -121,10 +121,12 @@ const GradientGenerator = () => {
     if (type === "Radial") return radialGradientGenerate();
     return conicGradientGenerate();
   };
+  
 
   useEffect(() => {
     setGradient(createGradient());
   }, [type]);
+
 
 
 

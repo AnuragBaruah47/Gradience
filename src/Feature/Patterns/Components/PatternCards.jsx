@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { cn } from "../../../Utils";
 import CopySvg from "../../../Shared/Components/CopySvg";
 import EyeSvg from "../../../Shared/Components/EyeSvg";
-import { styleStore, themeStore } from "../../../Store/Store";
+import { styleStore, themeStore, toggleArrow } from "../../../Store/Store";
 import { copyStyle, scrollToConfig } from "../Services/service";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -41,6 +41,7 @@ const CheckIcon = () => (
 
 const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
   const [copy, setCopy] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
   const cardRef = useRef(null);
 
   const darkTheme = themeStore((state) => state.darkTheme);
@@ -54,10 +55,17 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
   const style = styleStore((s) => s.style);
   const setId = styleStore((s) => s.setId);
   const id = styleStore((s) => s.id);
+  const importToggleDown = toggleArrow((s) => s.setArrow);
+   const clearId = styleStore((s) => s.clearId);
 
   const preview = id === patterns.id;
   const isFavourite = favourites.some((f) => f.id === patterns.id);
- 
+
+  useEffect(() => {
+    const handleResize = () => setIsDesktop(window.innerWidth >= 1024);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     if (!cardRef.current) return;
@@ -97,6 +105,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
     }
 
     if (preview) {
+      importToggleDown(true);
       clearStyle();
       setStyle(patterns.style);
       localStorage.setItem("selectedPatternId", patterns.id);
@@ -114,13 +123,16 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
       if (prevTheme === null) {
         savePrevTheme("");
         savePrevTheme(darkTheme);
+        importToggleDown(true);
       }
       setId(patterns.id);
       setTimeout(() => gsap.to(window, scrollToConfig), 200);
       if (patterns.theme === "light") setPreviewTheme(false);
       else if (patterns.theme === "dark") setPreviewTheme(true);
     } else {
-        setTimeout(() => gsap.to(window, scrollToConfig), 200);
+      importToggleDown(false);
+
+      setTimeout(() => gsap.to(window, scrollToConfig), 200);
       setId(null);
       if (prevTheme !== null) {
         setTheme(prevTheme);
@@ -153,18 +165,19 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
     );
   };
 
-const cardClasses = cn(
-  "group relative overflow-hidden rounded-[14px] opacity-0",
-  "border transition-[border-color,box-shadow] duration-200",
-  "hover:-translate-y-1 hover:scale-[1.01] hover:shadow-xl",
-  "transition-[transform,border-color,box-shadow] duration-280",
-  "ease-[cubic-bezier(0.34,1.56,0.64,1)]",
-  preview
-    ? "border-green-500 shadow-[0_0_0_1px_rgba(34,197,94,0.4)] hover:border-green-400 hover:shadow-[0_0_0_1px_rgba(34,197,94,0.5)]"
-    : darkTheme
-      ? "border-white/10 bg-white/5 hover:border-white/20 hover:shadow-black/40"
-      : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10",
-);
+  const cardClasses = cn(
+    "group relative overflow-hidden rounded-[14px] opacity-0",
+    "border transition-[border-color,box-shadow] duration-200",
+    "hover:-translate-y-1 hover:scale-[1.01] hover:shadow-xl",
+    "transition-[transform,border-color,box-shadow] duration-280",
+    "ease-[cubic-bezier(0.34,1.56,0.64,1)]",
+    preview
+      ? "border-green-500 shadow-[0_0_0_1px_rgba(34,197,94,0.4)] hover:border-green-400 hover:shadow-[0_0_0_1px_rgba(34,197,94,0.5)]"
+      : darkTheme
+        ? "border-white/10 bg-white/5 hover:border-white/20 hover:shadow-black/40"
+        : "border-black/8 bg-white hover:border-black/14 hover:shadow-black/10",
+  );
+
   const footerClasses = cn(
     "px-3 py-2.5 flex items-center justify-between border-t",
     darkTheme ? "border-white/8" : "border-black/6",
@@ -222,7 +235,7 @@ const cardClasses = cn(
         <StarIcon filled={isFavourite} />
       </button>
 
-      <div className="h-28  w-full overflow-hidden relative">
+      <div className="h-28 w-full overflow-hidden relative">
         <div
           style={patterns.style}
           className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.08]"
@@ -236,11 +249,12 @@ const cardClasses = cn(
         </div>
 
         <div
-        id={patterns.id}
+          id={patterns.id}
           className={cn(
-            "flex gap-1 ml-2 shrink-0",
-            "opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0",
-            "transition-[opacity,transform] duration-200",
+            "flex gap-1 ml-2 shrink-0 transition-[opacity,transform] duration-200",
+            isDesktop
+              ? "opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0"
+              : "opacity-100 translate-x-0",
           )}
         >
           <button

@@ -5,6 +5,7 @@ export const styleStore = create((set) => ({
   id: null,
   setStyle: (newStyle) => set({ style: newStyle }),
   setId: (newId) => set({ id: newId }),
+  clearId : (newId) => set({id : newId}),
   clearStyle: () => set({ style: null }),
 }));
 
@@ -38,3 +39,7 @@ export const themeStore = create((set) => ({
   },
 }));
 
+export const toggleArrow = create((set) => ({
+  down: false,
+  setArrow: (isDown) => set({ down: isDown }),
+}));
