@@ -127,7 +127,6 @@ const Swatch = ({ color, index, vertical }) => {
 };
 
 const Colorpallete = () => {
-  // ── all useState first ──────────────────────────────────────────
   const [harmony, setHarmony] = useState("monochromatic");
   const [palette, setPalette] = useState(() =>
     generateColorPalleteMonochromatic(generateColor())
@@ -138,14 +137,12 @@ const Colorpallete = () => {
   const [pickerColor, setPickerColor] = useState("#3b82f6");
   const [isMobile, setIsMobile] = useState(false);
 
-  // ── all useRef next ─────────────────────────────────────────────
   const modalRef = useRef(null);
 
-  // ── all store hooks next (always same count, never conditional) ─
+ 
   const darkTheme = themeStore((state) => state.darkTheme);
   const importToggleDown = toggleArrow((s) => s.setArrow);
 
-  // ── all useCallback next ────────────────────────────────────────
   const regenerate = useCallback(() => {
     const base = generateColor();
     const newPalette =
@@ -155,7 +152,7 @@ const Colorpallete = () => {
     setPalette(newPalette);
   }, [harmony]);
 
-  // ── all useEffect last ──────────────────────────────────────────
+
   useEffect(() => {
     importToggleDown(false);
     const check = () => setIsMobile(window.innerWidth < 640);
@@ -185,7 +182,6 @@ const Colorpallete = () => {
     }
   }, [modalOpen]);
 
-  // ── handlers (plain functions, no hooks) ───────────────────────
   const handleHarmonyChange = (h) => {
     setHarmony(h);
     const base = generateColor();
