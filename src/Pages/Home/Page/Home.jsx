@@ -42,6 +42,17 @@ const Home = () => {
   const clearId = styleStore((s) => s.clearId);
 
   useEffect(() => {
+    const sectionParam = new URLSearchParams(window.location.search).get("section");
+    if (sectionParam === "GradientGenerator") {
+      setSection("Gradient Generator");
+      toggleImportDown(false);
+    } else if (sectionParam === "ColorPalleteGenerator") {
+      setSection("Color Pallete Generator");
+      toggleImportDown(false);
+    }
+  }, []);
+
+  useEffect(() => {
     const data = localStorage.getItem("favourites");
     setFavourites(data ? JSON.parse(data) : []);
     if (popupRef.current) {
@@ -65,6 +76,18 @@ const Home = () => {
 
   const finalPatterns = querySearch(query, basePatterns);
 
+
+const updateParam = (sectionKey) => {
+  const params = new URLSearchParams(window.location.search);
+  if (sectionKey) {
+    params.set("section", sectionKey);
+    window.history.replaceState({}, "", `?${params.toString()}`);
+  } else {
+    params.delete("section");
+    const str = params.toString();
+    window.history.replaceState({}, "", str ? `?${str}` : window.location.pathname);
+  }
+};
   return (
     <div>
       {importDown && (
@@ -402,6 +425,7 @@ const Home = () => {
                 title: "Home",
                 icon: <HomeSvg />,
                 href: () => {
+                  updateParam(null);
                   setSection("");
                   id ? toggleImportDown(true) : toggleImportDown(false);
                 },
@@ -410,6 +434,7 @@ const Home = () => {
                 title: "Gradient Generator",
                 icon: <Gradient />,
                 href: () => {
+                  updateParam("GradientGenerator");
                   toggleImportDown(false);
                   setSection("Gradient Generator");
                 },
@@ -418,6 +443,7 @@ const Home = () => {
                 title: "Color Pallete Generator",
                 icon: <Pallete />,
                 href: () => {
+                  updateParam("ColorPalleteGenerator");
                   toggleImportDown(false);
                   setSection("Color Pallete Generator");
                 },

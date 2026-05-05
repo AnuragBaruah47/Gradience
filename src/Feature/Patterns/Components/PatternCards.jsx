@@ -6,6 +6,7 @@ import { styleStore, themeStore, toggleArrow } from "../../../Store/Store";
 import { copyStyle, scrollToConfig } from "../Services/service";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import { burst, springScale } from "../Utils/animations";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -56,7 +57,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
   const setId = styleStore((s) => s.setId);
   const id = styleStore((s) => s.id);
   const importToggleDown = toggleArrow((s) => s.setArrow);
-   const clearId = styleStore((s) => s.clearId);
+  const clearId = styleStore((s) => s.clearId);
 
   const preview = id === patterns.id;
   const isFavourite = favourites.some((f) => f.id === patterns.id);
@@ -118,37 +119,42 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
     }
   }, [preview]);
 
-  const togglePreview = () => {
-    if (!preview) {
-      if (prevTheme === null) {
-        savePrevTheme("");
-        savePrevTheme(darkTheme);
-        importToggleDown(true);
-      }
-      setId(patterns.id);
-      setTimeout(() => gsap.to(window, scrollToConfig), 200);
-      if (patterns.theme === "light") setPreviewTheme(false);
-      else if (patterns.theme === "dark") setPreviewTheme(true);
-    } else {
-      importToggleDown(false);
-      clearId(false)
-      setTimeout(() => gsap.to(window, scrollToConfig), 200);
-      setId(null);
-      if (prevTheme !== null) {
-        setTheme(prevTheme);
-        clearPrevTheme();
-      }
+const togglePreview = () => {
+  const btn = cardRef.current?.querySelector(`[title="${preview ? "Hide" : "Preview"}"]`);
+ burst(btn, preview
+  ? (darkTheme ? "#ffffff40" : "#6b7280")
+  : (darkTheme ? "#ffffff90" : "#374151")
+);
+  springScale(btn?.querySelector("svg"), 0.7, 1, 400);
+
+  if (!preview) {
+    if (prevTheme === null) {
+      savePrevTheme("");
+      savePrevTheme(darkTheme);
+      importToggleDown(true);
     }
-  };
+    setId(patterns.id);
+    setTimeout(() => gsap.to(window, scrollToConfig), 200);
+    if (patterns.theme === "light") setPreviewTheme(false);
+    else if (patterns.theme === "dark") setPreviewTheme(true);
+  } else {
+    importToggleDown(false);
+    clearId(false);
+    setTimeout(() => gsap.to(window, scrollToConfig), 200);
+    setId(null);
+    if (prevTheme !== null) {
+      setTheme(prevTheme);
+      clearPrevTheme();
+    }
+  }
+};
 
   const toggleCopy = () => {
+    const btn = cardRef.current?.querySelector(".copy-btn");
+    burst(btn, "#22c55e");
+    springScale(btn?.querySelector("svg"), 0.75, 1, 380);
     setCopy(true);
     copyStyle(patterns);
-    gsap.fromTo(
-      cardRef.current.querySelector(".copy-btn"),
-      { scale: 0.85 },
-      { scale: 1, duration: 0.3, ease: "back.out(2)" },
-    );
     setTimeout(() => setCopy(false), 2000);
   };
 
@@ -193,17 +199,17 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
     darkTheme ? "text-white/40" : "text-gray-400",
   );
 
-  const previewBtnClasses = cn(
-    "w-7 h-7 cursor-pointer rounded-[7px] flex items-center justify-center",
-    "border transition-all duration-150 active:scale-90 hover:scale-110",
-    preview
-      ? darkTheme
-        ? "bg-gray-200 text-black border-white"
-        : "bg-gray-500 text-white border-gray-900"
-      : darkTheme
-        ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
-        : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800",
-  );
+const previewBtnClasses = cn(
+  "w-7 h-7 cursor-pointer rounded-[7px] flex items-center justify-center",
+  "border transition-all duration-150 active:scale-90 hover:scale-110",
+  preview
+    ? darkTheme
+      ? "bg-white/15 text-white border-white/25 hover:bg-white/20 hover:text-white"
+      : "bg-gray-700 text-white border-gray-600 hover:bg-gray-800"
+    : darkTheme
+      ? "bg-white/10 text-white/70 border-white/10 hover:bg-white/20 hover:text-white"
+      : "bg-gray-100 text-gray-500 border-black/6 hover:bg-gray-200 hover:text-gray-800",
+);
 
   const copyBtnClasses = cn(
     "copy-btn cursor-pointer w-7 h-7 rounded-[7px] flex items-center justify-center",
@@ -220,7 +226,7 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
     "flex items-center justify-center transition-all duration-150",
     "bg-black/35 backdrop-blur-sm text-white",
     "hover:scale-110 active:scale-95",
-    isFavourite ? "opacity-100" : "opacity-0 group-hover:opacity-100",
+    isFavourite ? " lg:opacity-100" : "lg:opacity-0 lg:group-hover:opacity-100",
   );
 
   return (
@@ -237,8 +243,9 @@ const PatternCards = ({ patterns, favourites, setFavourites, index = 0 }) => {
 
       <div className="h-28 w-full overflow-hidden relative">
         <div
+        onClick={togglePreview}
           style={patterns.style}
-          className="w-full h-full transition-transform duration-500 ease-out group-hover:scale-[1.08]"
+          className="w-full h-full cursor-pointer transition-transform duration-500 ease-out group-hover:scale-[1.08]"
         />
       </div>
 

@@ -2,7 +2,7 @@ import React from "react";
 
 const Pallete = ({ height, width }) => {
   return (
-    <div className="h-2 w-6 flex justify-center items-center lg:h-5 lg:w-5">
+    <div className="w-4 flex justify-center items-center lg:h-5 lg:w-5">
       <svg
         viewBox="0 0 24 24"
         height={height}
